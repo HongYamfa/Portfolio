@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Code System — UX Ethnography Portfolio | Xinhua Han</title>
+    <style>
+        :root {
+            --bg: #fafaf9;
+            --text: #1c1917;
+            --text-secondary: #78716c;
+            --accent-red: #dc2626;
+            --accent-yellow: #d97706;
+            --accent-green: #059669;
+            --border: #e7e5e4;
+            --card: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0; width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(220,38,38,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin-bottom: 32px;
+        }
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .meta-item strong {
+            color: var(--text);
+            display: block;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+        .section {
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 600;
+        }
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .personas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .persona-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        .persona-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+        }
+        .persona-card.red::before { background: var(--accent-red); }
+        .persona-card.green::before { background: var(--accent-green); }
+        .persona-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+        .persona-card.red .persona-tag { background: rgba(220,38,38,0.08); color: var(--accent-red); }
+        .persona-card.green .persona-tag { background: rgba(5,150,105,0.08); color: var(--accent-green); }
+        .persona-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .persona-traits {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        .quote-box {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 15px;
+            font-style: italic;
+            line-height: 1.5;
+            border-left: 3px solid var(--border);
+        }
+        .persona-card.red .quote-box { border-left-color: var(--accent-red); }
+        .persona-card.green .quote-box { border-left-color: var(--accent-green); }
+        .insight-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 16px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .insight-pill span {
+            display: inline-block;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+        }
+        .persona-card.red .insight-pill span { background: var(--accent-red); }
+        .persona-card.green .insight-pill span { background: var(--accent-green); }
+
+        .journey-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 24px;
+        }
+        .journey-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .journey-title .dot {
+            width: 10px; height: 10px;
+            background: var(--accent-yellow);
+            border-radius: 50%;
+        }
+        .journey-chart {
+            position: relative;
+            height: 220px;
+            margin-bottom: 24px;
+        }
+        .journey-svg {
+            width: 100%; height: 100%;
+        }
+        .journey-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 8px;
+        }
+        .friction-callout {
+            background: rgba(217,119,6,0.06);
+            border: 1px solid rgba(217,119,6,0.15);
+            border-radius: 10px;
+            padding: 16px 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .friction-icon {
+            font-size: 20px;
+            line-height: 1;
+        }
+        .friction-text strong {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .friction-text p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .insight-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+        .insight-card .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .insight-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .insight-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .arrow {
+            color: var(--accent-green);
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        footer {
+            padding: 64px 0 80px;
+            text-align: center;
+        }
+        .footer-quote {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+        }
+        .footer-contact {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .footer-contact a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        .footer-contact a:hover {
+            border-color: var(--text);
+        }
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 100px;
+            background: var(--text);
+            color: var(--bg);
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 32px; }
+            .section { padding: 48px 0; }
+            .journey-section { padding: 24px; }
+            header { padding: 60px 0 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="eyebrow">UX Research Portfolio — Ethnography Case Study</div>
+        <h1>Health Code System:<br>When Mandatory Digital Products<br>Meet Cultural Resistance</h1>
+        <p class="subtitle">
+            An ethnographic investigation into how a high-penetration government-mandated app was reinterpreted, resisted, and patched by users across divergent social contexts.
+        </p>
+        <div class="meta">
+            <div class="meta-item">
+                <strong>Role</strong>
+                Independent Researcher
+            </div>
+            <div class="meta-item">
+                <strong>Methods</strong>
+                In-depth Interviews, Contextual Inquiry, Digital Diary, Social Listening
+            </div>
+            <div class="meta-item">
+                <strong>Duration</strong>
+                Nov 2021 – May 2022
+            </div>
+            <div class="meta-item">
+                <strong>Scale</strong>
+                30+ interviews, 2 cities, 10K+ social data points
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>Study at a Glance</h2>
+        <div class="overview-grid">
+            <div class="stat-card">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">In-depth interviews across 6 user segments (age, occupation, digital literacy)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Cities compared to surface spatial variance in policy interpretation and enforcement</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Social media posts scraped and emotionally coded to track sentiment evolution</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">40K</div>
+                <div class="stat-label">Words of field report delivered and presented at the 8th Youth Anthropology Conference</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Personas — The Human Behind the QR Code</h2>
+        <div class="personas">
+            <div class="persona-card red">
+                <div class="persona-tag">High Friction</div>
+                <div class="persona-name">The Dignity Defender</div>
+                <div class="persona-traits">70+ · Non-smartphone user · Pharmacy visitor (high-risk zone)</div>
+                <div class="quote-box">
+                    "You ask him to register with an ID card, and he would rather not buy the medicine at all."
+                </div>
+                <div class="insight-pill"><span></span> Refusal as dignity preservation, not digital illiteracy</div>
+            </div>
+            <div class="persona-card green">
+                <div class="persona-tag">System Patch</div>
+                <div class="persona-name">The Frontline Negotiator</div>
+                <div class="persona-traits">Pharmacy clerk · Risk-zone periphery · Empathy-driven pragmatist</div>
+                <div class="quote-box">
+                    "It's normal that old people find it inconvenient. If they have an ID card, we just help them register. No big deal."
+                </div>
+                <div class="insight-pill"><span></span> Frontline workers become the unofficial UX of the system</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Journey Map — Emotional Arc of a Pharmacy Visit</h2>
+        <div class="journey-section">
+            <div class="journey-title"><div class="dot"></div>Peak Friction: The Registration Moment</div>
+            <div class="journey-chart">
+                <svg class="journey-svg" viewBox="0 0 800 200" preserveAspectRatio="none">
+                    <!-- Grid lines -->
+                    <line x1="0" y1="100" x2="800" y2="100" stroke="#e7e5e4" stroke-width="1"/>
+                    <line x1="0" y1="50" x2="800" y2="50" stroke="#f5f5f4" stroke-width="1"/>
+                    <line x1="0" y1="150" x2="800" y2="150" stroke="#f5f5f4" stroke-width="1"/>
+
+                    <!-- Area under curve -->
+                    <path d="M 0,80 Q 100,70 160,130 Q 220,190 280,120 Q 340,60 400,80 Q 500,70 600,50 Q 680,30 720,60 Q 760,80 800,70 L 800,200 L 0,200 Z" 
+                          fill="rgba(217,119,6,0.06)" stroke="none"/>
+
+                    <!-- Curve -->
+                    <path d="M 0,80 Q 100,70 160,130 Q 220,190 280,120 Q 340,60 400,80 Q 500,70 600,50 Q 680,30 720,60 Q 760,80 800,70" 
+                          fill="none" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+
+                    <!-- Data points -->
+                    <circle cx="160" cy="130" r="6" fill="#dc2626" stroke="white" stroke-width="2"/>
+                    <circle cx="600" cy="50" r="6" fill="#059669" stroke="white" stroke-width="2"/>
+
+                    <!-- Annotation lines -->
+                    <line x1="160" y1="130" x2="160" y2="170" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,4"/>
+                    <line x1="600" y1="50" x2="600" y2="20" stroke="#059669" stroke-width="1" stroke-dasharray="4,4"/>
+
+                    <!-- Labels -->
+                    <text x="160" y="185" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="600">Dignity Crash</text>
+                    <text x="600" y="14" text-anchor="middle" font-size="11" fill="#059669" font-weight="600">Relief</text>
+                </svg>
+            </div>
+            <div class="journey-labels">
+                <span>Approach</span>
+                <span>Scan / Register</span>
+                <span>Verification</span>
+                <span>Shopping</span>
+                <span>Exit</span>
+            </div>
+            <div style="margin-top: 28px;">
+                <div class="friction-callout">
+                    <div class="friction-icon">⚡</div>
+                    <div class="friction-text">
+                        <strong>Critical Friction Point</strong>
+                        <p>The system's "objective" color coding (green/yellow/red) collided with users' subjective risk perception. A 70-year-old user experienced a <em>dignity crash</em> at the scanning moment—forced to choose between compliance and self-respect. The peak emotion was not fear of the virus, but shame of being publicly marked as "non-compliant."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>From Field Insight to Design Implication</h2>
+        <div class="insights-grid">
+            <div class="insight-card">
+                <div class="label">Field Finding</div>
+                <h3>Users performed "compliant theater" while developing hidden resistance scripts.</h3>
+                <p><span class="arrow">→</span> <strong>Design implication:</strong> High adoption metrics can mask true rejection. Build "transparency layers" that expose system logic, turning passive compliance into informed consent.</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Field Finding</div>
+                <h3>"Not unable to learn—just unwilling to lose dignity."</h3>
+                <p><span class="arrow">→</span> <strong>Design implication:</strong> For so-called "digitally vulnerable" groups, provide non-digital alternative paths that preserve autonomy, rather than "simplifying" interfaces that still force digital submission.</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Field Finding</div>
+                <h3>Frontline staff became the system's "human patch"—absorbing friction the design ignored.</h3>
+                <p><span class="arrow">→</span> <strong>Design implication:</strong> Service blueprints must include the <em>internal operator's</em> journey, not only the end user. Gray-area workarounds by staff are signals of systemic failure, not individual heroism.</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Field Finding</div>
+                <h3>Color semantics were inverted by local emotional logic.</h3>
+                <p><span class="arrow">→</span> <strong>Design implication:</strong> Visual codes carry cultural payload. In cross-cultural or high-stakes products, semantic mapping must be validated ethnographically—not assumed universal.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="badge">Xinhua Han — UX Researcher & Ethnographer</div>
+        <p class="footer-quote">
+            "Real conversations in the field reveal cultural tensions that survey data alone can never surface."
+        </p>
+        <p class="footer-contact">
+            MSc Social & Cultural Anthropology (Distinction), KU Leuven · BEng Cybersecurity, Sichuan University<br><br>
+            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a> · 
+            <a href="tel:+8618991322966">+86 189 9132 2966</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
