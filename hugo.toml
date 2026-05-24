@@ -61,6 +61,11 @@ title = '韩鑫华'
     minFontSizeRem = 0.8
     maxFontSizeRem = 2.0
 
+[languages]
+  [languages.zh-cn]
+    languageName = "中文"
+    weight = 10
+
 [menu]
   [[menu.main]]
     identifier = "home"
