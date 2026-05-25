@@ -2,12 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "韩鑫华",
-    "label": "用户体验研究者",
-    "image": "",
+    "label": "现场工作者",
+    "image": "portfolio/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260525164252_192_90.jpg",
     "email": "hongyamfa@gmail.com",
-    "phone": "18991322966",
     "url": "",
-    "summary": "社会文化人类学、计算机工程与数字媒体复合背景。长期关注文化、技术与日常生活之间的交互地带。",
+    "summary": "社会文化人类学、计算机工程与数字媒体复合背景。长期关注文化、技术与日常生活之间的交互地带。热衷于挖掘人与技术物之间未被言说的动机、意义与张力。专注电子产品的用户体验与人因工程评估。擅长通过混合研究方法构建用户画像与包容性设计框架；具备神经多样性用户（ADHD、社交障碍等）的交互需求研究经验，为产品的无障碍设计提供循证支持。",
     "location": {
       "address": "",
       "postalCode": "",
