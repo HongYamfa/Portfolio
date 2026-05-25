@@ -18,8 +18,6 @@ Independent music lover, runner. First-hand embodied insights into user feelings
 
 <!-- Place fieldwork photos in static/images/fieldwork/ directory, then uncomment below -->
 
-<!--
 <img src="/images/fieldwork/fieldwork-1.jpg" alt="Fieldwork 1" loading="lazy" />
 <img src="/images/fieldwork/fieldwork-2.jpg" alt="Fieldwork 2" loading="lazy" />
 <img src="/images/fieldwork/fieldwork-3.jpg" alt="Fieldwork 3" loading="lazy" />
--->
