@@ -4,11 +4,6 @@ date: 2026-05-24T23:00:00+08:00
 draft: false
 ---
 
-<div style="text-align:center;padding:1.5rem 0 2rem;">
-<div style="font-family:var(--font-monospace);font-size:2.25rem;font-weight:700;color:var(--fg0);letter-spacing:0.06em;">韩鑫华</div>
-<div style="font-family:var(--font-monospace);font-size:0.9rem;color:var(--fg3);margin-top:0.6rem;">现场工作者 &nbsp;·&nbsp; 用户体验研究者</div>
-</div>
-
 <div style="display:flex;gap:2rem;align-items:flex-start;margin-bottom:2.5rem;">
 <div style="flex:3;min-width:0;">
 <h2 style="margin-top:0;">用人类学的深度，技术产品洞察 × 包容性设计</h2>
