@@ -1,5 +1,6 @@
 baseURL = 'https://hongyamfa.github.io/Portfolio/'
 languageCode = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
 title = '韩鑫华'
 
 [build]
@@ -65,23 +66,40 @@ title = '韩鑫华'
   [languages.zh-cn]
     languageName = "中文"
     weight = 10
+    [[languages.zh-cn.menus.main]]
+      identifier = "home"
+      name = "主页"
+      url = "/"
+      weight = 10
+    [[languages.zh-cn.menus.main]]
+      identifier = "portfolio"
+      name = "作品集"
+      url = "/portfolio/"
+      weight = 20
+    [[languages.zh-cn.menus.main]]
+      identifier = "about"
+      name = "关于我"
+      url = "/about/"
+      weight = 30
 
-[menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "主页"
-    url = "/"
-    weight = 10
-  [[menu.main]]
-    identifier = "portfolio"
-    name = "作品集"
-    url = "/portfolio/"
+  [languages.en]
+    languageName = "English"
     weight = 20
-  [[menu.main]]
-    identifier = "about"
-    name = "关于我"
-    url = "/about/"
-    weight = 30
+    [[languages.en.menus.main]]
+      identifier = "home"
+      name = "Home"
+      url = "/"
+      weight = 10
+    [[languages.en.menus.main]]
+      identifier = "portfolio"
+      name = "Portfolio"
+      url = "/portfolio/"
+      weight = 20
+    [[languages.en.menus.main]]
+      identifier = "about"
+      name = "About"
+      url = "/about/"
+      weight = 30
 
 [module]
   [[module.imports]]
