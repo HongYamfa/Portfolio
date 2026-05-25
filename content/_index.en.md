@@ -12,7 +12,7 @@ draft: false
 <p>Independent music lover, runner. First-hand embodied insights into user feelings and behavior patterns for music and sports products.</p>
 </div>
 <div style="flex:2;min-width:160px;max-width:260px;flex-shrink:0;">
-<img src="images/fieldwork/fieldwork-0.jpg" alt="Fieldwork" style="width:100%;border-radius:4px;display:block;">
+<img src="/Portfolio/images/fieldwork/fieldwork-0.jpg" alt="Fieldwork" style="width:100%;border-radius:4px;display:block;">
 </div>
 </div>
 
@@ -22,14 +22,14 @@ draft: false
 
 <div style="display:flex;gap:6px;height:360px;margin-top:1rem;">
 <div style="flex:1;min-width:0;">
-<img src="images/fieldwork/fieldwork-1.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
+<img src="/Portfolio/images/fieldwork/fieldwork-1.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
 </div>
 <div style="flex:2;min-width:0;display:flex;flex-direction:column;gap:6px;">
 <div style="flex:1;min-height:0;">
-<img src="images/fieldwork/fieldwork-2.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
+<img src="/Portfolio/images/fieldwork/fieldwork-2.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
 </div>
 <div style="flex:1;min-height:0;">
-<img src="images/fieldwork/fieldwork-3.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
+<img src="/Portfolio/images/fieldwork/fieldwork-3.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
 </div>
 </div>
 </div>

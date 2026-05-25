@@ -5,6 +5,15 @@
 >
   {{ partial "head/head.html" . }}
   <body>
+    {{ if .IsHome }}
+    <style>
+      main {
+        grid-template-areas: "content" !important;
+        grid-template-columns: minmax(0, 900px) !important;
+        justify-content: center;
+      }
+    </style>
+    {{ end }}
     <div class="layout">
       {{ partial "header.html" . }}
       <main>

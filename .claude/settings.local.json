@@ -6,7 +6,9 @@
       "PowerShell(hugo list all 2>&1)",
       "PowerShell(hugo mod graph 2>&1)",
       "PowerShell(hugo mod vendor 2>&1)",
-      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\18991\\\\Portfolio\\\\layouts\\\\partials\\\\json-resume\")"
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\18991\\\\Portfolio\\\\layouts\\\\partials\\\\json-resume\")",
+      "Bash(Test-Path \"c:\\\\Users\\\\18991\\\\Portfolio\\\\static\\\\images\\\\fieldwork\\\\fieldwork-0.jpg\")",
+      "PowerShell(git -C \"c:\\\\Users\\\\18991\\\\Portfolio\" ls-files \"static/images/fieldwork/\")"
     ]
   }
 }
