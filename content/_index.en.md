@@ -4,20 +4,21 @@ date: 2026-05-24T23:00:00+08:00
 draft: false
 ---
 
-<div style="max-width:520px;margin:0 auto 2rem;">
-<img src="images/fieldwork/fieldwork-0.jpg" alt="Fieldwork" style="width:100%;border-radius:4px;display:block;">
-</div>
-
-<div style="max-width:560px;margin:0 auto;">
-<h2 style="text-align:center;">UX Research with Anthropological Depth</h2>
+<div style="display:flex;gap:2rem;align-items:flex-start;margin-bottom:2.5rem;">
+<div style="flex:2;min-width:0;">
+<h2 style="margin-top:0;">UX Research with Anthropological Depth</h2>
 <p>Interdisciplinary background in socio-cultural anthropology, computer engineering, and digital media. I focus on the intersection of culture, technology, and everyday life — uncovering the unspoken motivations, meanings, and tensions between people and brands, products, and systems.</p>
 <p>Specialized in user experience and human factors evaluation for electronic products, skilled in building user personas and inclusive design frameworks through mixed research methods. Experienced in interaction needs research for neurodivergent users (ADHD, social disabilities), providing evidence-based support for accessible product design.</p>
 <p>Independent music lover, runner. First-hand embodied insights into user feelings and behavior patterns for music and sports products.</p>
 </div>
+<div style="flex:1;min-width:0;max-width:280px;">
+<img src="images/fieldwork/fieldwork-0.jpg" alt="Fieldwork" style="width:100%;border-radius:4px;display:block;">
+</div>
+</div>
 
 <hr>
 
-<h2 style="text-align:center;">Fieldwork Snapshots</h2>
+<h2>Fieldwork Snapshots</h2>
 
 <div style="display:flex;gap:6px;height:360px;margin-top:1rem;max-width:700px;margin-left:auto;margin-right:auto;">
 <div style="flex:1;min-width:0;">
