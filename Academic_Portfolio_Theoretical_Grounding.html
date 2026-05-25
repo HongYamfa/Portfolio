@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theoretical Grounding — Academic Portfolio | Xinhua Han</title>
+    <style>
+        :root {
+            --bg: #fafaf9;
+            --text: #1c1917;
+            --text-secondary: #78716c;
+            --accent-teal: #0d9488;
+            --accent-amber: #b45309;
+            --border: #e7e5e4;
+            --card: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        header {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid var(--border);
+        }
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 640px;
+        }
+        .section {
+            padding: 56px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            font-weight: 600;
+        }
+        .thesis-banner {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .thesis-banner::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--accent-teal);
+        }
+        .thesis-banner p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .thesis-banner strong {
+            color: var(--accent-teal);
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            margin-bottom: 28px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .project-card:hover { transform: translateY(-2px); }
+        .project-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+        }
+        .project-card.teal::before { background: var(--accent-teal); }
+        .project-card.amber::before { background: var(--accent-amber); }
+
+        .project-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .meta-tag {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 100px;
+            background: rgba(13,148,136,0.08);
+            color: var(--accent-teal);
+        }
+        .project-card.amber .meta-tag {
+            background: rgba(180,83,9,0.08);
+            color: var(--accent-amber);
+        }
+        .project-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .project-sub {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .block {
+            margin-bottom: 20px;
+        }
+        .block-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .block p, .block li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .block ul {
+            padding-left: 18px;
+        }
+        .block li { margin-bottom: 6px; }
+        .quote-line {
+            border-left: 3px solid var(--border);
+            padding-left: 16px;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 14px 0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .project-card.teal .quote-line { border-left-color: var(--accent-teal); }
+        .project-card.amber .quote-line { border-left-color: var(--accent-amber); }
+
+        .insight-box {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin-top: 20px;
+        }
+        .insight-box .label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .insight-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .insight-box strong {
+            color: var(--accent-teal);
+        }
+        .project-card.amber .insight-box strong {
+            color: var(--accent-amber);
+        }
+
+        footer {
+            padding: 56px 0 72px;
+            text-align: center;
+        }
+        .footer-contact {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .footer-contact a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 100px;
+            background: var(--text);
+            color: var(--bg);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 32px; }
+            .section { padding: 40px 0; }
+            header { padding: 60px 0 36px; }
+            .project-card { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="eyebrow">Academic Portfolio — Theoretical Grounding</div>
+        <h1>From Animism to Digital Materiality</h1>
+        <p class="subtitle">
+            Two theoretical investigations that reframe how we understand the relationship between humans, objects, and interfaces—foundational to my ethnographic practice.
+        </p>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>Connecting Thread</h2>
+        <div class="thesis-banner">
+            <p>
+                <strong>Both projects challenge the Western dualistic split (subject/object, nature/culture, material/immaterial).</strong> 
+                Whether examining Siberian hunters' mimetic transformations or iPhone users' haptic gestures, the argument is the same: 
+                <strong>agency is relational, not possessed.</strong> This framework directly informs my commercial ethnography—
+                I do not treat users as "rational actors using tools," but as subjects in continuous, embodied negotiation with technologies that shape their personhood.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Project I — Reconfiguring Self-World Relations</h2>
+        <div class="project-card teal">
+            <div class="project-meta">
+                <span class="meta-tag">Social & Cultural Anthropology</span>
+                <span class="meta-tag">Ontological Turn</span>
+                <span class="meta-tag">KU Leuven</span>
+            </div>
+            <h3>Beyond the Cogito: Animism, Mimesis, and the Critique of Dualism</h3>
+            <p class="project-sub">
+                A critical engagement with Nurit Bird-David, Rane Willerslev, and Philippe Descola on whether "relatedness" can replace the Cartesian subject as the foundation of human experience.
+            </p>
+
+            <div class="block">
+                <div class="block-label">Core Debate</div>
+                <p>
+                    Bird-David argues that animism is not a cognitive error (Durkheim) but an alternative ontology based on <strong>relatedness</strong> rather than separation. 
+                    I test this claim against Willerslev's Yukaghir ethnography and Descola's ontological grid (Animism / Totemism / Analogism / Naturalism).
+                </p>
+                <div class="quote-line">
+                    "The lack of any guaranteed, a priori difference means that difference has to be created constantly through everyday practices." — Willerslev, <em>Soul Hunters</em>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="block-label">My Position</div>
+                <ul>
+                    <li>Bird-David's "relatedness" risks dissolving the subject entirely; the <strong>cogito</strong> cannot be abandoned but must be situated within relational practice.</li>
+                    <li>Willerslev's "mimetic hunting" reveals that animists do not fuse with animals; they <strong>perform difference through seduction and non-coincidence</strong>.</li>
+                    <li>Descola's four ontologies are useful heuristics, but his "naturalism" category overstates Western homogeneity and underplays internal dissent.</li>
+                </ul>
+            </div>
+
+            <div class="insight-box">
+                <div class="label">Implication for Ethnographic Practice</div>
+                <p>
+                    <strong>Users are not "segments" to be targeted.</strong> Like Yukaghir hunters, they constantly perform and negotiate their difference from the products/brands they interact with. 
+                    Ethnography must capture this <strong>performative tension</strong>—how people simultaneously appropriate and resist the identities that technologies offer them.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Project II — Digital Interfaces as Social Agents</h2>
+        <div class="project-card amber">
+            <div class="project-meta">
+                <span class="meta-tag">Digital Anthropology</span>
+                <span class="meta-tag">STS / Materiality</span>
+                <span class="meta-tag">KU Leuven</span>
+            </div>
+            <h3>Smartphones between Techniques and Virtuosity: Agency of Cellular Interfaces</h3>
+            <p class="project-sub">
+                An investigation into why "social constructivism" fails to account for digital materials, and how iPhone interfaces produce a new kind of social agency through haptic gesture, fluid motion, and design fetishism.
+            </p>
+
+            <div class="block">
+                <div class="block-label">Core Argument</div>
+                <p>
+                    Drawing on Galloway's "interface effects," Deleuze's <em>dispositif</em>, and Gell's theory of enchantment, I argue that the smartphone is not a neutral tool but an <strong>autonomous zone of activity</strong> that reshapes personhood through operational sequences (tap, swipe, pinch).
+                </p>
+                <div class="quote-line">
+                    "Interfaces are not things, but processes that effect a result... They bring about transformations in material states." — Galloway, <em>The Interface Effect</em>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="block-label">Key Concepts Deployed</div>
+                <ul>
+                    <li><strong>Interface Effects:</strong> The screen is not a window but a threshold that mediates between realities, producing specific social and historical outcomes.</li>
+                    <li><strong>Fluid Design:</strong> Apple's "run like water" philosophy creates an illusion of direct intentionality, masking the algorithmic and material infrastructure beneath.</li>
+                    <li><strong>Techniques over Objects:</strong> Following Deleuze and Ingold, agency lies not in the device but in the <strong>curves of visibility and lines of force</strong> it mobilizes.</li>
+                    <li><strong>From Fetish to Factish:</strong> iPhone marketing transforms the device into a Latourian "factish"—neither pure object nor pure belief, but a hybrid that commands collective attachment.</li>
+                </ul>
+            </div>
+
+            <div class="insight-box">
+                <div class="label">Implication for Ethnographic Practice</div>
+                <p>
+                    <strong>Users do not "use" interfaces; they enter into relational ecologies with them.</strong> 
+                    The tap/swipe/pinch sequence is not merely usability—it is a <strong>technique of the body</strong> (Mauss) that reshapes habitus. 
+                    In my fieldwork on health-code systems and AI tools, this framework allows me to see <strong>gesture, resistance, and compliance as embodied political practices</strong>, not just behavioral data points.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>How Theory Grounds Commercial Insight</h2>
+        <div class="project-card" style="border-top:4px solid var(--text);">
+            <div class="block">
+                <div class="block-label">From Academic Debate to Business Application</div>
+                <ul>
+                    <li><strong>Descola's ontological pluralism</strong> → helps me identify when a product's assumed "naturalism" (objective, universal) clashes with users' "animist" or "analogist" worldviews (e.g., elderly users treating health-code colors as moral judgments rather than data states).</li>
+                    <li><strong>Willerslev's mimetic non-coincidence</strong> → explains why users perform "compliant theater" while maintaining hidden resistance scripts—difference is constantly performed, not given.</li>
+                    <li><strong>Galloway's interface effects</strong> → reveals that "frictionless" UX design can actually <em>increase</em> user anxiety by hiding the system's decision logic (e.g., "why did my code turn yellow?").</li>
+                    <li><strong>Gell's enchantment / factish</strong> → explains brand loyalty and product attachment beyond functional benefit: the iPhone, like the health-code, becomes a social agent that users feel they must appease or negotiate with.</li>
+                </ul>
+            </div>
+            <div class="quote-line" style="border-left-color:var(--text); margin-top:16px;">
+                "Theory is not a luxury in commercial ethnography. It is the difference between describing what people do and explaining why they must do it that way."
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="badge">Xinhua Han — Ethnographer & Researcher</div>
+        <p class="footer-contact">
+            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a> · 
+            <a href="tel:+8618991322966">+86 189 9132 2966</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
