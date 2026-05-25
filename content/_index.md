@@ -16,10 +16,10 @@ draft: false
 
 ## 田野掠影
 
-<!-- 将田野照片放入 static/images/fieldwork/ 目录，文件名与下方对应 -->
+<!-- 将田野照片放入 static/images/fieldwork/ 目录，然后取消下方注释 -->
 
-![田野现场 1](/images/fieldwork/fieldwork-1.jpg)
-
-![田野现场 2](/images/fieldwork/fieldwork-2.jpg)
-
-![田野现场 3](/images/fieldwork/fieldwork-3.jpg)
+<!--
+<img src="/images/fieldwork/fieldwork-1.jpg" alt="田野现场 1" loading="lazy" />
+<img src="/images/fieldwork/fieldwork-2.jpg" alt="田野现场 2" loading="lazy" />
+<img src="/images/fieldwork/fieldwork-3.jpg" alt="田野现场 3" loading="lazy" />
+-->

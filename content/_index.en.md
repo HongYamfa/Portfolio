@@ -16,10 +16,10 @@ Independent music lover, runner. First-hand embodied insights into user feelings
 
 ## Fieldwork Snapshots
 
-<!-- Place fieldwork photos in static/images/fieldwork/ directory, matching filenames below -->
+<!-- Place fieldwork photos in static/images/fieldwork/ directory, then uncomment below -->
 
-![Fieldwork 1](/images/fieldwork/fieldwork-1.jpg)
-
-![Fieldwork 2](/images/fieldwork/fieldwork-2.jpg)
-
-![Fieldwork 3](/images/fieldwork/fieldwork-3.jpg)
+<!--
+<img src="/images/fieldwork/fieldwork-1.jpg" alt="Fieldwork 1" loading="lazy" />
+<img src="/images/fieldwork/fieldwork-2.jpg" alt="Fieldwork 2" loading="lazy" />
+<img src="/images/fieldwork/fieldwork-3.jpg" alt="Fieldwork 3" loading="lazy" />
+-->
