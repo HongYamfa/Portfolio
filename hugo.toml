@@ -1,3 +1,136 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://hongyamfa.github.io/Portfolio/'
+languageCode = 'zh-cn'
+defaultContentLanguage = 'zh-cn'
+title = '韩鑫华'
+
+[build]
+  noJSConfigInAssets = true
+  [build.buildStats]
+    enable = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[imaging]
+  quality = 75
+
+[outputs]
+  home = ["html", "rss", "searchIndex"]
+
+[outputFormats]
+  [outputFormats.searchIndex]
+    mediaType = "application/json"
+    baseName = "search-index"
+    isPlainText = true
+    notAlternative = true
+
+[params]
+  defaultTheme = "auto"
+  themeColor = "blue"
+  themeContrast = "medium"
+  author = "韩鑫华"
+  subtitle = "社会文化人类学 × 计算机工程 × 数字媒体"
+  description = "社会文化人类学、计算机工程与数字媒体复合背景。长期关注文化、技术与日常生活之间的交互地带。"
+
+  [params.logo]
+    text = "韩鑫华"
+    url = "/"
+
+  [params.prism]
+    languages = [
+      "markup",
+      "css",
+      "clike",
+      "javascript",
+      "bash",
+      "diff",
+      "toml"
+    ]
+    plugins = [
+      "normalize-whitespace",
+      "toolbar",
+      "copy-to-clipboard",
+      "line-numbers",
+      "command-line",
+      "diff-highlight"
+    ]
+
+  [params.tagCloud]
+    enable = false
+    minFontSizeRem = 0.8
+    maxFontSizeRem = 2.0
+
+[languages]
+  [languages.zh-cn]
+    languageName = "中文"
+    weight = 10
+    [[languages.zh-cn.menus.main]]
+      identifier = "home"
+      name = "主页"
+      url = "/"
+      weight = 10
+    [[languages.zh-cn.menus.main]]
+      identifier = "portfolio"
+      name = "作品集"
+      url = "/portfolio/"
+      weight = 20
+    [[languages.zh-cn.menus.main]]
+      identifier = "about"
+      name = "关于我"
+      url = "/about/"
+      weight = 30
+
+  [languages.en]
+    languageName = "English"
+    weight = 20
+    [[languages.en.menus.main]]
+      identifier = "home"
+      name = "Home"
+      url = "/"
+      weight = 10
+    [[languages.en.menus.main]]
+      identifier = "portfolio"
+      name = "Portfolio"
+      url = "/portfolio/"
+      weight = 20
+    [[languages.en.menus.main]]
+      identifier = "about"
+      name = "About"
+      url = "/about/"
+      weight = 30
+
+[module]
+  [[module.imports]]
+    path = "github.com/schnerring/hugo-theme-gruvbox"
+  [[module.mounts]]
+    source = "node_modules/simple-icons/icons"
+    target = "assets/simple-icons"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "node_modules/prismjs"
+    target = "assets/prismjs"
+  [[module.mounts]]
+    source = "node_modules/prism-themes/themes"
+    target = "assets/prism-themes"
+  [[module.mounts]]
+    source = "node_modules/typeface-fira-code/files"
+    target = "static/fonts"
+  [[module.mounts]]
+    source = "node_modules/typeface-roboto-slab/files"
+    target = "static/fonts"
+  [[module.mounts]]
+    source = "node_modules/@tabler/icons/icons"
+    target = "assets/tabler-icons"
+  [[module.mounts]]
+    source = "hugo_stats.json"
+    target = "assets/watching/hugo_stats.json"
