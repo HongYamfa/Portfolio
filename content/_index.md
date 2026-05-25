@@ -16,8 +16,7 @@ draft: false
 
 ## 田野掠影
 
-<!-- 将田野照片放入 static/images/fieldwork/ 目录，然后取消下方注释 -->
-
-<img src="/images/fieldwork/fieldwork-1.jpg" alt="田野现场 1" loading="lazy" />
-<img src="/images/fieldwork/fieldwork-2.jpg" alt="田野现场 2" loading="lazy" />
-<img src="/images/fieldwork/fieldwork-3.jpg" alt="田野现场 3" loading="lazy" />
+<img src="images/fieldwork/fieldwork-0.jpg" alt="田野现场" loading="lazy" />
+<img src="images/fieldwork/fieldwork-1.jpg" alt="田野现场" loading="lazy" />
+<img src="images/fieldwork/fieldwork-2.jpg" alt="田野现场" loading="lazy" />
+<img src="images/fieldwork/fieldwork-3.jpg" alt="田野现场" loading="lazy" />
