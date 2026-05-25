@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>主页 on 韩鑫华</title>
-    <link>http://localhost:1313/Portfolio/</link>
-    <description>Recent content in 主页 on 韩鑫华</description>
+    <title>Home on My New Hugo Project</title>
+    <link>https://example.org/</link>
+    <description>Recent content in Home on My New Hugo Project</description>
     <generator>Hugo</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
     <lastBuildDate>Sun, 24 May 2026 23:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>关于我</title>
-      <link>http://localhost:1313/Portfolio/about/</link>
+      <title>About</title>
+      <link>https://example.org/about/</link>
       <pubDate>Sun, 24 May 2026 23:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/Portfolio/about/</guid>
-      <description>&lt;h2 id=&#34;韩鑫华&#34;&gt;韩鑫华&lt;a href=&#34;#%e9%9f%a9%e9%91%ab%e5%8d%8e&#34; class=&#34;post-heading__anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;社会文化人类学 × 计算机工程 × 数字媒体 | 用户体验研究者&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;长期关注文化、技术与日常生活之间的交互地带。热衷于挖掘人们与品牌、产品、系统之间那些未被言说的动机、意义与张力，并把这些洞察转化为产品与策略团队能够使用的叙事与战略。&lt;/p&gt;&#xA;&lt;h3 id=&#34;教育背景&#34;&gt;教育背景&lt;a href=&#34;#%e6%95%99%e8%82%b2%e8%83%8c%e6%99%af&#34; class=&#34;post-heading__anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;比利时 鲁汶大学（KU Leuven）&lt;/strong&gt; | 2023.09 — 2026.09&lt;br&gt;&#xA;社会文化人类学 理学硕士（优等/Distinction）&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;德国 海德堡大学&lt;/strong&gt; | 2025.10 — 2026.03&lt;br&gt;&#xA;Erasmus+ 交换生&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;英国 斯旺西大学&lt;/strong&gt; | 2022.09 — 2023.09&lt;br&gt;&#xA;数字媒体 文学硕士（优等/Distinction）&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;四川大学&lt;/strong&gt; | 2017 — 2021&lt;br&gt;&#xA;网络空间安全 工学学士&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;联系方式&#34;&gt;联系方式&lt;a href=&#34;#%e8%81%94%e7%b3%bb%e6%96%b9%e5%bc%8f&#34; class=&#34;post-heading__anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;📧 &lt;a&#xA;  href=&#34;mailto:hongyamfa@gmail.com&#34;&#xA;  &#xA;  &#xA;&gt;hongyamfa@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;📱 18991322966&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <guid>https://example.org/about/</guid>
+      <description>&lt;h2 id=&#34;xinhua-han&#34;&gt;Xinhua Han&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Socio-cultural Anthropology × Computer Engineering × Digital Media | UX Researcher&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;I focus on the intersection of culture, technology, and everyday life. I am passionate about uncovering the unspoken motivations, meanings, and tensions between people and brands, products, and systems, and transforming these insights into narratives and strategies that product and strategy teams can use.&lt;/p&gt;&#xA;&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;KU Leuven (QS: 60)&lt;/strong&gt; | 2023.09 — 2026.09&lt;br&gt;&#xA;MSc in Socio-cultural Anthropology (Distinction)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cross-Cultural AI Product User Cognition and Inclusive Design Research</title>
+      <link>https://example.org/portfolio/crosscultural-ai/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/portfolio/crosscultural-ai/</guid>
+      <description>Master&amp;rsquo;s thesis and survey project. Led a longitudinal study of 30 core users, conducted 50+ in-depth interviews and multi-round digital behavior monitoring, and established interaction need assessment dimensions for neurodiverse users (ADHD, social &amp;amp; reading disorders).</description>
+    </item>
+    <item>
+      <title>Theoretical Grounding: From Animism to Digital Materiality</title>
+      <link>https://example.org/portfolio/theoretical-grounding/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.org/portfolio/theoretical-grounding/</guid>
+      <description>Academic portfolio. Systematically traces theoretical threads from animism to digital materiality, exploring how technology reshapes human-world relations and how digital interfaces become social actors.</description>
+    </item>
+    <item>
+      <title>Digital Governance Product Mental Model Mismatch: Health Code System Case Study</title>
+      <link>https://example.org/portfolio/healthcode/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.org/portfolio/healthcode/</guid>
+      <description>Independent fieldwork project. Designed user voice collection protocol, built web scraper capturing 10K+ user feedback posts, established emotional evolution monitoring model and demand prioritization matrix, conducted 20+ in-depth interviews across 6 user personas.</description>
     </item>
   </channel>
 </rss>

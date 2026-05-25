@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>作品集 on 韩鑫华</title>
-    <link>http://localhost:1313/Portfolio/portfolio/</link>
-    <description>Recent content in 作品集 on 韩鑫华</description>
+    <title>Portfolio on My New Hugo Project</title>
+    <link>https://example.org/portfolio/</link>
+    <description>Recent content in Portfolio on My New Hugo Project</description>
     <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/Portfolio/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cross-Cultural AI Product User Cognition and Inclusive Design Research</title>
+      <link>https://example.org/portfolio/crosscultural-ai/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://example.org/portfolio/crosscultural-ai/</guid>
+      <description>Master&amp;rsquo;s thesis and survey project. Led a longitudinal study of 30 core users, conducted 50+ in-depth interviews and multi-round digital behavior monitoring, and established interaction need assessment dimensions for neurodiverse users (ADHD, social &amp;amp; reading disorders).</description>
+    </item>
+    <item>
+      <title>Theoretical Grounding: From Animism to Digital Materiality</title>
+      <link>https://example.org/portfolio/theoretical-grounding/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.org/portfolio/theoretical-grounding/</guid>
+      <description>Academic portfolio. Systematically traces theoretical threads from animism to digital materiality, exploring how technology reshapes human-world relations and how digital interfaces become social actors.</description>
+    </item>
+    <item>
+      <title>Digital Governance Product Mental Model Mismatch: Health Code System Case Study</title>
+      <link>https://example.org/portfolio/healthcode/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://example.org/portfolio/healthcode/</guid>
+      <description>Independent fieldwork project. Designed user voice collection protocol, built web scraper capturing 10K+ user feedback posts, established emotional evolution monitoring model and demand prioritization matrix, conducted 20+ in-depth interviews across 6 user personas.</description>
+    </item>
   </channel>
 </rss>
