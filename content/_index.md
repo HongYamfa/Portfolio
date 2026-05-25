@@ -11,3 +11,15 @@ draft: false
 专注电子产品的用户体验与人因工程评估，擅长通过混合研究方法构建用户画像与包容性设计框架。具备神经多样性用户（ADHD、社交障碍等）的交互需求研究经验，为产品的无障碍设计提供循证支持。
 
 独立音乐爱好者，跑者。对音乐与运动产品的用户感受与行为模式有第一手体感洞察。
+
+---
+
+## 田野掠影
+
+<!-- 将田野照片放入 static/images/fieldwork/ 目录，文件名与下方对应 -->
+
+![田野现场 1](/images/fieldwork/fieldwork-1.jpg)
+
+![田野现场 2](/images/fieldwork/fieldwork-2.jpg)
+
+![田野现场 3](/images/fieldwork/fieldwork-3.jpg)
