@@ -4,9 +4,10 @@ date: 2026-05-24T23:00:00+08:00
 draft: false
 ---
 
+<h2>用人类学的深度，技术产品洞察 × 包容性设计</h2>
+
 <div style="display:flex;gap:2rem;align-items:flex-start;margin-bottom:2.5rem;">
 <div style="flex:2;min-width:0;">
-<h2 style="margin-top:0;">用人类学的深度，技术产品洞察 × 包容性设计</h2>
 <p>社会文化人类学、计算机工程与数字媒体复合背景。长期关注文化、技术与日常生活之间的交互地带，热衷于挖掘人们与品牌、产品、系统之间那些未被言说的动机、意义与张力。</p>
 <p>专注电子产品的用户体验与人因工程评估，擅长通过混合研究方法构建用户画像与包容性设计框架。具备神经多样性用户（ADHD、社交障碍等）的交互需求研究经验，为产品的无障碍设计提供循证支持。</p>
 <p>独立音乐爱好者，跑者。对音乐与运动产品的用户感受与行为模式有第一手体感洞察。</p>
@@ -29,7 +30,7 @@ draft: false
 <img src="images/fieldwork/fieldwork-2.jpg" alt="田野现场" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
 </div>
 <div style="flex:1;min-height:0;">
-<img src="images/fieldwork/fieldwork-3.jpg" alt="田野现场" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
+<img src="images/fieldwork/fieldwork-6.jpg" alt="田野现场" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
 </div>
 </div>
 </div>

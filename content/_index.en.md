@@ -4,9 +4,10 @@ date: 2026-05-24T23:00:00+08:00
 draft: false
 ---
 
+<h2>UX Research with Anthropological Depth</h2>
+
 <div style="display:flex;gap:2rem;align-items:flex-start;margin-bottom:2.5rem;">
 <div style="flex:2;min-width:0;">
-<h2 style="margin-top:0;">UX Research with Anthropological Depth</h2>
 <p>Interdisciplinary background in socio-cultural anthropology, computer engineering, and digital media. I focus on the intersection of culture, technology, and everyday life — uncovering the unspoken motivations, meanings, and tensions between people and brands, products, and systems.</p>
 <p>Specialized in user experience and human factors evaluation for electronic products, skilled in building user personas and inclusive design frameworks through mixed research methods. Experienced in interaction needs research for neurodivergent users (ADHD, social disabilities), providing evidence-based support for accessible product design.</p>
 <p>Independent music lover, runner. First-hand embodied insights into user feelings and behavior patterns for music and sports products.</p>
@@ -29,7 +30,7 @@ draft: false
 <img src="images/fieldwork/fieldwork-2.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
 </div>
 <div style="flex:1;min-height:0;">
-<img src="images/fieldwork/fieldwork-3.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
+<img src="images/fieldwork/fieldwork-6.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
 </div>
 </div>
 </div>
