@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Xinhua Han",
+    "label": "UX Researcher",
+    "image": "",
+    "email": "hongyamfa@gmail.com",
+    "phone": "+86 18991322966",
+    "url": "",
+    "summary": "Interdisciplinary background in socio-cultural anthropology, computer engineering, and digital media. Focused on user experience research and human factors evaluation.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "CN",
+      "region": ""
+    },
+    "profiles": []
+  }
+}
