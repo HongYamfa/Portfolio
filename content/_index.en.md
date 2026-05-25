@@ -4,19 +4,44 @@ date: 2026-05-24T23:00:00+08:00
 draft: false
 ---
 
-## UX Research with Anthropological Depth
+<div style="text-align:center;padding:1.5rem 0 2rem;">
+<div style="font-family:var(--font-monospace);font-size:2.25rem;font-weight:700;color:var(--fg0);letter-spacing:0.06em;">Xinhua Han</div>
+<div style="font-family:var(--font-monospace);font-size:0.9rem;color:var(--fg3);margin-top:0.6rem;">Field Worker &nbsp;·&nbsp; UX Researcher</div>
+</div>
 
-Interdisciplinary background in socio-cultural anthropology, computer engineering, and digital media. I focus on the intersection of culture, technology, and everyday life — uncovering the unspoken motivations, meanings, and tensions between people and brands, products, and systems.
+<div style="display:flex;gap:2rem;align-items:flex-start;margin-bottom:2.5rem;">
+<div style="flex:3;min-width:0;">
+<h2 style="margin-top:0;">Anthropological Depth: Tech Product Insights × Inclusive Design</h2>
+<p>Interdisciplinary background in socio-cultural anthropology, computer engineering, and digital media. I focus on the intersection of culture, technology, and everyday life — uncovering the unspoken motivations, meanings, and tensions between people and brands, products, and systems.</p>
+<p>Specialized in user experience and human factors evaluation for electronic products, skilled in building user personas and inclusive design frameworks through mixed research methods. Experienced in interaction needs research for neurodivergent users (ADHD, social disabilities), providing evidence-based support for accessible product design.</p>
+<p>Independent music lover, runner. First-hand embodied insights into user feelings and behavior patterns for music and sports products.</p>
+</div>
+<div style="flex:2;min-width:160px;max-width:260px;flex-shrink:0;">
+<img src="images/fieldwork/fieldwork-0.jpg" alt="Fieldwork" style="width:100%;border-radius:4px;display:block;">
+</div>
+</div>
 
-Specialized in user experience and human factors evaluation for electronic products, skilled in building user personas and inclusive design frameworks through mixed research methods. Experienced in interaction needs research for neurodivergent users (ADHD, social disabilities), providing evidence-based support for accessible product design.
+<hr>
 
-Independent music lover, runner. First-hand embodied insights into user feelings and behavior patterns for music and sports products.
+<h2>Fieldwork Snapshots</h2>
 
----
+<div style="display:flex;gap:6px;height:360px;margin-top:1rem;">
+<div style="flex:1;min-width:0;">
+<img src="images/fieldwork/fieldwork-1.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
+</div>
+<div style="flex:2;min-width:0;display:flex;flex-direction:column;gap:6px;">
+<div style="flex:1;min-height:0;">
+<img src="images/fieldwork/fieldwork-2.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
+</div>
+<div style="flex:1;min-height:0;">
+<img src="images/fieldwork/fieldwork-3.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
+</div>
+</div>
+</div>
 
-## Fieldwork Snapshots
+<hr>
 
-<img src="images/fieldwork/fieldwork-0.jpg" alt="Fieldwork" loading="lazy" />
-<img src="images/fieldwork/fieldwork-1.jpg" alt="Fieldwork" loading="lazy" />
-<img src="images/fieldwork/fieldwork-2.jpg" alt="Fieldwork" loading="lazy" />
-<img src="images/fieldwork/fieldwork-3.jpg" alt="Fieldwork" loading="lazy" />
+<div style="text-align:center;padding:1.5rem 0;font-family:var(--font-monospace);font-size:0.875rem;color:var(--fg3);line-height:2.2;">
+<div>hongyamfa@gmail.com</div>
+<div><a href="https://www.linkedin.com/in/xinhua-han">linkedin.com/in/xinhua-han</a></div>
+</div>
