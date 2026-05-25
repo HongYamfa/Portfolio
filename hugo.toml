@@ -62,6 +62,9 @@ title = '韩鑫华'
     minFontSizeRem = 0.8
     maxFontSizeRem = 2.0
 
+# Disable post list on homepage
+mainSections = []
+
 [languages]
   [languages.zh-cn]
     languageName = "中文"
@@ -73,13 +76,13 @@ title = '韩鑫华'
       weight = 10
     [[languages.zh-cn.menus.main]]
       identifier = "portfolio"
-      name = "作品集"
+      name = "项目集"
       url = "/portfolio/"
       weight = 20
     [[languages.zh-cn.menus.main]]
       identifier = "about"
-      name = "关于我"
-      url = "/about/"
+      name = "简历"
+      url = "/resume/"
       weight = 30
 
   [languages.en]
@@ -92,13 +95,13 @@ title = '韩鑫华'
       weight = 10
     [[languages.en.menus.main]]
       identifier = "portfolio"
-      name = "Portfolio"
+      name = "Projects"
       url = "/portfolio/"
       weight = 20
     [[languages.en.menus.main]]
       identifier = "about"
-      name = "About"
-      url = "/about/"
+      name = "Resume"
+      url = "/resume/"
       weight = 30
 
 [module]

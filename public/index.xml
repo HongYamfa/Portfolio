@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on My New Hugo Project</title>
-    <link>https://example.org/</link>
-    <description>Recent content in Home on My New Hugo Project</description>
+    <title>韩鑫华</title>
+    <link>http://localhost:1313/Portfolio/</link>
+    <description>Recent content on 韩鑫华</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>zh-cn</language>
     <lastBuildDate>Sun, 24 May 2026 23:00:00 +0800</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About</title>
-      <link>https://example.org/about/</link>
+      <title>简历</title>
+      <link>http://localhost:1313/Portfolio/resume/</link>
       <pubDate>Sun, 24 May 2026 23:00:00 +0800</pubDate>
-      <guid>https://example.org/about/</guid>
-      <description>&lt;h2 id=&#34;xinhua-han&#34;&gt;Xinhua Han&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Socio-cultural Anthropology × Computer Engineering × Digital Media | UX Researcher&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;I focus on the intersection of culture, technology, and everyday life. I am passionate about uncovering the unspoken motivations, meanings, and tensions between people and brands, products, and systems, and transforming these insights into narratives and strategies that product and strategy teams can use.&lt;/p&gt;&#xA;&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;KU Leuven (QS: 60)&lt;/strong&gt; | 2023.09 — 2026.09&lt;br&gt;&#xA;MSc in Socio-cultural Anthropology (Distinction)&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cross-Cultural AI Product User Cognition and Inclusive Design Research</title>
-      <link>https://example.org/portfolio/crosscultural-ai/</link>
-      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/portfolio/crosscultural-ai/</guid>
-      <description>Master&amp;rsquo;s thesis and survey project. Led a longitudinal study of 30 core users, conducted 50+ in-depth interviews and multi-round digital behavior monitoring, and established interaction need assessment dimensions for neurodiverse users (ADHD, social &amp;amp; reading disorders).</description>
-    </item>
-    <item>
-      <title>Theoretical Grounding: From Animism to Digital Materiality</title>
-      <link>https://example.org/portfolio/theoretical-grounding/</link>
-      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://example.org/portfolio/theoretical-grounding/</guid>
-      <description>Academic portfolio. Systematically traces theoretical threads from animism to digital materiality, exploring how technology reshapes human-world relations and how digital interfaces become social actors.</description>
-    </item>
-    <item>
-      <title>Digital Governance Product Mental Model Mismatch: Health Code System Case Study</title>
-      <link>https://example.org/portfolio/healthcode/</link>
-      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://example.org/portfolio/healthcode/</guid>
-      <description>Independent fieldwork project. Designed user voice collection protocol, built web scraper capturing 10K+ user feedback posts, established emotional evolution monitoring model and demand prioritization matrix, conducted 20+ in-depth interviews across 6 user personas.</description>
+      <guid>http://localhost:1313/Portfolio/resume/</guid>
+      <description>&lt;h2 id=&#34;教育背景&#34;&gt;教育背景&lt;a href=&#34;#%e6%95%99%e8%82%b2%e8%83%8c%e6%99%af&#34; class=&#34;post-heading__anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;比利时 鲁汶大学（KU Leuven · QS #60）&lt;/strong&gt; | 2023.09 — 2026.09&#xA;社会文化人类学 · 理学硕士（优等 / Distinction）&lt;/p&gt;&#xA;&lt;p&gt;主修：文化、亲密关系与关联性；移民与流动性；后人类主义人类学；语言世界中的多样性与不平等&#xA;毕业论文：《再造意义：中国留学生如何在多元学习资源下重塑自我》——聚焦跨文化背景下数字化工具对用户行为认知模式的重构，构建用户分层心智模型。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;德国 海德堡大学（Heidelberg University · QS #80）&lt;/strong&gt; | 2025.10 — 2026.03&#xA;Erasmus+ 交换生&lt;/p&gt;&#xA;&lt;p&gt;研究方向：生成式 AI 如何重塑非字母文明的思考与表达，以及在不同文化生态下形成的伦理道德挑战。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;英国 斯旺西大学（Swansea University）&lt;/strong&gt; | 2022.09 — 2023.09&#xA;数字媒体 · 文学硕士（优等 / Distinction）&lt;/p&gt;&#xA;&lt;p&gt;主修：数字化革命；全球化媒体；数字前沿：当代问题和趋势；数字媒体的商业与政治&#xA;毕业论文：《语言是智能需要的一切吗？对人工智能与语言媒介的反思》——在 ChatGPT 广泛流行前预判生成式 AI 对习惯模式与产品期望的颠覆性影响，并完成经验研究的理论框架。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;strong&gt;四川大学&lt;/strong&gt; | 2017 — 2021&#xA;网络空间安全 · 工学学士&lt;/p&gt;&#xA;&lt;p&gt;核心课程：数字逻辑；数据结构与算法；计算机通信与网络&#xA;毕业设计：基于时序神经网络的情感分析研究。主导创新创业计划项目&amp;quot;基于主题建模的网络舆情主流观点挖掘技术研究&amp;quot;，获软件著作权，并在 2020 年网络技术挑战赛斩获西南赛区一等奖（省级）。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;核心技能&#34;&gt;核心技能&lt;a href=&#34;#%e6%a0%b8%e5%bf%83%e6%8a%80%e8%83%bd&#34; class=&#34;post-heading__anchor&#34; aria-hidden=&#34;true&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;研究方法&lt;/strong&gt;&#xA;深度访谈 · 焦点小组 · 参与观察 · 可用性测试 · 服务蓝图 · 数字行为追踪 · 多角色体验地图&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

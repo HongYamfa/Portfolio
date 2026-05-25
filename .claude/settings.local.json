@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\18991\\\\AppData\\\\Local\\\\hugo_cache\\\\modules\\\\filecache\" -Recurse -Depth 5 | Where-Object { $_.Name -match \"gruvbox|sidebar|profile|home\" } | Select-Object FullName | Select-Object -First 20)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\18991\\\\AppData\\\\Local\\\\hugo_cache\\\\modules\\\\filecache\\\\modules\" -Recurse -Depth 6 | Where-Object { !$_.PSIsContainer } | Select-Object FullName | Select-Object -First 30)",
+      "PowerShell(hugo list all 2>&1)",
+      "PowerShell(hugo mod graph 2>&1)",
+      "PowerShell(hugo mod vendor 2>&1)",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Users\\\\18991\\\\Portfolio\\\\layouts\\\\partials\\\\json-resume\")"
+    ]
+  }
+}
