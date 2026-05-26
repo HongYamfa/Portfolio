@@ -21,7 +21,7 @@ draft: false
 
 <h2>Fieldwork Snapshots</h2>
 
-<div style="display:flex;gap:6px;height:360px;margin-top:1rem;max-width:700px;margin-left:auto;margin-right:auto;">
+<div style="display:flex;gap:6px;height:360px;margin-top:1rem;max-width:900px;margin-left:auto;margin-right:auto;">
 <div style="flex:1;min-width:0;">
 <img src="images/fieldwork/fieldwork-1.jpg" alt="Fieldwork" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
 </div>

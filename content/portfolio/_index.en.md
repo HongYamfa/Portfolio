@@ -13,7 +13,7 @@ Below are research projects and fieldwork I have led or participated in.
 
 Led a longitudinal study of 30 core users, conducted 50+ in-depth interviews and multi-round digital behavior monitoring, and established interaction need assessment dimensions for neurodivergent users.
 
-[View Full Report](MA_Thesis_Portfolio_CrossCultural_AI.html)
+[View Full Report](Crosscultural_AI_Thesis_en.html)
 
 ---
 
@@ -24,7 +24,7 @@ Led a longitudinal study of 30 core users, conducted 50+ in-depth interviews and
 
 Designed user voice collection protocol, built web scraper capturing 10K+ user feedback posts, established emotional evolution monitoring model and demand prioritization matrix.
 
-[View Full Report](HealthCode_Ethnography.html)
+[View Full Report](Healthcode_ethnography_en.html)
 
 ---
 
@@ -34,4 +34,4 @@ Designed user voice collection protocol, built web scraper capturing 10K+ user f
 
 Systematically traces theoretical threads from animism to digital materiality, exploring how technology reshapes human-world relations.
 
-[View Full Report](Academic_Portfolio_Theoretical_Grounding.html)
+[View Full Report](Academic_Portfolio_Theoretical_Grounding_en.html)

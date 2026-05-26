@@ -13,7 +13,7 @@ draft: false
 
 主导 30 人核心用户的纵向追踪研究，执行 50+ 场深度访谈与多轮数字行为监测，建立神经多样性用户（ADHD/社交&阅读障碍等）的交互需求评估维度。
 
-[查看完整报告](MA_Thesis_Portfolio_CrossCultural_AI.html)
+[查看完整报告](Crosscultural_AI_Thesis_zh.html)
 
 ---
 
@@ -24,7 +24,7 @@ draft: false
 
 设计用户声音采集方案，编写爬虫工具抓取 1 万条+用户反馈，建立情感演化监测模型与诉求优先级矩阵，针对 6 类用户画像执行 20+ 场深度访谈。
 
-[查看完整报告](HealthCode_Ethnography.html)
+[查看完整报告](Healthcode_ethnography_zh.html)
 
 ---
 
@@ -34,4 +34,4 @@ draft: false
 
 系统梳理从万物有灵论到数字物质性的理论脉络，探讨技术如何重塑人与世界的关系，以及数字界面如何成为社会行动者。
 
-[查看完整报告](Academic_Portfolio_Theoretical_Grounding.html)
+[查看完整报告](Academic_Portfolio_Theoretical_Grounding_zh.html)
