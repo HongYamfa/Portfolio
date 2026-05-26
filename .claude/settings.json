@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/18991/AppData/Local/hugo_cache/modules/filecache/modules/pkg/mod/github.com/schnerring/hugo-theme-gruvbox@v0.0.0-20251001122453-81058f53a809/**)",
+      "Bash(xargs grep -l \"logo\")",
+      "Bash(Get-ChildItem -Recurse -Filter \"*.html\" \"C:\\\\Users\\\\18991\\\\AppData\\\\Local\\\\hugo_cache\\\\modules\\\\filecache\\\\modules\\\\pkg\\\\mod\\\\github.com\\\\schnerring\\\\hugo-theme-gruvbox@v0.0.0-20251001122453-81058f53a809\\\\layouts\")",
+      "Bash(Select-String -Pattern \"logo\")",
+      "Bash(Select-Object -First 10)"
+    ]
+  }
+}
