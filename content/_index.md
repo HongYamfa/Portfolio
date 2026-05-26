@@ -4,7 +4,7 @@ date: 2026-05-24T23:00:00+08:00
 draft: false
 ---
 
-<h2>用自然科学的精细度，人文科学的深度，社会科学的广度，投身于技术产品洞察和包容性设计</h2>
+<h2>用自然科学的精度，人文科学的深度，社会科学的广度，投身于技术产品洞察和包容性设计</h2>
 
 <div style="display:flex;gap:2rem;align-items:flex-start;margin-bottom:2.5rem;">
 <div style="flex:2;min-width:0;">

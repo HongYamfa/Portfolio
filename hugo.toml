@@ -91,17 +91,17 @@ mainSections = []
     [[languages.en.menus.main]]
       identifier = "home"
       name = "Home"
-      url = "/"
+      url = "/en/"
       weight = 10
     [[languages.en.menus.main]]
       identifier = "portfolio"
       name = "Projects"
-      url = "/portfolio/"
+      url = "/en/portfolio/"
       weight = 20
     [[languages.en.menus.main]]
       identifier = "about"
       name = "Resume"
-      url = "/resume/"
+      url = "/en/resume/"
       weight = 30
 
 [module]
