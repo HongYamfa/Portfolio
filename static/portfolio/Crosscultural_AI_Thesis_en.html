@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross-Cultural Learning & AI Adoption — Ethnography Portfolio | Xinhua Han</title>
+    <style>
+        :root {
+            --bg: #f8f7f4;
+            --text: #1c1917;
+            --text-secondary: #78716c;
+            --accent-teal: #0f766e;
+            --accent-rose: #be123c;
+            --accent-indigo: #4338ca;
+            --accent-amber: #b45309;
+            --accent-green: #059669;
+            --border: #e7e5e4;
+            --card: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        header {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0; width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(67,56,202,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin-bottom: 32px;
+        }
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .meta-item strong {
+            color: var(--text);
+            display: block;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+        .section {
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 600;
+        }
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent-indigo);
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Research Context */
+        .context-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 32px;
+            margin-top: 8px;
+        }
+        .context-box h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .context-box p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .context-box .highlight {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* Personas */
+        .personas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .persona-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .persona-card:hover { transform: translateY(-3px); }
+        .persona-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+        }
+        .persona-card.teal::before { background: var(--accent-teal); }
+        .persona-card.rose::before { background: var(--accent-rose); }
+        .persona-card.indigo::before { background: var(--accent-indigo); }
+        .persona-card.amber::before { background: var(--accent-amber); }
+        .persona-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 100px;
+            margin-bottom: 14px;
+        }
+        .persona-card.teal .persona-tag { background: rgba(15,118,110,0.08); color: var(--accent-teal); }
+        .persona-card.rose .persona-tag { background: rgba(190,18,60,0.08); color: var(--accent-rose); }
+        .persona-card.indigo .persona-tag { background: rgba(67,56,202,0.08); color: var(--accent-indigo); }
+        .persona-card.amber .persona-tag { background: rgba(180,83,9,0.08); color: var(--accent-amber); }
+        .persona-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .persona-traits {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .quote-box {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+            border-left: 3px solid var(--border);
+            margin-bottom: 14px;
+        }
+        .persona-card.teal .quote-box { border-left-color: var(--accent-teal); }
+        .persona-card.rose .quote-box { border-left-color: var(--accent-rose); }
+        .persona-card.indigo .quote-box { border-left-color: var(--accent-indigo); }
+        .persona-card.amber .quote-box { border-left-color: var(--accent-amber); }
+        .insight-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .insight-pill span { display: inline-block; width: 6px; height: 6px; border-radius: 50%; }
+        .persona-card.teal .insight-pill span { background: var(--accent-teal); }
+        .persona-card.rose .insight-pill span { background: var(--accent-rose); }
+        .persona-card.indigo .insight-pill span { background: var(--accent-indigo); }
+        .persona-card.amber .insight-pill span { background: var(--accent-amber); }
+
+        /* Journey */
+        .journey-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 24px;
+        }
+        .journey-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .journey-title .dot {
+            width: 10px; height: 10px;
+            background: var(--accent-amber);
+            border-radius: 50%;
+        }
+        .emotion-curve {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 160px;
+            padding: 0 8px;
+            margin-bottom: 24px;
+            position: relative;
+        }
+        .emotion-curve::before {
+            content: "";
+            position: absolute;
+            top: 50%; left: 0; right: 0;
+            height: 1px;
+            background: var(--border);
+        }
+        .emotion-point {
+            text-align: center;
+            flex: 1;
+            position: relative;
+        }
+        .emotion-bar {
+            width: 40px;
+            margin: 0 auto 8px;
+            border-radius: 6px 6px 0 0;
+            transition: height 0.3s;
+        }
+        .emotion-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .emotion-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+            max-width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Insights */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .insight-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 32px;
+            position: relative;
+        }
+        .insight-card .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .insight-card .number {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 42px;
+            font-weight: 700;
+            color: rgba(67,56,202,0.08);
+            line-height: 1;
+        }
+        .insight-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            padding-right: 50px;
+        }
+        .insight-card .verbatim {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 2px solid var(--border);
+            padding-left: 12px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .insight-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .arrow {
+            color: var(--accent-indigo);
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        /* Methodology */
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .method-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+        }
+        .method-icon {
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+        .method-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .method-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 64px 0 80px;
+            text-align: center;
+        }
+        .footer-quote {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+        }
+        .footer-contact {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .footer-contact a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        .footer-contact a:hover {
+            border-color: var(--text);
+        }
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 100px;
+            background: var(--text);
+            color: var(--bg);
+            margin-bottom: 24px;
+        }
+        .section-summary {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 32px; }
+            .section { padding: 48px 0; }
+            header { padding: 60px 0 36px; }
+            .journey-section { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="eyebrow">Longitudinal Ethnography — Cross-Cultural Product Adoption</div>
+        <h1>When AI Meets Cultural Learning:<br>How International Students<br>Rebuild Their Cognitive Toolkit</h1>
+        <p class="subtitle">
+            A two-year immersion study tracking how Chinese postgraduate students in Europe renegotiate their learning habits, social expectations, and sense of agency when confronted with AI tools and unfamiliar pedagogical cultures — and what this means for products serving cross-cultural users.
+        </p>
+        <div class="meta">
+            <div class="meta-item"><strong>Role</strong>Independent Researcher</div>
+            <div class="meta-item"><strong>Methods</strong>Longitudinal Interviews, Auto-ethnography, Digital Behavior Tracking, Social Listening</div>
+            <div class="meta-item"><strong>Duration</strong>Sept 2024 – July 2025 (10 months formal research; Sept 2023 – July 2025 incl. auto-ethnography)</div>
+            <div class="meta-item"><strong>Scale</strong>25 interlocutors, 10 key participants with follow-ups</div>
+        </div>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>Study at a Glance</h2>
+        <div class="overview-grid">
+            <div class="stat-card">
+                <div class="stat-number">10mo</div>
+                <div class="stat-label">Formal fieldwork; 2 years incl. auto-ethnographic calibration (Sept 2023 – July 2025)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">25</div>
+                <div class="stat-label">Interlocutors across humanities, social sciences, and philosophy programs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10</div>
+                <div class="stat-label">Key interlocutors with 2+ follow-up interviews each, plus auto-ethnographic field notes and social-media observation</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Distinct cognitive profiles identified from behavioral patterns, with 10 key participants tracked across multiple semesters</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Research Context — Why This Matters</h2>
+        <div class="context-box">
+            <h3>The Problem: AI Tools Designed for "Users," Not for "Learners in Transition"</h3>
+            <p>
+                By late 2024, generative AI had become ubiquitous in higher education. Product teams optimistically assume that AI assistants lower barriers for all students equally. <span class="highlight">But for Chinese international students navigating unfamiliar pedagogical cultures — where classroom discussion is graded, oral exams determine pass/fail, and "critical thinking" means something different than it does in Beijing — AI is not just a tool. It is a cognitive prosthetic, a social interlocutor, and an identity threat all at once.</span>
+            </p>
+            <p>
+                The study was born from a personal paradox: as a Chinese student trained in cybersecurity (Sichuan University) turned anthropologist (KU Leuven), I watched my peers — and myself — develop intricate, often contradictory relationships with ChatGPT. Some treated it as a "brainful yet brainless" companion that liberated productivity. Others saw it as eroding the very skills they came abroad to acquire. Still others used it to compensate for neurodivergent challenges (self-identified ADHD, Asperger's, dyslexia) that the traditional classroom ignored.
+            </p>
+            <p>
+                <span class="highlight">This research asks: What does "user-centered design" mean when the user is simultaneously adapting to a new culture, a new language, and a new cognitive toolkit? How do products inadvertently amplify the very anxieties they claim to solve?</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>User Archetypes — Four Ways of Being Stuck</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            Each participant arrived with a different "cognitive operating system" shaped by their educational history, neurodivergent profile, and relationship with authority. The same classroom, the same AI tool, and the same discussion format produced four entirely different experiences of friction and adaptation.
+        </p>
+        <div class="personas">
+            <div class="persona-card teal">
+                <div class="persona-tag">Intuition-Driven</div>
+                <div class="persona-name">The Reluctant Performer</div>
+                <div class="persona-traits">Former journalist · Neurodivergent (self-identified Asperger's, ADHD, dyslexia) · High social anxiety · "Small-street-smart" learning style</div>
+                <div class="quote-box">"I just don't want to discuss. The questions for discussion are worthless. Better to spend that time doing something real."</div>
+                <div class="insight-pill"><span></span> Classroom discussion feels like forced theatrical performance, not learning</div>
+            </div>
+            <div class="persona-card rose">
+                <div class="persona-tag">Goal-Oriented</div>
+                <div class="persona-name">The Structured Adapter</div>
+                <div class="persona-traits">Former teacher · ChatGPT power-user · Extroverted but anxious · Views exchange as transaction</div>
+                <div class="quote-box">"Talking to others is just exchanging viewpoints. I don't see why it has to be so emotional."</div>
+                <div class="insight-pill"><span></span> AI becomes a "cognitive prosthetic" for tasks that feel socially inefficient</div>
+            </div>
+            <div class="persona-card indigo">
+                <div class="persona-tag">System-Seeking</div>
+                <div class="persona-name">The Collapsing Optimizer</div>
+                <div class="persona-traits">Former philosophy student · High self-efficacy · First-semester breakdown · Productivity-system collapse under new institutional logic</div>
+                <div class="quote-box">"I thought I could handle it. Then the first semester hit, and I realized my entire system didn't work here."</div>
+                <div class="insight-pill"><span></span> Productivity systems imported from home culture collapse under new institutional logic</div>
+            </div>
+            <div class="persona-card amber">
+                <div class="persona-tag">Multi-Layered</div>
+                <div class="persona-name">The Gradual Transformer</div>
+                <div class="persona-traits">Long-term observer · ChatGPT dependent · Three-year trajectory visible · Multiple diagnoses · Narrative thinker averse to argumentative essays</div>
+                <div class="quote-box">"Looking back, I can't tell whether I adapted to the system or the system finally gave up on changing me."</div>
+                <div class="insight-pill"><span></span> Long-term adaptation may be camouflaged resignation, not genuine integration</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Critical Findings — Emotional Arc &amp; Core Discoveries</h2>
+
+        <div class="journey-section">
+            <div class="journey-title"><div class="dot"></div>Emotional Trajectory: From Honeymoon to Double Bind</div>
+            <div class="emotion-curve">
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:80px;background:var(--accent-teal);"></div>
+                    <div class="emotion-label">Month 1-3</div>
+                    <div class="emotion-desc">Excited, overwhelmed, "everything is possible"</div>
+                </div>
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:45px;background:var(--accent-amber);"></div>
+                    <div class="emotion-label">Month 4-6</div>
+                    <div class="emotion-desc">Confused, self-blame, "why can't I keep up?"</div>
+                </div>
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:25px;background:var(--accent-rose);"></div>
+                    <div class="emotion-label">Month 7-12</div>
+                    <div class="emotion-desc">Numb, cynical, "this is just how it is"</div>
+                </div>
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:55px;background:var(--accent-indigo);"></div>
+                    <div class="emotion-label">Year 2</div>
+                    <div class="emotion-desc">Strategic, selective, "I take what I need"</div>
+                </div>
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:70px;background:var(--accent-teal);"></div>
+                    <div class="emotion-label">Graduation</div>
+                    <div class="emotion-desc">Ambivalent pride, unresolved grief</div>
+                </div>
+            </div>
+            <div class="section-summary">
+                <strong>Key insight:</strong> The emotional curve does not follow a simple "culture shock" U-shape. It plateaus in a <em>double bind</em> — participants feel they must perform a version of themselves they do not believe in, while abandoning skills they once trusted. Products designed for "international students" often target the honeymoon phase and miss the long-tail crisis.
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>From Insight to Strategy</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            Six core findings extracted from longitudinal interview data, classroom observations, and digital behavior tracking. Each finding connects ethnographic observation to product strategy.
+        </p>
+
+        <div class="insights-grid">
+            <div class="insight-card">
+                <div class="label">Field Finding 01</div>
+                <div class="number">01</div>
+                <h3>The Parallel-Classroom Effect</h3>
+                <div class="verbatim">"Every time we've had a group discussion, it feels like we're two parallel worlds separated by glass." — Social media post</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> Collaboration features cannot assume shared cultural norms for "discussion." Real-time translation or shared documents do not bridge fundamentally different turn-taking, disagreement, and silence protocols. <em>Build culture-setting onboarding, not just language tools.</em></p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Field Finding 02</div>
+                <div class="number">02</div>
+                <h3>ChatGPT as "Brainful yet Brainless" Social Interlocutor</h3>
+                <div class="verbatim">"ChatGPT is the only one who understands what I am trying to say before I have finished saying it." — Interview</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> The killer feature for cross-cultural users is not accuracy but <em>interpretive generosity</em> — the ability to reconstruct half-formed thoughts without shaming the user. Current AI products optimize for correctness; they should optimize for <em>recognition</em> and <em>emotional safety</em>.</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Field Finding 03</div>
+                <div class="number">03</div>
+                <h3>The Workshop Portfolio Trap</h3>
+                <div class="verbatim">"The workshop is basically writing over and over with a half-baked framework, then realising the framework doesn't work — but for the sake of this course, I still have to cobble something together."</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> Process-tracking features (version history, iteration logs) can become <em>surveillance tools</em> when the institutional culture values performative struggle over outcome. Users will game the system to produce the appearance of process. <em>Design for authentic workflow, not visible effort.</em></p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Field Finding 04</div>
+                <div class="number">04</div>
+                <h3>Oracy vs. Literacy — The Hidden Interface War</h3>
+                <div class="verbatim">"I can write a perfect essay in Chinese. But here, if you cannot talk fast and loud in class, you are invisible."</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> EdTech platforms that prioritize video responses, live chat, or verbal Q&amp;A systematically disadvantage users from high-literacy cultures. Multimodal submission options (text, voice, visual) are not accessibility luxuries; they are <em>equity requirements</em> for cross-cultural products.</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Field Finding 05</div>
+                <div class="number">05</div>
+                <h3>Neurodiversity as Cultural, Not Clinical</h3>
+                <div class="verbatim">"I stopped going to discussions. I just read what other people wrote and built my arguments from there. It was more reliable than the chaos of the room."</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> "Inclusive design" often focuses on screen readers and color contrast. But for neurodivergent users in high-stakes social environments, the real need is <em>asynchronous, structured information architectures</em> that replace real-time social negotiation with predictable, navigable data flows.</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Field Finding 06</div>
+                <div class="number">06</div>
+                <h3>Authorship Anxiety in the Age of AI</h3>
+                <div class="verbatim">"I can't tell anymore whether I am thinking or just approving what the machine suggests."</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> AI writing assistants need <em>provenance features</em> — not to detect plagiarism, but to help users reconstruct their own decision trail. "I chose this word because..." functions as an identity anchor in a sea of algorithmic suggestions. <em>Design for authorship continuity, not just output quality.</em></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Methodology — How the Study Was Built</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            The research was framed as an ethnographic experiment of encounter, drawing on Gregory Bateson's ecology of mind and Tim Ingold's correspondence anthropology. Methodological rigor was maintained through multi-scalar, digital, and dialogical approaches.
+        </p>
+        <div class="method-grid">
+            <div class="method-card">
+                <div class="method-icon">🪞</div>
+                <h3>Auto-ethnography</h3>
+                <p>The researcher was simultaneously insider (Chinese international student) and outsider (anthropologist), using self-observation to calibrate interview questions and identify blind spots across two years of personal transition.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">📱</div>
+                <h3>Digital Behavior Tracking</h3>
+                <p>Participants shared screenshots of ChatGPT conversations, learning-platform logs, and social-media posts, creating a longitudinal digital trace alongside verbal interviews — capturing what people do, not just what they say.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">🎭</div>
+                <h3>Social Listening</h3>
+                <p>Systematic collection of anonymous posts by Chinese international students on Xiaohongshu and WeChat, capturing emotions too raw to express in formal interviews — the "shadow conversations" that formal methods miss.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">🔄</div>
+                <h3>Longitudinal Design</h3>
+                <p>Same participants interviewed across four semesters, tracking how their relationship to tools, institutions, and their own identities transformed over time — not as a snapshot, but as a film. Follow-ups calibrated to academic calendar stress points.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="badge">Xinhua Han — Fieldworker</div>
+        <p class="footer-quote">
+            "Continuous footage is the film itself. For the ethnographer, the unedited sequence of encounters contains the desire object — and the theory."
+        </p>
+        <p class="footer-contact">
+            MSc Social &amp; Cultural Anthropology &amp; Digital Media · BEng Computer Engineering<br><br>
+            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

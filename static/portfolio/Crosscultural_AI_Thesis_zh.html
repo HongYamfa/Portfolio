@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跨文化学习与AI采纳 — 民族志研究案例 | 韩鑫华</title>
+    <style>
+        :root {
+            --bg: #f8f7f4;
+            --text: #1c1917;
+            --text-secondary: #78716c;
+            --accent-teal: #0f766e;
+            --accent-rose: #be123c;
+            --accent-indigo: #4338ca;
+            --accent-amber: #b45309;
+            --accent-green: #059669;
+            --border: #e7e5e4;
+            --card: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        header {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0; width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(67,56,202,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin-bottom: 32px;
+        }
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .meta-item strong {
+            color: var(--text);
+            display: block;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+        .section {
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 600;
+        }
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent-indigo);
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Research Context */
+        .context-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 32px;
+            margin-top: 8px;
+        }
+        .context-box h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .context-box p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .context-box .highlight {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* Personas */
+        .personas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .persona-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .persona-card:hover { transform: translateY(-3px); }
+        .persona-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+        }
+        .persona-card.teal::before { background: var(--accent-teal); }
+        .persona-card.rose::before { background: var(--accent-rose); }
+        .persona-card.indigo::before { background: var(--accent-indigo); }
+        .persona-card.amber::before { background: var(--accent-amber); }
+        .persona-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 100px;
+            margin-bottom: 14px;
+        }
+        .persona-card.teal .persona-tag { background: rgba(15,118,110,0.08); color: var(--accent-teal); }
+        .persona-card.rose .persona-tag { background: rgba(190,18,60,0.08); color: var(--accent-rose); }
+        .persona-card.indigo .persona-tag { background: rgba(67,56,202,0.08); color: var(--accent-indigo); }
+        .persona-card.amber .persona-tag { background: rgba(180,83,9,0.08); color: var(--accent-amber); }
+        .persona-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .persona-traits {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .quote-box {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+            border-left: 3px solid var(--border);
+            margin-bottom: 14px;
+        }
+        .persona-card.teal .quote-box { border-left-color: var(--accent-teal); }
+        .persona-card.rose .quote-box { border-left-color: var(--accent-rose); }
+        .persona-card.indigo .quote-box { border-left-color: var(--accent-indigo); }
+        .persona-card.amber .quote-box { border-left-color: var(--accent-amber); }
+        .insight-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .insight-pill span { display: inline-block; width: 6px; height: 6px; border-radius: 50%; }
+        .persona-card.teal .insight-pill span { background: var(--accent-teal); }
+        .persona-card.rose .insight-pill span { background: var(--accent-rose); }
+        .persona-card.indigo .insight-pill span { background: var(--accent-indigo); }
+        .persona-card.amber .insight-pill span { background: var(--accent-amber); }
+
+        /* Journey */
+        .journey-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 24px;
+        }
+        .journey-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .journey-title .dot {
+            width: 10px; height: 10px;
+            background: var(--accent-amber);
+            border-radius: 50%;
+        }
+        .emotion-curve {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 160px;
+            padding: 0 8px;
+            margin-bottom: 24px;
+            position: relative;
+        }
+        .emotion-curve::before {
+            content: "";
+            position: absolute;
+            top: 50%; left: 0; right: 0;
+            height: 1px;
+            background: var(--border);
+        }
+        .emotion-point {
+            text-align: center;
+            flex: 1;
+            position: relative;
+        }
+        .emotion-bar {
+            width: 40px;
+            margin: 0 auto 8px;
+            border-radius: 6px 6px 0 0;
+            transition: height 0.3s;
+        }
+        .emotion-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .emotion-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+            max-width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Insights */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .insight-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 32px;
+            position: relative;
+        }
+        .insight-card .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .insight-card .number {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 42px;
+            font-weight: 700;
+            color: rgba(67,56,202,0.08);
+            line-height: 1;
+        }
+        .insight-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            padding-right: 50px;
+        }
+        .insight-card .verbatim {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 2px solid var(--border);
+            padding-left: 12px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .insight-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .arrow {
+            color: var(--accent-indigo);
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        /* Methodology */
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .method-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+        }
+        .method-icon {
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+        .method-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .method-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 64px 0 80px;
+            text-align: center;
+        }
+        .footer-quote {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+        }
+        .footer-contact {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .footer-contact a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        .footer-contact a:hover {
+            border-color: var(--text);
+        }
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 100px;
+            background: var(--text);
+            color: var(--bg);
+            margin-bottom: 24px;
+        }
+        .section-summary {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 32px; }
+            .section { padding: 48px 0; }
+            header { padding: 60px 0 36px; }
+            .journey-section { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="eyebrow">纵向民族志 — 跨文化产品采纳</div>
+        <h1>当AI遇上文化学习：<br>留学生如何<br>重建认知工具箱</h1>
+        <p class="subtitle">
+            一项为期两年的沉浸式追踪研究：中国研究生在欧洲如何重新协商学习习惯、社会期望与能动性，当面对AI工具与不熟悉的教学文化时 — 以及这对服务跨文化用户的产品意味着什么。
+        </p>
+        <div class="meta">
+            <div class="meta-item"><strong>角色</strong>独立研究者</div>
+            <div class="meta-item"><strong>方法</strong>纵向访谈、自我民族志、数字行为追踪、社媒聆听</div>
+            <div class="meta-item"><strong>周期</strong>2024.09 – 2025.07（10个月正式研究；2023.09 – 2025.07 含自我民族志）</div>
+            <div class="meta-item"><strong>规模</strong>25 位受访者，10 位核心受访者多次回访</div>
+        </div>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>研究概览</h2>
+        <div class="overview-grid">
+            <div class="stat-card">
+                <div class="stat-number">10个月</div>
+                <div class="stat-label">正式田野工作；含自我民族志校准共2年（2023.09 – 2025.07）</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">25</div>
+                <div class="stat-label">受访者，覆盖人文、社科与哲学项目</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10</div>
+                <div class="stat-label">核心受访者每人 2+ 次回访，配合自我民族志田野笔记与社媒观察</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">认知原型，基于行为模式识别，10 位核心受访者跨学期追踪</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>研究背景 — 为什么重要</h2>
+        <div class="context-box">
+            <h3>研究问题：为"用户"设计的AI工具，而非为"转型中的学习者"</h3>
+            <p>
+                到2024年底，生成式AI在高等教育中已无处不在。产品团队乐观地认为AI助手为所有学生平等地降低了门槛。<span class="highlight">但对于正在适应不熟悉教学文化的中国留学生 — 课堂讨论算分、口试决定挂科、"批判性思维"在北京和在布鲁塞尔意味着不同的东西 — AI不只是工具。它同时是认知假体、社交对话者和身份威胁。</span>
+            </p>
+            <p>
+                这项研究诞生于一个个人悖论：作为从网络安全（四川大学）转向人类学（鲁汶大学）的中国学生，我目睹我的同伴 — 以及我自己 — 与ChatGPT建立起复杂而常常矛盾的关系。有人视它为"有脑子又没脑子"的伙伴，解放了生产力。有人认为它在侵蚀他们出国本欲习得的核心能力。还有人用它来补偿传统课堂忽视的神经多样性挑战（自我诊断的ADHD、阿斯伯格、阅读障碍）。
+            </p>
+            <p>
+                <span class="highlight">本研究追问：当用户同时在适应新文化、新语言和新认知工具箱时，"以用户为中心的设计"意味着什么？产品如何不经意间放大了它们声称要解决的焦虑？</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>用户原型 — 四种"卡住了"的状态</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            每位参与者带着由教育历史、神经多样性档案和权威关系塑造的不同"认知操作系统"而来。同一个课堂、同一个AI工具、同一个讨论形式产生了四种完全不同的摩擦与适应体验。
+        </p>
+        <div class="personas">
+            <div class="persona-card teal">
+                <div class="persona-tag">直觉驱动型</div>
+                <div class="persona-name">不情愿的表演者</div>
+                <div class="persona-traits">前记者 · 神经多样性（自我诊断阿斯伯格、ADHD、阅读障碍） · 高社交焦虑 · "市井小聪明"学习风格</div>
+                <div class="quote-box">"我就是不想讨论。讨论的问题毫无价值。不如拿时间做正经事。"</div>
+                <div class="insight-pill"><span></span> 课堂讨论像被迫表演，不是学习</div>
+            </div>
+            <div class="persona-card rose">
+                <div class="persona-tag">目标导向型</div>
+                <div class="persona-name">结构化适应者</div>
+                <div class="persona-traits">前教师 · ChatGPT重度用户 · 外向但焦虑 · 将交流视为交易</div>
+                <div class="quote-box">"跟别人说话就是交换观点。我不明白为什么要那么情绪化。"</div>
+                <div class="insight-pill"><span></span> AI成为"认知假体"，承担社交低效任务</div>
+            </div>
+            <div class="persona-card indigo">
+                <div class="persona-tag">系统寻求型</div>
+                <div class="persona-name">崩溃的优化者</div>
+                <div class="persona-traits">前哲学学生 · 高自我效能感 · 第一学期崩溃 · 既有生产力系统在新制度逻辑下瓦解</div>
+                <div class="quote-box">"我以为自己能应付。然后第一学期来了，我发现整套系统在这里不管用。"</div>
+                <div class="insight-pill"><span></span> 从母文化进口的生产力系统在全新制度逻辑下崩溃</div>
+            </div>
+            <div class="persona-card amber">
+                <div class="persona-tag">多层复合型</div>
+                <div class="persona-name">渐进变形者</div>
+                <div class="persona-traits">长期观察者 · ChatGPT依赖者 · 三年轨迹可见 · 多重诊断 · 厌恶议论文的叙事型思考者</div>
+                <div class="quote-box">"回头看，我分不清是自己适应了系统，还是系统终于放弃了改变我。"</div>
+                <div class="insight-pill"><span></span> 长期适应可能只是伪装了的妥协，而非真正整合</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>核心发现 — 情感弧线与关键发现</h2>
+
+        <div class="journey-section">
+            <div class="journey-title"><div class="dot"></div>情感轨迹：从蜜月期到双重束缚</div>
+            <div class="emotion-curve">
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:80px;background:var(--accent-teal);"></div>
+                    <div class="emotion-label">第1-3月</div>
+                    <div class="emotion-desc">兴奋，不知所措，"一切皆有可能"</div>
+                </div>
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:45px;background:var(--accent-amber);"></div>
+                    <div class="emotion-label">第4-6月</div>
+                    <div class="emotion-desc">困惑，自责，"为什么我跟不上？"</div>
+                </div>
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:25px;background:var(--accent-rose);"></div>
+                    <div class="emotion-label">第7-12月</div>
+                    <div class="emotion-desc">麻木，愤世嫉俗，"就是这样了"</div>
+                </div>
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:55px;background:var(--accent-indigo);"></div>
+                    <div class="emotion-label">第二年</div>
+                    <div class="emotion-desc">策略性，选择性，"我只拿我需要的"</div>
+                </div>
+                <div class="emotion-point">
+                    <div class="emotion-bar" style="height:70px;background:var(--accent-teal);"></div>
+                    <div class="emotion-label">毕业</div>
+                    <div class="emotion-desc">矛盾的骄傲，未消解的遗憾</div>
+                </div>
+            </div>
+            <div class="section-summary">
+                <strong>关键洞察：</strong> 情感曲线并不遵循简单的"文化冲击"U型。它停滞于一个<em>双重束缚</em> — 参与者感到自己必须表演一个不相信的自我版本，同时放弃曾经信赖的技能。为"留学生"设计的产品往往只瞄准蜜月期，错过了长尾危机。
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>从洞察到战略</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            六条核心发现，提取自纵向访谈数据、课堂观察和数字行为追踪。每条发现连接民族志观察与产品战略。
+        </p>
+
+        <div class="insights-grid">
+            <div class="insight-card">
+                <div class="label">田野发现 01</div>
+                <div class="number">01</div>
+                <h3>平行课堂效应</h3>
+                <div class="verbatim">"每次小组讨论，感觉就像被玻璃隔开的两个平行世界。" — 社媒帖子</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 协作功能不能假设"讨论"的共享文化规范。实时翻译或共享文档无法弥合根本不同的轮流发言、异议表达和沉默礼仪。<em>构建文化设定的引导，而非仅语言工具。</em></p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 02</div>
+                <div class="number">02</div>
+                <h3>ChatGPT作为"有脑子又没脑子"的社交对话者</h3>
+                <div class="verbatim">"ChatGPT是唯一一个在我还没说完就懂我想说什么的人。" — 访谈</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 跨文化用户的杀手功能不是准确性，而是<em>解释性包容</em> — 重构半成形想法而不羞辱用户的能力。当前AI产品优化正确性；它们应优化<em>识别</em>与<em>情感安全</em>。</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 03</div>
+                <div class="number">03</div>
+                <h3>工作坊档案陷阱</h3>
+                <div class="verbatim">"工作坊就是用一个半生不熟的框架反复写，然后发现框架不管用 — 但为了这门课，还得硬凑出点东西来。"</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 过程追踪功能（版本历史、迭代日志）当机构文化重视表演式挣扎而非结果时，可能成为<em>监控工具</em>。用户会利用系统制造过程的假象。<em>为真实工作流设计，而非可见努力。</em></p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 04</div>
+                <div class="number">04</div>
+                <h3>口语 vs. 读写 — 隐藏的界面战争</h3>
+                <div class="verbatim">"我能用中文写出一篇完美的论文。但在这里，如果你在课堂上不能说得又快又大声，你就等于不存在。"</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 优先视频回复、实时聊天或口头问答的教育科技平台系统性地不利来自高读写文化背景的用户。多模态提交选项（文字、语音、视觉）不是无障碍奢侈，而是跨文化产品的<em>公平必需</em>。</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 05</div>
+                <div class="number">05</div>
+                <h3>神经多样性是文化性的，不是临床性的</h3>
+                <div class="verbatim">"我不再去讨论课了。我只看别人写了什么，然后在此基础上构建自己的论点。这比教室里的混乱更可靠。"</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> "包容性设计"往往只关注屏幕阅读器和色彩对比度。但对于高风险社交环境中的神经多样性用户，真正需要的是<em>异步、结构化的信息架构</em> — 用可预测、可导航的数据流替代实时社交协商。</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 06</div>
+                <div class="number">06</div>
+                <h3>AI时代的作者身份焦虑</h3>
+                <div class="verbatim">"我已经分不清自己是在思考，还是在赞同机器的建议。"</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> AI写作助手需要<em>溯源功能</em> — 不是为了检测抄袭，而是帮助用户重建自己的决策轨迹。"我选择这个词是因为……"在算法建议的海洋中充当身份锚点。<em>为作者连续性设计，而非仅输出质量。</em></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>方法论 — 研究如何构建</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            研究被框架为一场相遇的民族志实验，汲取格雷戈里·贝特森的心智生态学和蒂姆·英戈尔德的对应人类学。通过多尺度、数字和对话式方法维持方法论严谨性。
+        </p>
+        <div class="method-grid">
+            <div class="method-card">
+                <div class="method-icon">🪞</div>
+                <h3>自我民族志</h3>
+                <p>研究者同时是局内人（中国留学生）和局外人（人类学家），通过自我观察来校准访谈问题、识别盲区，跨越两年的个人转型。</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">📱</div>
+                <h3>数字行为追踪</h3>
+                <p>受访者分享ChatGPT对话截图、学习平台日志和社媒帖子，与口头访谈并行构建纵向数字痕迹 — 捕捉人们做了什么，而不只是说了什么。</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">🎭</div>
+                <h3>社媒聆听</h3>
+                <p>系统性收集中国留学生在小红书和微信上的匿名帖子，捕捉正式访谈中过于生猛而无法表达的情绪 — 正式方法遗漏的"影子对话"。</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">🔄</div>
+                <h3>纵向设计</h3>
+                <p>同一受访者在四个学期内接受访谈，追踪他们与工具、机构和自我身份的关系如何随时间转变 — 不是快照，而是一部电影。回访校准至学年压力节点。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="badge">韩鑫华 — 现场工作者</div>
+        <p class="footer-quote">
+            "连续的画面本身就是电影。对民族志学者而言，未经剪辑的相遇序列包含着欲望的对象 — 以及理论。"
+        </p>
+        <p class="footer-contact">
+            社会文化人类学与数字媒体硕士 · 计算机工程学士<br><br>
+            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康码系统 — 用户研究民族志案例 | 韩鑫华</title>
+    <style>
+        :root {
+            --bg: #fafaf9;
+            --text: #1c1917;
+            --text-secondary: #78716c;
+            --accent-red: #dc2626;
+            --accent-yellow: #d97706;
+            --accent-green: #059669;
+            --accent-blue: #2563eb;
+            --accent-purple: #7c3aed;
+            --accent-teal: #0f766e;
+            --border: #e7e5e4;
+            --card: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        header {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0; width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(220,38,38,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin-bottom: 32px;
+        }
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .meta-item strong {
+            color: var(--text);
+            display: block;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+        .section {
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 600;
+        }
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Research Context */
+        .context-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 32px;
+            margin-top: 8px;
+        }
+        .context-box h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .context-box p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .context-box .highlight {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* Personas */
+        .personas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .persona-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .persona-card:hover { transform: translateY(-3px); }
+        .persona-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+        }
+        .persona-card.red::before { background: var(--accent-red); }
+        .persona-card.yellow::before { background: var(--accent-yellow); }
+        .persona-card.blue::before { background: var(--accent-blue); }
+        .persona-card.purple::before { background: var(--accent-purple); }
+        .persona-card.teal::before { background: var(--accent-teal); }
+        .persona-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 100px;
+            margin-bottom: 14px;
+        }
+        .persona-card.red .persona-tag { background: rgba(220,38,38,0.08); color: var(--accent-red); }
+        .persona-card.yellow .persona-tag { background: rgba(217,119,6,0.08); color: var(--accent-yellow); }
+        .persona-card.blue .persona-tag { background: rgba(37,99,235,0.08); color: var(--accent-blue); }
+        .persona-card.purple .persona-tag { background: rgba(124,58,237,0.08); color: var(--accent-purple); }
+        .persona-card.teal .persona-tag { background: rgba(15,118,110,0.08); color: var(--accent-teal); }
+        .persona-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .persona-traits {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .quote-box {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+            border-left: 3px solid var(--border);
+            margin-bottom: 14px;
+        }
+        .persona-card.red .quote-box { border-left-color: var(--accent-red); }
+        .persona-card.yellow .quote-box { border-left-color: var(--accent-yellow); }
+        .persona-card.blue .quote-box { border-left-color: var(--accent-blue); }
+        .persona-card.purple .quote-box { border-left-color: var(--accent-purple); }
+        .persona-card.teal .quote-box { border-left-color: var(--accent-teal); }
+        .insight-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .insight-pill span {
+            display: inline-block;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+        }
+        .persona-card.red .insight-pill span { background: var(--accent-red); }
+        .persona-card.yellow .insight-pill span { background: var(--accent-yellow); }
+        .persona-card.blue .insight-pill span { background: var(--accent-blue); }
+        .persona-card.purple .insight-pill span { background: var(--accent-purple); }
+        .persona-card.teal .insight-pill span { background: var(--accent-teal); }
+
+        /* Spatial comparison */
+        .spatial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 8px;
+        }
+        .spatial-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px;
+            position: relative;
+        }
+        .spatial-card .zone-label {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        .zone-red { background: rgba(220,38,38,0.08); color: var(--accent-red); }
+        .zone-yellow { background: rgba(217,119,6,0.08); color: var(--accent-yellow); }
+        .zone-green { background: rgba(5,150,105,0.08); color: var(--accent-green); }
+        .spatial-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            padding-right: 60px;
+        }
+        .spatial-card .field {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+        .spatial-card .value {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        .spatial-card .quote {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 2px solid var(--border);
+            padding-left: 12px;
+            line-height: 1.5;
+        }
+
+        /* Conflict timeline */
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+        .timeline-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .timeline-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+        }
+        .timeline-card.c1::before { background: var(--accent-red); }
+        .timeline-card.c2::before { background: var(--accent-yellow); }
+        .timeline-card.c3::before { background: var(--accent-purple); }
+        .timeline-card.c4::before { background: var(--accent-blue); }
+        .tl-icon {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .tl-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .tl-quote {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .tl-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 100px;
+            background: var(--bg);
+            color: var(--text-secondary);
+        }
+
+        /* Insights */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .insight-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+        .insight-card .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .insight-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .insight-card .verbatim {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 2px solid var(--border);
+            padding-left: 12px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .insight-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .arrow {
+            color: var(--accent-green);
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        /* Methodology */
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .method-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+        }
+        .method-icon {
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+        .method-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .method-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 64px 0 80px;
+            text-align: center;
+        }
+        .footer-quote {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+        }
+        .footer-contact {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .footer-contact a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        .footer-contact a:hover {
+            border-color: var(--text);
+        }
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 100px;
+            background: var(--text);
+            color: var(--bg);
+            margin-bottom: 24px;
+        }
+        .section-summary {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 32px; }
+            .section { padding: 48px 0; }
+            header { padding: 60px 0 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="eyebrow">用户研究作品集 — 民族志案例</div>
+        <h1>健康码系统：<br>当强制性数字产品<br>遭遇文化抵抗</h1>
+        <p class="subtitle">
+            一项民族志调查：一项覆盖近全国人口的政府强制性应用，如何在不同社会语境中被用户重新解读、抵抗与修补 — 揭示为什么使用率指标远不足以衡量用户信任。
+        </p>
+        <div class="meta">
+            <div class="meta-item"><strong>角色</strong>独立研究者</div>
+            <div class="meta-item"><strong>方法</strong>深度访谈、情境调研、数字日记、社媒聆听</div>
+            <div class="meta-item"><strong>周期</strong>2021.11 – 2022.05（7个月）</div>
+            <div class="meta-item"><strong>规模</strong>30+ 访谈，2 城（成都、西安），10K+ 社媒数据点</div>
+        </div>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>研究概览</h2>
+        <div class="overview-grid">
+            <div class="stat-card">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">深度访谈，覆盖 6 类用户群体（年龄、职业、数字素养维度）</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">城市对比，揭示政策解读与执行文化的空间差异</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">社媒帖子抓取与情感编码，追踪情绪演化与新兴话语</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4万</div>
+                <div class="stat-label">字田野报告，于第八届青年人类学论坛发表</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>研究背景 — 为什么重要</h2>
+        <div class="context-box">
+            <h3>研究问题：一个"完美覆盖"却无人信任的产品</h3>
+            <p>
+                健康码系统在中国14亿人口中数月内实现了近100%渗透。从产品数据看，这是一场巨大的成功。<span class="highlight">但在全民采用的表象之下，隐藏着系统性摩擦、尊严受损和不可见的规避行为 — 这些没有任何量化仪表盘能够捕捉。</span>
+            </p>
+            <p>
+                2021年11月，当首个大城市（成都）部署"时空伴随"追踪后，8.2万人一夜之间变黄码。事件触发了一系列具身冲突的连锁反应 — 老年人宁可放弃购药也不愿交出身份证信息，保安用发抖音威胁来制服反抗的年轻人，一位教授在课后码变黄、无法乘坐任何交通工具，在寒冬中徒步数小时回家。
+            </p>
+            <p>
+                本研究追问：<span class="highlight">当合规性是被强制而非自愿时，"用户采用"究竟意味着什么？一线执行者如何成为系统非官方的UX补丁？产品团队能从抵抗行为中学到什么，而非仅从使用量中学习？</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>用户原型 — 二维码背后的四种真相</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            同一个健康码界面产生了四种截然不同的用户体验。这些原型并非来自人口统计学切分，而是来自民族志观察 — 观察个体如何与一个无法退出的系统协商关系。
+        </p>
+        <div class="personas">
+            <div class="persona-card red">
+                <div class="persona-tag">高摩擦型</div>
+                <div class="persona-name">尊严守护者</div>
+                <div class="persona-traits">70岁以上 · 非智能手机用户 · 药店访客（高风险区）· 拒绝身份证登记</div>
+                <div class="quote-box">"你让他拿身份证登记，他宁可不买这个药。"</div>
+                <div class="insight-pill"><span></span> 拒绝是尊严的维护，不是数字文盲</div>
+            </div>
+            <div class="persona-card yellow">
+                <div class="persona-tag">规则补丁型</div>
+                <div class="persona-name">一线协调者</div>
+                <div class="persona-traits">药店/KTV前台 · 共情驱动的务实主义者 · 灰色地带操作者，发明变通方案</div>
+                <div class="quote-box">"身份证是真的假的都行，主要是电话号码。我们心里也有数。"</div>
+                <div class="insight-pill"><span></span> 一线工作者成为系统非官方的UX补丁</div>
+            </div>
+            <div class="persona-card blue">
+                <div class="persona-tag">身份撕裂型</div>
+                <div class="persona-name">尊严受损的执行者</div>
+                <div class="persona-traits">25岁保安 · 北方务工返乡 · 阶层意识强烈 · 将执法权力用作报复工具</div>
+                <div class="quote-box">"年轻人读了书就看不起你。觉得自己高人一等。"</div>
+                <div class="insight-pill"><span></span> 执法工具异化为阶级报复武器</div>
+            </div>
+            <div class="persona-card purple">
+                <div class="persona-tag">系统怀疑型</div>
+                <div class="persona-name">制度解读者</div>
+                <div class="persona-traits">私立医院院长 · 处理"退费"危机 · 政策与实践鸿沟的见证者</div>
+                <div class="quote-box">"转绿之后，你怎么证明自己曾经是黄码？没人能说得清。"</div>
+                <div class="insight-pill"><span></span> 状态转换的不透明摧毁服务端信任</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>核心发现 — 空间民族志与冲突瞬间</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            800米范围内的三个商业场所产生了三种截然不同的互动生态系统。空间不是背景，它是行为的共谋者。以下是田野观察和揭示系统真实压力测试的具身摩擦事件。
+        </p>
+        <div class="spatial-grid">
+            <div class="spatial-card">
+                <div class="zone-label zone-red">高风险</div>
+                <h3>P1 药店</h3>
+                <div class="field">执行强度</div>
+                <div class="value">极严 — 无码禁入</div>
+                <div class="field">一线策略</div>
+                <div class="value">店长Q："不登记，不卖药。"</div>
+                <div class="field">用户抵抗</div>
+                <div class="value">老年人直接放弃交易</div>
+                <div class="quote" style="margin-top:12px;">"子女教他们不要泄露个人信息。"</div>
+            </div>
+            <div class="spatial-card">
+                <div class="zone-label zone-yellow">形式化</div>
+                <h3>KTV 前台</h3>
+                <div class="field">执行强度</div>
+                <div class="value">表演式 — 纸质登记表存在但从不核验</div>
+                <div class="field">一线策略</div>
+                <div class="value">员工S："我们只要有电话号码就行。"</div>
+                <div class="field">用户抵抗</div>
+                <div class="value">顾客敷衍填写假身份证</div>
+                <div class="quote" style="margin-top:12px;">"上级只看你写没写，不看你写的是不是真的。"</div>
+            </div>
+            <div class="spatial-card">
+                <div class="zone-label zone-green">弹性</div>
+                <h3>商场侧门</h3>
+                <div class="field">执行强度</div>
+                <div class="value">弹性 — "提醒但不能阻拦"</div>
+                <div class="field">一线策略</div>
+                <div class="value">保安A：用发抖音威胁反抗的年轻人</div>
+                <div class="field">用户抵抗</div>
+                <div class="value">年轻人直接绕过；老年人自觉配合</div>
+                <div class="quote" style="margin-top:12px;">"我把这个发抖音上。没人会支持你。"</div>
+            </div>
+        </div>
+        <div class="section-summary">
+            <strong>田野洞察：</strong> 从总部绘制的服务蓝图如果不包含<em>空间弹性</em>和<em>一线变通脚本</em>，注定失败。"同一个"政策因物理环境、经济压力和地方执行文化而产生截然不同的用户旅程。
+        </div>
+
+        <p style="font-size:15px;color:var(--text-secondary);margin:32px 0 24px;">
+            四件从田野笔记中提取的具身摩擦事件。它们不是边缘案例，而是系统真实的压力测试 — 每件都揭示了一个用户旅程图遗漏的利益相关者。
+        </p>
+        <div class="timeline">
+            <div class="timeline-card c1">
+                <div class="tl-icon">💊</div>
+                <div class="tl-title">尊严 vs. 药物</div>
+                <div class="tl-quote">"你让他拿身份证登记，他宁可不买这个药。"</div>
+                <div class="tl-tag">交易放弃</div>
+            </div>
+            <div class="timeline-card c2">
+                <div class="tl-icon">🎥</div>
+                <div class="tl-title">抖音威慑</div>
+                <div class="tl-quote">"我把这个发到网上。我让你工作也丢掉。"</div>
+                <div class="tl-tag">灰色地带执法</div>
+            </div>
+            <div class="timeline-card c3">
+                <div class="tl-icon">👶</div>
+                <div class="tl-title">婴儿车碾压</div>
+                <div class="tl-quote">护士伸脚阻挡；家长直接推着婴儿车碾过她的脚，边骂边走。</div>
+                <div class="tl-tag">身体暴力</div>
+            </div>
+            <div class="timeline-card c4">
+                <div class="tl-icon">🚶</div>
+                <div class="tl-title">教授的步行</div>
+                <div class="tl-quote">下课后码变黄。无法乘坐任何交通工具。寒冬中徒步数小时回家。</div>
+                <div class="tl-tag">出行能力崩溃</div>
+            </div>
+        </div>
+        <div class="section-summary">
+            <strong>设计启示：</strong> 该系统为<em>顺从的、理性的、独立的个体</em>设计。而现实中它遭遇的是<em>家庭、等级、身体和尊严</em>。每一个冲突点都揭示了一个用户旅程图遗忘的利益相关者。
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>从洞察到战略</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            六条田野洞察转化为可操作的产品与服务设计启示。每条发现都从民族志观察走向战略建议。
+        </p>
+        <div class="insights-grid">
+            <div class="insight-card">
+                <div class="label">田野发现 01</div>
+                <h3>用户在表演"合规剧场"的同时，发展出隐藏的抵抗脚本</h3>
+                <div class="verbatim">"身份证是真的假的都行，主要是电话号码。" — 一线员工</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 高使用率可能掩盖真实的拒绝。构建<em>透明度层</em>来暴露系统逻辑，将被动合规转化为知情同意。为"信任验证"设计，而非仅仅"使用验证"。</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 02</div>
+                <h3>"不是学不会 — 只是不愿意丢尊严"</h3>
+                <div class="verbatim">"子女教他们不要随便泄露个人信息。" — 药店店长</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 所谓"数字弱势群体"的抵抗其实是<em>受过教育的谨慎</em>（家庭反诈教育），不是无知。提供保留自主权的非数字替代路径，而非迫使用户数字提交的"简化版"界面。</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 03</div>
+                <h3>一线员工成为系统的"人肉补丁" — 吸收设计忽略的摩擦</h3>
+                <div class="verbatim">"我把这个发抖音上。没人会支持你。" — 保安的灰色威慑</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 服务蓝图必须包含<em>内部操作者的旅程</em>，不只关注终端用户。员工的灰色变通是系统性失败的早期信号，不是个人英雄主义。设计升级路径，而非仅处理异常。</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 04</div>
+                <h3>颜色语义被地方情感逻辑颠覆了</h3>
+                <div class="verbatim">"跟黄码比，我其实更喜欢红码。" — 隔离受访者</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 视觉代码承载文化载荷。在跨文化或高风险产品中，语义映射必须经过民族志验证 — 不能假设通用。"危险"色在地方压力下可能变成"确定性"色。始终在语境中测试符号解读。</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 05</div>
+                <h3>状态转换的不透明性在服务终端引发信任雪崩</h3>
+                <div class="verbatim">"转绿之后，你怎么证明自己曾经是黄码？没人能说得清。" — 医院院长</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 当系统的状态转换逻辑（黄→绿）不透明时，<em>客服成本</em>不会落在系统设计者头上，而是被倾泻到服务链最脆弱的节点（私立医院、小诊所、前台职员）。主动的状态解释胜过被动的客服补救。</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">田野发现 06</div>
+                <h3>800米范围内的空间语境产生三种截然不同的互动生态</h3>
+                <div class="verbatim">"上级只看你写没写，不看你写的是不是真的。" — KTV员工</div>
+                <p><span class="arrow">→</span> <strong>战略：</strong> 单一用户旅程图是危险的虚构。部署<em>空间敏感的服务变体</em>，考虑地方执行文化、经济压力和物理布局 — 否则一线员工会自己发明（并隐藏）变通方案。语境感知式部署，而非一刀切式上线。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>方法论 — 研究如何构建</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            独立研究不等于无结构研究。项目在保持民族志田野工作所需灵活性的同时，遵循了确保伦理安全、分析有效性和可审计性的正式协议。
+        </p>
+        <div class="method-grid">
+            <div class="method-card">
+                <div class="method-icon">🔒</div>
+                <h3>研究伦理</h3>
+                <p>所有受访者签署知情同意书。所有输出完全匿名化。保障随时退出权。录音仅限研究者本人访问。</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">📊</div>
+                <h3>混合方法</h3>
+                <p>63项问卷用于人口统计学基线与痛点排序。30+半结构式深度访谈。5+场所参与式观察。社媒抓取（10K+帖子）用于情感与话语分析。</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">🗺️</div>
+                <h3>田野密度</h3>
+                <p>2城（成都、西安），5+商业/机构场所，6个月纵向追踪。每个场所手绘空间地图，记录物质布局与权力几何。</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">🔍</div>
+                <h3>分析框架</h3>
+                <p>数据沿三个分析层次组织：数字化/数据化、认同/标识符、人观 — 对应STS与物质文化研究的"技-身-人"框架。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="badge">韩鑫华 — 现场工作者</div>
+        <p class="footer-quote">
+            "田野中的真实对话，能揭示问卷数据永远无法捕捉的文化张力。"
+        </p>
+        <p class="footer-contact">
+            社会文化人类学与数字媒体硕士 · 计算机工程学士<br><br>
+            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing With — Design Anthropology Portfolio | Xinhua Han</title>
+    <style>
+        :root {
+            --bg: #fafaf9;
+            --text: #1c1917;
+            --text-secondary: #78716c;
+            --accent-teal: #0d9488;
+            --accent-amber: #b45309;
+            --accent-indigo: #4338ca;
+            --border: #e7e5e4;
+            --card: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+        header {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0; width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(13,148,136,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 640px;
+        }
+        .section {
+            padding: 56px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            font-weight: 600;
+        }
+        .thesis-banner {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .thesis-banner::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--accent-teal);
+        }
+        .thesis-banner p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .thesis-banner strong {
+            color: var(--accent-teal);
+        }
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            margin-bottom: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+        }
+        .project-card.teal::before { background: var(--accent-teal); }
+        .project-card.amber::before { background: var(--accent-amber); }
+        .project-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .meta-tag {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 100px;
+            background: rgba(13,148,136,0.08);
+            color: var(--accent-teal);
+        }
+        .project-card.amber .meta-tag {
+            background: rgba(180,83,9,0.08);
+            color: var(--accent-amber);
+        }
+        .project-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .project-sub {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .block {
+            margin-bottom: 20px;
+        }
+        .block-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .block p, .block li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .block ul {
+            padding-left: 18px;
+        }
+        .block li { margin-bottom: 6px; }
+        .quote-line {
+            border-left: 3px solid var(--border);
+            padding-left: 16px;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 14px 0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .project-card.teal .quote-line { border-left-color: var(--accent-teal); }
+        .project-card.amber .quote-line { border-left-color: var(--accent-amber); }
+        .insight-box {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin-top: 20px;
+        }
+        .insight-box .label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .insight-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .insight-box strong {
+            color: var(--accent-teal);
+        }
+        .project-card.amber .insight-box strong {
+            color: var(--accent-amber);
+        }
+        .bridge-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            margin-top: 8px;
+            border-top: 4px solid var(--text);
+        }
+        .bridge-card .block-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .bridge-card ul {
+            padding-left: 18px;
+        }
+        .bridge-card li {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .bridge-card .quote-line {
+            border-left: 3px solid var(--text);
+            padding-left: 16px;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 16px 0 0 0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        footer {
+            padding: 56px 0 72px;
+            text-align: center;
+        }
+        .footer-contact {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .footer-contact a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 100px;
+            background: var(--text);
+            color: var(--bg);
+            margin-bottom: 20px;
+        }
+        @media (max-width: 640px) {
+            .project-card { padding: 24px; }
+            h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="eyebrow">Design Anthropology Portfolio — Theoretical Grounding</div>
+        <h1>Designing With:<br>From New Animism<br>to Embodied Digital Practice</h1>
+        <p class="subtitle">
+            Two investigations that reframe design not as problem-solving for passive users, but as a practice of correspondence—between humans, materials, and digital systems.
+        </p>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>Connecting Thread</h2>
+        <div class="thesis-banner">
+            <p>
+                <strong>Design anthropology is not "designing for users." It is designing with living beings in a world that is always under construction.</strong>
+                Against the Cartesian split between mind and body, subject and object, Tim Ingold's <strong>new humanism</strong> treats life not as a possession but as a process of growth along lines of becoming. His <strong>new animism</strong> is not a folk belief in spirits inside objects; it is the recognition that all beings—human and non-human—participate in the world through relations of <strong>correspondence</strong>.
+                <br><br>
+                Paul Dourish extends this into digital practice: interaction is not information transmission but <strong>situated, embodied action</strong>. The interface is not a tool to be used but an environment to be inhabited. Together, Ingold and Dourish provide a framework in which ethnography and design are continuous practices of attending to the world and responding to its affordances.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Project I — Correspondence, Not Classification</h2>
+        <div class="project-card teal">
+            <div class="project-meta">
+                <span class="meta-tag">Design Anthropology</span>
+                <span class="meta-tag">New Animism</span>
+                <span class="meta-tag">KU Leuven</span>
+            </div>
+            <h3>Beyond the Cogito: Correspondence, Meshwork, and the Critique of Dualism</h3>
+            <p class="project-sub">
+                A critical engagement with Ingold's "new animism," Bird-David's "relatedness," and Descola's ontological grid—arguing that design must move from static classification to dynamic correspondence.
+            </p>
+
+            <div class="block">
+                <div class="block-label">Core Debate</div>
+                <p>
+                    Conventional animism studies ask: "Do people believe spirits live in objects?" Ingold's <strong>new animism</strong> reverses the question: "How do humans and non-humans co-respond to one another in shared environments?" This shifts anthropology from epistemology (what people think) to <strong>ontology as practice</strong> (how they attend, perceive, and act).
+                </p>
+                <div class="quote-line">
+                    "To inhabit the world is to join in the processes of its continual generation." — Tim Ingold, <em>Being Alive</em>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="block-label">My Position</div>
+                <ul>
+                    <li><strong>Ingold's "new humanism"</strong> refuses the Cartesian container-model of the self. The person is not a bounded subject who "has" experiences; life is an unbounded process of <strong>correspondence</strong> with an ever-changing world.</li>
+                    <li><strong>Bird-David's "relatedness"</strong> is a step forward from Descola's static grid, but it remains an abstract noun. Ingold's concept of <strong>"meshwork"</strong> (lines of growth entangling) better captures how designers, users, and materials interweave in real time.</li>
+                    <li><strong>Willerslev's Yukaghir hunters</strong> do not "imitate" animals from a distance. They enter into correspondence—adjusting posture, rhythm, and attention until human and animal trajectories align. This is not representation; it is <strong>co-perception</strong>.</li>
+                    <li><strong>Descola's four ontologies</strong> (naturalism, animism, totemism, analogism) are useful heuristics, but their static taxonomic structure contradicts the fluid, processual reality that design anthropology must engage with.</li>
+                </ul>
+            </div>
+
+            <div class="insight-box">
+                <div class="label">Implication for Design Practice</div>
+                <p>
+                    <strong>Users are not segments to be targeted; they are lives with which products must correspond.</strong> A persona is not a fixed type but a temporary knot in a meshwork of relations. Design research must therefore track <strong>processes of becoming</strong>—how people grow into, around, and sometimes away from the technologies they inhabit.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Project II — Smartphones between Techniques and Virtuosity</h2>
+        <div class="project-card amber">
+            <div class="project-meta">
+                <span class="meta-tag">Interface Anthropology</span>
+                <span class="meta-tag">Digital Materiality</span>
+                <span class="meta-tag">KU Leuven</span>
+            </div>
+            <h3>Interface Effects and Cellular Agency: How the iPhone Reshapes Social Action</h3>
+            <p class="project-sub">
+                An investigation into why "social constructivism" fails to account for digital materials, and how iPhone interfaces produce a new kind of social agency through haptic gesture, fluid motion, and design fetishism.
+            </p>
+
+            <div class="block">
+                <div class="block-label">Core Argument</div>
+                <p>
+                    Drawing on Galloway's "interface effects," Paul Dourish's "embodied interaction," and Gell's theory of enchantment, I argue that the smartphone is not a neutral tool but an <strong>autonomous zone of activity</strong> that reshapes personhood through operational sequences (tap, swipe, pinch).
+                </p>
+                <div class="quote-line">
+                    "Interfaces are not things, but processes that effect a result... They bring about transformations in material states." — Alexander Galloway, <em>The Interface Effect</em>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="block-label">Key Concepts Deployed</div>
+                <ul>
+                    <li><strong>Interface Effects (Galloway):</strong> The screen is not a window but a <strong>threshold</strong> mediating between realities, producing specific social and historical outcomes. The interface is not a transparent medium; it is a transformative force in its own right.</li>
+                    <li><strong>Fluid Design:</strong> Apple's "run like water" philosophy creates an illusion of <strong>direct intentionality</strong>, masking the algorithmic and material infrastructure beneath. Users believe they "directly" touch content, yet they are interacting with a carefully orchestrated layer of interface effects.</li>
+                    <li><strong>Embodied Interaction (Dourish):</strong> Following Dourish, agency lies not in the device itself but in the <strong>situated engagement</strong> between body and interface that generates meaning. Cognition is not locked in the head; it is distributed across gestures, screen materials, and spatial environments. The iPhone's value resides not in its hardware but in the embodied sequences of technique it trains.</li>
+                    <li><strong>From Fetish to Factish:</strong> iPhone marketing transforms the device into a Latourian <strong>"factish"</strong>—neither pure object nor pure belief, but a hybrid that commands collective attachment. This is not mere brand loyalty; it is an ontological binding.</li>
+                </ul>
+            </div>
+
+            <div class="insight-box">
+                <div class="label">Implication for Ethnographic Practice</div>
+                <p>
+                    <strong>Users do not "use" interfaces; they enter into relational ecologies with them.</strong> The tap/swipe/pinch sequence is not merely usability—it is a <strong>technique of the body</strong> (Mauss) that reshapes habitus. In my fieldwork on health-code systems and AI tools, this framework allows me to see <strong>gesture, resistance, and compliance as embodied political practices</strong>, not just behavioral data points to be optimized. When users "naturally" swipe their screens, they are performing a designed choreography of the body with political consequences.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>How Design Anthropology Grounds Commercial Insight</h2>
+        <div class="bridge-card">
+            <div class="block-label">From Theoretical Debate to Design Strategy</div>
+            <ul>
+                <li><strong>Ingold's "correspondence"</strong> → reframes user research: the goal is not to "extract needs" from passive subjects but to <em>join users in their practices</em> and design from within the meshwork. This produces insights that survey methods miss entirely.</li>
+                <li><strong>Galloway's "interface effects"</strong> → reveals that "frictionless" UX often destroys meaning. When an interface hides its material logic (e.g., why did my health code turn yellow?), it severs the user's capacity to correspond with the system, generating anxiety rather than trust. Commercial design must find a political balance between transparency and fluidity.</li>
+                <li><strong>Dourish's "embodied design"</strong> → shows that user attachment is often not functional dependency but the <strong>entanglement of bodily technique and identity</strong>. Understanding how gestures reshape habitus is key to designing products that are truly <em>inhabited</em> rather than merely <em>used</em>.</li>
+                <li><strong>"Designing with" vs. "designing for"</strong> → shifts the researcher's position from external observer to co-practitioner. Inclusive design is not adding features for "edge cases"; it is recognizing that every user is a center of a meshwork, and the design must grow with them.</li>
+            </ul>
+            <div class="quote-line">
+                "Theory is not a luxury in design anthropology. It is the difference between imposing form on the world and learning, with the world, what forms might yet become."
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="badge">Xinhua Han — Design Anthropologist & Researcher</div>
+        <p class="footer-contact">
+            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a> · 
+            <a href="tel:+8618991322966">+86 189 9132 2966</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
