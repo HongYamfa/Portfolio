@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Code System — UX Ethnography Portfolio | Xinhua Han</title>
+    <title>Health Code System — User Research Ethnographic Case | Xinhua Han</title>
     <style>
         :root {
             --bg: #fafaf9;
@@ -20,7 +20,7 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
@@ -58,7 +58,7 @@
         .subtitle {
             font-size: 18px;
             color: var(--text-secondary);
-            max-width: 1500px;
+            max-width: 900px;
             margin-bottom: 32px;
         }
         .meta {
@@ -112,8 +112,6 @@
             font-size: 14px;
             color: var(--text-secondary);
         }
-
-        /* Research Context */
         .context-box {
             background: var(--card);
             border: 1px solid var(--border);
@@ -136,8 +134,6 @@
             color: var(--text);
             font-weight: 600;
         }
-
-        /* Personas */
         .personas {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -222,8 +218,6 @@
         .persona-card.blue .insight-pill span { background: var(--accent-blue); }
         .persona-card.purple .insight-pill span { background: var(--accent-purple); }
         .persona-card.teal .insight-pill span { background: var(--accent-teal); }
-
-        /* Spatial comparison */
         .spatial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -275,8 +269,6 @@
             padding-left: 12px;
             line-height: 1.5;
         }
-
-        /* Conflict timeline */
         .timeline {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -300,15 +292,8 @@
         .timeline-card.c2::before { background: var(--accent-yellow); }
         .timeline-card.c3::before { background: var(--accent-purple); }
         .timeline-card.c4::before { background: var(--accent-blue); }
-        .tl-icon {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        .tl-title {
-            font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
+        .tl-icon { font-size: 20px; margin-bottom: 10px; }
+        .tl-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
         .tl-quote {
             font-size: 13px;
             font-style: italic;
@@ -325,8 +310,6 @@
             background: var(--bg);
             color: var(--text-secondary);
         }
-
-        /* Insights */
         .insights-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -371,8 +354,6 @@
             font-weight: 700;
             margin-right: 4px;
         }
-
-        /* Methodology */
         .method-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -385,21 +366,9 @@
             padding: 28px;
             text-align: center;
         }
-        .method-icon {
-            font-size: 28px;
-            margin-bottom: 14px;
-        }
-        .method-card h3 {
-            font-size: 15px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        .method-card p {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
+        .method-icon { font-size: 28px; margin-bottom: 14px; }
+        .method-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; }
+        .method-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
         footer {
             padding: 64px 0 80px;
             text-align: center;
@@ -412,10 +381,7 @@
             margin: 0 auto 32px;
             line-height: 1.5;
         }
-        .footer-contact {
-            font-size: 14px;
-            color: var(--text-secondary);
-        }
+        .footer-contact { font-size: 14px; color: var(--text-secondary); }
         .footer-contact a {
             color: var(--text);
             text-decoration: none;
@@ -423,9 +389,7 @@
             border-bottom: 1px solid var(--border);
             transition: border-color 0.2s;
         }
-        .footer-contact a:hover {
-            border-color: var(--text);
-        }
+        .footer-contact a:hover { border-color: var(--text); }
         .badge {
             display: inline-block;
             font-size: 11px;
@@ -448,7 +412,6 @@
             border-radius: 10px;
             line-height: 1.6;
         }
-
         @media (max-width: 640px) {
             h1 { font-size: 32px; }
             .section { padding: 48px 0; }
@@ -457,44 +420,43 @@
     </style>
 </head>
 <body>
-
 <a href="./" style="position:fixed;top:20px;left:20px;z-index:1000;padding:8px 16px;background:rgba(250,250,249,0.9);border:1px solid #e7e5e4;border-radius:6px;color:#78716c;font-size:14px;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;backdrop-filter:blur(4px);box-shadow:0 1px 3px rgba(0,0,0,0.05);">← Back</a>
 
 <header>
     <div class="container">
-        <div class="eyebrow">UX Research Portfolio — Ethnography Case Study</div>
-        <h1>Health Code System: When Mandatory Digital Products Meet Cultural Resistance</h1>
+        <div class="eyebrow">User Research Portfolio — Ethnographic Case</div>
+        <h1>When Global Digital Governance Technology Meets Local Cultural Friction</h1>
         <p class="subtitle">
-            An ethnographic investigation into how a high-penetration government-mandated app was reinterpreted, resisted, and patched by users across divergent social contexts — revealing why adoption metrics alone are insufficient proxies for user trust.
+            An ethnographic investigation into how a government-mandated app covering nearly the entire national population was reinterpreted, resisted, and repaired by users across different social contexts.
         </p>
         <div class="meta">
             <div class="meta-item"><strong>Role</strong>Independent Researcher</div>
-            <div class="meta-item"><strong>Methods</strong>In-depth Interviews, Contextual Inquiry, Digital Diary, Social Listening</div>
-            <div class="meta-item"><strong>Duration</strong>Nov 2021 – May 2022 (7 months)</div>
-            <div class="meta-item"><strong>Scale</strong>30+ interviews, 2 cities (Chengdu, Xi'an), 10K+ social data points</div>
+            <div class="meta-item"><strong>Method</strong>In-depth interviews, participant observation, digital trace analysis, social media discourse analysis</div>
+            <div class="meta-item"><strong>Duration</strong>2021.11 – 2022.05 (7 months)</div>
+            <div class="meta-item"><strong>Scale</strong>30+ interviews, 2 cities (Chengdu, Xi'an), 10K+ social media data points</div>
         </div>
     </div>
 </header>
 
 <section class="section">
     <div class="container">
-        <h2>Study at a Glance</h2>
+        <h2>Research Overview</h2>
         <div class="overview-grid">
             <div class="stat-card">
                 <div class="stat-number">30+</div>
-                <div class="stat-label">In-depth interviews across 6 user segments (age, occupation, digital literacy)</div>
+                <div class="stat-label">In-depth interviews across 6 user groups (age, occupation, digital literacy)</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">2</div>
-                <div class="stat-label">Cities compared to surface spatial variance in policy interpretation and enforcement culture</div>
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Cities compared, revealing spatial differences in policy interpretation and enforcement culture</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">10K+</div>
-                <div class="stat-label">Social media posts scraped and emotionally coded for sentiment evolution and emergent discourse</div>
+                <div class="stat-label">Social media posts scraped and sentiment-coded, tracking emotional evolution and emerging discourse</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">40K</div>
-                <div class="stat-label">Words of field report delivered and presented at the 8th Youth Anthropology Conference</div>
+                <div class="stat-number">40K+</div>
+                <div class="stat-label">Characters of field report, presented at the 8th Youth Anthropology Forum</div>
             </div>
         </div>
     </div>
@@ -502,17 +464,17 @@
 
 <section class="section">
     <div class="container">
-        <h2>Research Context — Why This Matters</h2>
+        <h2>Research Context — Why It Matters</h2>
         <div class="context-box">
-            <h3>The Problem: A "Perfectly" Adopted Product That Nobody Trusted</h3>
+            <h3>Research Question: A Universal System Almost No One Associated with Their Actual Health</h3>
             <p>
-                The health code system achieved near-100% penetration across China's 1.4 billion population within months. From a product metrics perspective, it was a resounding success. <span class="highlight">Yet beneath the surface of universal adoption lay a landscape of systemic friction, dignity violations, and invisible workarounds that no quantitative dashboard could capture.</span>
+                The Health Code system achieved near-100% penetration among China's 1.4 billion people within months. From product data, this was a tremendous success. <span class="highlight">But beneath the surface of mass adoption lay systemic friction, dignitary harm, and invisible evasion behaviours that no quantitative dashboard could capture.</span>
             </p>
             <p>
-                When the first major city (Chengdu) deployed "spatio-temporal companion" tracking in November 2021, 82,000 people turned yellow-coded overnight. The event triggered a cascade of embodied conflicts — elderly citizens abandoning pharmacy purchases rather than surrendering ID data, security guards weaponising social media threats against defiant youth, a professor walking home for hours in winter after his code turned yellow mid-commute.
+                In November 2021, after the first major city (Chengdu) deployed "spatial-temporal proximity" tracking, 82,000 people became "yellow code" overnight. This triggered a chain of embodied conflicts: elderly people chose to forgo medication rather than surrender ID information; security guards threatened resistant young people with posting videos on Douyin; a professor, whose code turned yellow after class, could not board any form of transport and walked hours home through the winter cold.
             </p>
             <p>
-                This research asks: <span class="highlight">What does "user adoption" really mean when compliance is coerced? How do frontline workers become the system's unofficial UX patch? And what can product teams learn when they study resistance, not just usage?</span>
+                This study asks: <span class="highlight">when compliance is mandated rather than voluntary, what does "user adoption" actually mean? How do frontline workers become the system's unofficial patches? What can product teams learn from acts of resistance, rather than from usage metrics alone?</span>
             </p>
         </div>
     </div>
@@ -522,36 +484,36 @@
     <div class="container">
         <h2>User Archetypes — Four Truths Behind the QR Code</h2>
         <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
-            The same health code interface produced four entirely different user experiences. These archetypes emerge not from demographic segmentation, but from ethnographic observation of how individuals negotiated their relationship with a system they could not opt out of.
+            The same health code interface produced four entirely distinct user experiences. These archetypes do not emerge from demographic segmentation, but from ethnographic observation — watching how individuals negotiated their relationship with a system they could not exit.
         </p>
         <div class="personas">
             <div class="persona-card red">
-                <div class="persona-tag">High Friction</div>
-                <div class="persona-name">The Dignity Defender</div>
-                <div class="persona-traits">70+ · Non-smartphone user · Pharmacy visitor (high-risk zone) · Refuses ID registration on principle</div>
-                <div class="quote-box">"You ask him to register with an ID card, and he would rather not buy the medicine at all."</div>
-                <div class="insight-pill"><span></span> Refusal as dignity preservation, not digital illiteracy</div>
+                <div class="persona-tag">High-Friction</div>
+                <div class="persona-name">The Dignity Guardian</div>
+                <div class="persona-traits">70+ · Non-smartphone user · Pharmacy visitor (high-risk zone) · Refused ID registration</div>
+                <div class="quote-box">"Their children taught them not to disclose personal information... You ask them to register with their ID, and they'd rather go without the medication."</div>
+                <div class="insight-pill"><span></span> Refusal is dignity maintenance, not digital illiteracy</div>
             </div>
             <div class="persona-card yellow">
-                <div class="persona-tag">Rule Patch</div>
-                <div class="persona-name">The Frontline Negotiator</div>
-                <div class="persona-traits">Pharmacy/KTV clerk · Empathy-driven pragmatist · Gray-area operator who invents workarounds</div>
-                <div class="quote-box">"Whether the ID is real or fake, what matters is the phone number. We know it anyway."</div>
-                <div class="insight-pill"><span></span> Frontline workers become the system's unofficial UX patch</div>
+                <div class="persona-tag">Rule Patcher</div>
+                <div class="persona-name">The Flexible Frontline Coordinator</div>
+                <div class="persona-traits">Pharmacy/KTV receptionist · Empathy-driven pragmatist · Grey-zone operator who invents workarounds</div>
+                <div class="quote-box">"It doesn't matter if the ID is real or fake — what matters is the phone number. We know what's going on."</div>
+                <div class="insight-pill"><span></span> Frontline workers become the system's unofficial patches</div>
             </div>
             <div class="persona-card blue">
-                <div class="persona-tag">Identity Tension</div>
-                <div class="persona-name">The Dignity-Damaged Enforcer</div>
-                <div class="persona-traits">25-yr-old security guard · Former northern worker · Class-conscious · Uses enforcement power to settle scores</div>
-                <div class="quote-box">"Young people with degrees look down on you. They think they are better than you."</div>
-                <div class="insight-pill"><span></span> Enforcement tools become class-revenge weapons</div>
+                <div class="persona-tag">Identity-Torn</div>
+                <div class="persona-name">The Dignity-Wounded Frontline Enforcer</div>
+                <div class="persona-traits">25-year-old security guard · Migrant worker returning from the north · Strong class consciousness · Weaponises enforcement authority as resistance tool</div>
+                <div class="quote-box">"Elderly people are actually more cooperative... Young people who've been educated look down on you. They think they're superior."</div>
+                <div class="insight-pill"><span></span> Enforcement tool weaponised as instrument of class resistance</div>
             </div>
             <div class="persona-card purple">
-                <div class="persona-tag">System Skeptic</div>
+                <div class="persona-tag">System Sceptic</div>
                 <div class="persona-name">The Institutional Interpreter</div>
-                <div class="persona-traits">Private hospital director · Managing "refund" crisis · Policy-practice gap witness</div>
-                <div class="quote-box">"After turning green, how do you prove you were yellow? No one can tell."</div>
-                <div class="insight-pill"><span></span> State-transition opacity destroys trust at the service terminal</div>
+                <div class="persona-traits">Director of private hospital · Handling "refund" crisis · Witness to the chasm between policy and practice</div>
+                <div class="quote-box">"Refunding test fees for affected yellow-code people was meant to be a good thing. But once you turn green, how do you prove you were ever yellow? Nobody can explain it."</div>
+                <div class="insight-pill"><span></span> Ambiguity of state transitions undermines trust at service endpoints</div>
             </div>
         </div>
     </div>
@@ -559,50 +521,46 @@
 
 <section class="section">
     <div class="container">
-        <h2>Critical Findings — Spatial Ethnography &amp; Conflict Moments</h2>
+        <h2>Core Findings — Spatial Ethnography and Moments of Conflict</h2>
         <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
-            Three commercial sites within 800 meters of each other produced three distinct interaction ecosystems. Space is not background; it is a co-conspirator of behavior. Below are the field observations and the embodied friction events that reveal the system's true stress tests.
+            Three commercial venues within 800 metres produced three entirely distinct interaction ecosystems. Space is not background — it is complicit in behaviour. Below are field observations and embodied friction events that reveal how the system was truly stress-tested.
         </p>
         <div class="spatial-grid">
             <div class="spatial-card">
-                <div class="zone-label zone-red">High Risk</div>
-                <h3>P1 Pharmacy</h3>
-                <div class="field">Enforcement intensity</div>
-                <div class="value">Extremely strict — no entry without code</div>
-                <div class="field">Frontline strategy</div>
-                <div class="value">Manager Q: "No registration, no sale."</div>
-                <div class="field">User resistance</div>
-                <div class="value">Elderly exit the transaction entirely</div>
-                <div class="quote" style="margin-top:12px;">"Their children taught them not to leak personal info."</div>
+                <div class="zone-label zone-red">High-Risk</div>
+                <h3>Pharmacy</h3>
+                <div class="field">Enforcement</div>
+                <div class="value">Strict — no code, no entry</div>
+                <div class="field">Frontline Strategy</div>
+                <div class="value">Manager: "No registration, no medicine."</div>
+                <div class="field">User Resistance</div>
+                <div class="value">Elderly customers simply abandon the transaction</div>
             </div>
             <div class="spatial-card">
-                <div class="zone-label zone-yellow">Formality</div>
-                <h3>KTV Front Desk</h3>
-                <div class="field">Enforcement intensity</div>
-                <div class="value">Performative — paper log exists but is never verified</div>
-                <div class="field">Frontline strategy</div>
-                <div class="value">Staff S: "We just need the phone number."</div>
-                <div class="field">User resistance</div>
-                <div class="value">Customers敷衍填写 fake IDs</div>
-                <div class="quote" style="margin-top:12px;">"The superior only checks whether you wrote it, not if it is true."</div>
+                <div class="zone-label zone-yellow">Performative</div>
+                <h3>KTV Reception</h3>
+                <div class="field">Enforcement</div>
+                <div class="value">Theatrical — paper forms exist but are never verified</div>
+                <div class="field">Frontline Strategy</div>
+                <div class="value">Staff: "We just need a phone number."</div>
+                <div class="field">User Resistance</div>
+                <div class="value">Customers fill in fake ID numbers without consequence</div>
             </div>
             <div class="spatial-card">
-                <div class="zone-label zone-green">Elastic</div>
-                <h3>Shopping Mall Side Gate</h3>
-                <div class="field">Enforcement intensity</div>
-                <div class="value">Elastic — "remind but cannot block"</div>
-                <div class="field">Frontline strategy</div>
-                <div class="value">Guard A: Uses TikTok video threat against defiant youth</div>
-                <div class="field">User resistance</div>
-                <div class="value">Young adults physically bypass; elderly comply willingly</div>
-                <div class="quote" style="margin-top:12px;">"I will post this on Douyin. No one will support you."</div>
+                <div class="zone-label zone-green">Flexible</div>
+                <h3>Shopping Mall Side Entrance</h3>
+                <div class="field">Enforcement</div>
+                <div class="value">Flexible — "We can remind, but not block"</div>
+                <div class="field">Frontline Strategy</div>
+                <div class="value">Guards: threatening resistant young people with Douyin</div>
+                <div class="field">User Resistance</div>
+                <div class="value">Young people feign not noticing; elderly cooperate readily</div>
             </div>
         </div>
         <div class="section-summary">
-            <strong>Field insight:</strong> A service blueprint drawn from headquarters will fail if it does not include the <em>spatial elasticity</em> and <em>frontline workaround scripts</em> that emerge within 800 meters of each other. The "same" policy produces divergent user journeys depending on physical context, economic pressure, and local enforcement culture.
+            <strong>Field insight:</strong> Service blueprints drawn at headquarters without <em>spatial elasticity</em> and <em>frontline workaround scripts</em> are destined to fail. The "same" policy produces entirely different user journeys across physical environments, economic pressures, and local enforcement cultures.
+            <br><strong>Design implication:</strong> The system was designed for <em>compliant, rational, independent individuals</em>. In reality it encountered <em>families, hierarchies, bodies, and dignity</em>. Each conflict point reveals a stakeholder the journey map forgot.
         </div>
-
-
     </div>
 </section>
 
@@ -610,44 +568,28 @@
     <div class="container">
         <h2>From Insight to Strategy</h2>
         <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
-            Six field insights translated into actionable product and service design implications. Each finding moves from ethnographic observation to strategic recommendation.
+            Three field insights translated into actionable product and service design implications. Each finding moves from ethnographic observation to strategic recommendation.
         </p>
         <div class="insights-grid">
             <div class="insight-card">
                 <div class="label">Field Finding 01</div>
-                <h3>Users performed "compliant theater" while developing hidden resistance scripts.</h3>
-                <div class="verbatim">"Whether the ID is real or fake, what matters is the phone number." — Frontline staff</div>
-                <p><span class="arrow">→</span> <strong>Strategy:</strong> High adoption metrics can mask true rejection. Build <em>transparency layers</em> that expose system logic, turning passive compliance into informed consent. Design for "trust verification" not just "usage verification."</p>
+                <h3>Users perform "compliance theatre" while developing hidden resistance scripts: "Not unable to learn — just unwilling to sacrifice dignity"</h3>
+                <p><span class="arrow">→</span> <strong>Strategy 1:</strong> High usage rates may mask genuine refusal. Build <em>transparency layers</em> that expose system logic, transforming passive compliance into informed consent. Design for "trust verification," not just "usage verification."</p>
+                <p><span class="arrow">→</span> <strong>Strategy 2:</strong> The resistance of so-called "digitally vulnerable" groups is <em>educated caution</em> (family anti-fraud education), not ignorance. Offer non-digital alternative pathways that preserve autonomy, rather than a "simplified" interface that forces digital submission.</p>
             </div>
             <div class="insight-card">
                 <div class="label">Field Finding 02</div>
-                <h3>"Not unable to learn — just unwilling to lose dignity."</h3>
-                <div class="verbatim">"Their children taught them not to leak personal information." — Pharmacy manager</div>
-                <p><span class="arrow">→</span> <strong>Strategy:</strong> For so-called "digitally vulnerable" groups, resistance is <em>educated caution</em> (anti-fraud family training), not ignorance. Provide non-digital alternative paths that preserve autonomy rather than "simplified" interfaces that still force digital submission.</p>
+                <h3>Frontline workers become the system's "human patch" — absorbing friction that design ignored. Colour semantics were overturned by local emotional logic!</h3>
+                <div class="verbatim">"Compared to yellow code, I actually prefer red code." — isolated informant</div>
+                <p><span class="arrow">→</span> <strong>Strategy 1:</strong> Service blueprints must include the <em>journey of internal operators</em>, not just end users. Employee workarounds are early signals of systemic failure, not individual heroism. Design escalation pathways rather than exception-handling alone.</p>
+                <p><span class="arrow">→</span> <strong>Strategy 2:</strong> Visual codes carry cultural payloads. In cross-cultural or high-stakes products, semantic mappings must be ethnographically validated — not assumed to be universal. A "danger" colour may become a "certainty" colour under local pressure. Always test symbolic interpretation in context.</p>
             </div>
             <div class="insight-card">
                 <div class="label">Field Finding 03</div>
-                <h3>Frontline staff became the system's "human patch" — absorbing friction the design ignored.</h3>
-                <div class="verbatim">"I will post this on Douyin. No one will support you." — Security guard's gray-area deterrent</div>
-                <p><span class="arrow">→</span> <strong>Strategy:</strong> Service blueprints must include the <em>internal operator's journey</em>, not only the end user. Gray-area workarounds by staff are early signals of systemic failure, not individual heroism. Design escalation pathways, not just exception handlers.</p>
-            </div>
-            <div class="insight-card">
-                <div class="label">Field Finding 04</div>
-                <h3>Color semantics were inverted by local emotional logic.</h3>
-                <div class="verbatim">"Compared to yellow, I actually prefer red." — Quarantined respondent</div>
-                <p><span class="arrow">→</span> <strong>Strategy:</strong> Visual codes carry cultural payload. In cross-cultural or high-stakes products, semantic mapping must be validated ethnographically — not assumed universal. A "danger" color can become a "certainty" color under local stress. Always test symbol interpretation in context.</p>
-            </div>
-            <div class="insight-card">
-                <div class="label">Field Finding 05</div>
-                <h3>State-transition opacity created a trust avalanche at the service terminal.</h3>
-                <div class="verbatim">"After turning green, how do you prove you were yellow? No one can tell." — Hospital director</div>
-                <p><span class="arrow">→</span> <strong>Strategy:</strong> When a system's state-transition logic (yellow → green) is opaque, the <em>customer-service cost</em> does not fall on the system designer; it is dumped onto the most fragile node in the service chain (private hospitals, small clinics, frontline clerks). Proactive status explanation beats reactive customer service.</p>
-            </div>
-            <div class="insight-card">
-                <div class="label">Field Finding 06</div>
-                <h3>Spatial context within 800 meters produced three divergent interaction ecosystems.</h3>
-                <div class="verbatim">"The superior only checks whether you wrote it, not if it is true." — KTV staff</div>
-                <p><span class="arrow">→</span> <strong>Strategy:</strong> A single user journey map is a dangerous fiction. Deploy <em>spatially sensitive service variants</em> that account for local enforcement culture, economic pressure, and physical layout — otherwise frontline workers will invent (and hide) their own. Context-aware deployment, not one-size-fits-all rollout.</p>
+                <h3>Micro-spatial contexts produce radically different interaction ecologies; ambiguity of state transitions triggers a trust avalanche at service endpoints</h3>
+                <div class="verbatim">"Once you turn green, how do you prove you were ever yellow? Nobody can explain it." — hospital director</div>
+                <div class="verbatim">"The higher-ups just check whether you wrote something, not whether it's true." — KTV employee</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> A single user journey map is a dangerous fiction. Deploy <em>spatially-sensitive service variants</em> that account for local enforcement culture, economic pressure, and physical layout — or frontline staff will invent (and conceal) their own workarounds. Context-aware deployment, not one-size-fits-all rollout.</p>
             </div>
         </div>
     </div>
@@ -655,30 +597,30 @@
 
 <section class="section">
     <div class="container">
-        <h2>Methodology — How the Study Was Built</h2>
+        <h2>Methodology — How the Research Was Built</h2>
         <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
-            Independent research does not mean unstructured research. The project followed a formal protocol to ensure ethical safety, analytical validity, and auditability — all while maintaining the flexibility ethnographic fieldwork demands.
+            Independent research does not mean unstructured research. The project maintained the flexibility required for ethnographic fieldwork while adhering to formal protocols ensuring ethical safety, analytical validity, and auditability.
         </p>
         <div class="method-grid">
             <div class="method-card">
                 <div class="method-icon">🔒</div>
                 <h3>Research Ethics</h3>
-                <p>Informed consent signed by all interviewees. Full anonymization in all outputs. Right to withdraw guaranteed. Audio recordings restricted to researcher-only access.</p>
+                <p>All informants signed informed consent forms. All outputs fully anonymised. Right to withdraw guaranteed at any time. Recordings accessible only to the researcher.</p>
             </div>
             <div class="method-card">
                 <div class="method-icon">📊</div>
                 <h3>Mixed Methods</h3>
-                <p>63-item questionnaire for demographic baseline and pain-point prioritization. 30+ semi-structured interviews. Participatory observation in 5+ sites. Social-media scraping (10K+ posts) for sentiment and discourse analysis.</p>
+                <p>63 surveys for demographic baseline and pain-point ranking. 30+ semi-structured in-depth interviews. 5+ venue participant observations. Social media scraping (10K+ posts) for sentiment and discourse analysis.</p>
             </div>
             <div class="method-card">
                 <div class="method-icon">🗺️</div>
                 <h3>Field Density</h3>
-                <p>2 cities (Chengdu, Xi'an), 5+ commercial/institutional sites, 6-month longitudinal tracking. Hand-drawn spatial maps for each site to document material layout and power geometry.</p>
+                <p>2 cities (Chengdu, Xi'an), 5+ commercial/institutional venues, 6-month longitudinal tracking. Hand-drawn spatial maps of each venue recording material layout and the geometry of power.</p>
             </div>
             <div class="method-card">
                 <div class="method-icon">🔍</div>
                 <h3>Analytical Framework</h3>
-                <p>Data organized along three analytical layers: digitalisation/datafication, identification/identity, and personhood — corresponding to the "technique-body-person" framework from STS and material culture studies.</p>
+                <p>Data organised along three analytic layers: digitalisation/datafication, identity/identifier, and personhood — corresponding to the STS and material culture studies' tech-body-person framework.</p>
             </div>
         </div>
     </div>
@@ -686,12 +628,12 @@
 
 <footer>
     <div class="container">
-        <div class="badge">Xinhua Han — Fieldworker</div>
+        <div class="badge">Xinhua Han — Field Worker</div>
         <p class="footer-quote">
-            "Real conversations in the field reveal cultural tensions that survey data alone can never surface."
+            "Real conversations in the field reveal cultural tensions that survey data can never capture."
         </p>
         <p class="footer-contact">
-            MSc Social &amp; Cultural Anthropology &amp; Digital Media · BEng Computer Engineering<br><br>
+            MA in Socio-Cultural Anthropology & Digital Media · BA in Computer Engineering<br><br>
             <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a>
         </p>
     </div>
