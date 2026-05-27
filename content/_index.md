@@ -7,10 +7,10 @@ draft: false
 <h2>用自然科学的精度，人文科学的深度，社会科学的广度，投身于技术产品洞察和包容性设计</h2>
 
 <div style="display:flex;gap:2rem;align-items:flex-start;margin-bottom:2.5rem;">
-<div style="flex:2;min-width:0;">
-<p>计算机工程、数字媒体与社会文化人类学复合背景。长期关注文化、技术与日常生活之间的交互地带，热衷于挖掘人们与品牌、产品、系统之间那些日用不知又难以言说的意义之网。</p>
-<p>专注电子产品的用户体验与人因工程评估，擅长通过混合研究方法构建用户画像与包容性设计框架。具备神经多样性用户（ADHD、社交障碍等）的交互需求研究经验，为无障碍设计提供循证支持。</p>
-<p>日常漫步于民间声响、影像与山水之间。对多模态媒介技术，特别是音乐和运动产品的用户感受与行为模式有很多第一手体感洞察。</p>
+<div style="flex:2;min-width:0;font-size:1.08rem;line-height:1.9;">
+<p><strong>计算机工程、数字媒体与社会文化人类学</strong>复合背景。长期关注<strong>文化、技术与日常生活</strong>之间的交汇地带，热衷于挖掘人们与品牌、产品、系统之间难以言说的动机与张力。</p>
+<p>擅长通过<strong>混合研究方法</strong>构建用户画像与<strong>包容性设计框架</strong>。具备<strong>神经多样性用户</strong>的交互需求研究经验，为无障碍设计提供循证支持。</p>
+<p>日常漫步于民间声响、影像与山水之间。对<strong>多模态媒介技术</strong>，特别是<strong>音乐和运动产品</strong>的用户感受与行为模式有很多<strong>第一手体感洞察</strong>。</p>
 </div>
 <div style="flex:1;min-width:0;max-width:360px;">
 <img src="images/fieldwork/fieldwork-0.jpg" alt="田野现场" style="width:100%;height:260px;object-fit:cover;object-position:center left;border-radius:4px;display:block;">
