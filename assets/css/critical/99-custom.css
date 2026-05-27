@@ -1,0 +1,94 @@
+/* Homepage custom styles using theme variables */
+
+/* Intro section */
+.home-intro {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .home-intro {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.home-intro-text {
+  flex: 2;
+  min-width: 0;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.home-intro-portrait {
+  flex: 1;
+  min-width: 0;
+  max-width: 320px;
+}
+
+.home-intro-portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center left;
+  border-radius: 2px;
+}
+
+/* Gallery */
+.home-gallery {
+  display: flex;
+  gap: 4px;
+  height: 420px;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-gallery-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.home-gallery-side {
+  flex: 2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.home-gallery-side > div {
+  flex: 1;
+  min-height: 0;
+}
+
+.home-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Contact footer */
+.home-contact {
+  text-align: center;
+  padding: 2rem 0;
+  font-family: var(--font-monospace);
+  font-size: 0.875rem;
+  color: var(--fg3);
+  line-height: 2.2;
+}
+
+.home-contact a {
+  color: var(--fg3);
+}
+
+.home-contact a:hover {
+  color: var(--fg0);
+}

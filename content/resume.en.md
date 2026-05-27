@@ -15,9 +15,9 @@ Thesis: *Remaking Meaning: How Chinese Students Reconstruct the Self Through Plu
 ---
 
 **Heidelberg University (QS #80), Germany** | Oct 2025 — Mar 2026
-Erasmus+ Exchange Student
+Erasmus+ Exchange Student · Institute of Anthropology
 
-Research focus: How generative AI reshapes thinking and expression in non-alphabetic civilizations, and the ethical challenges arising across different cultural ecologies.
+Research focus: How the technological modernization of alphabetic civilizations reshapes thinking and expression in Chinese civilization (e.g., romanization of Chinese script), and the ethical challenges arising across different cultural ecologies.
 
 ---
 
@@ -51,9 +51,6 @@ Adobe Creative Cloud · NVivo · Microsoft Office · Ability to communicate effe
 **Languages**
 Mandarin (native) · English (fluent / C1) · Cantonese (intermediate) · German (beginner)
 
-**Academic Presentations**
-- Oct 2025 · EASA TAN Annual Conference (University of the Aegean, Greece) — *Rethinking Anthropology as Education: Between Self and Alterity*
-- Jun 2022 · 8th Youth Anthropology Conference (Nanjing University) — *Anthropological Reflections on China's Technological Governance under Normalized Epidemic Control*
 
 ---
 
@@ -62,9 +59,11 @@ Mandarin (native) · English (fluent / C1) · Cantonese (intermediate) · German
 ### Cross-Cultural AI User Cognitive Ecology & Inclusive Design Study
 **Sep 2024 — Jul 2025 | Master's Thesis & Research Project**
 
-Led a longitudinal tracking study of 30 core users, conducting 50+ in-depth interviews and multiple rounds of digital behavior monitoring to observe AI usage habits in non-native language environments over an extended period. Key focus: capturing non-verbal signals such as silence and avoidance to uncover motivations that conventional surveys miss.
+Led a longitudinal tracking study of 25 core users, conducting 50+ in-depth interviews and multiple rounds of digital behavior monitoring to observe AI usage habits in non-native language environments over an extended period. Key focus: capturing non-verbal signals such as silence and avoidance to uncover motivations that conventional surveys miss.
 
-**Key Insight:** Emotional support — not knowledge acquisition — is the primary interaction driver. Established an interaction needs assessment framework for neurodivergent users (ADHD / dyslexia / social disabilities), providing empirical grounding for inclusive and accessible AI product design. Revealed the dynamic process by which users engage in "meaning-making" and "self-reconstruction" through AI in non-native contexts, informing cross-cultural adaptation strategies for AI products going global.
+**Key Insight:** Emotional support — not knowledge acquisition — is the primary interaction driver. Established an interaction needs assessment framework for neurodivergent users (ADHD / dyslexia / social disabilities), providing empirical grounding for inclusive and accessible AI product design. Revealed the dynamic process by which users engage in "meaning-making" and "self-reconstruction" through AI in non-native contexts, informing cross-cultural adaptation and cognitive sovereignty protection strategies for AI products going global.
+
+**Publication:** *Rethinking Anthropology as Education: Between Self and Alterity*, EASA TAN Annual Conference, University of the Aegean, Greece, Oct 2025
 
 ---
 
@@ -73,7 +72,9 @@ Led a longitudinal tracking study of 30 core users, conducting 50+ in-depth inte
 
 Designed a user-voice capture strategy, built a web scraper to collect 10,000+ user feedback entries, and established a sentiment evolution model and needs-priority matrix. Conducted 20+ in-depth interviews and usability diagnostics across 6 user personas (segmented by age, occupation, and digital literacy), independently producing a 40,000-word research report.
 
-**Key Insight:** The same product carried radically different social meanings and identity associations across user groups. User compliance and covert resistance toward technology coexist — and neither is simply correlated with technical proficiency.
+**Key Insight:** The same product carried radically different social meanings and identity associations across user groups. User compliance and covert resistance toward technology coexist — and neither is simply correlated with technical proficiency. Adoption rate data may mask large-scale surface compliance; true acceptance requires independent assessment through qualitative research.
+
+**Publication:** *Anthropological Reflections on China's Technological Governance under Normalized Epidemic Control*, 8th Youth Anthropology Conference, Nanjing University, Jun 2022
 
 ---
 
@@ -82,7 +83,7 @@ Designed a user-voice capture strategy, built a web scraper to collect 10,000+ u
 
 Through covert participant observation from the service-terminal perspective, identified interaction breakdowns and efficiency bottlenecks in extreme scenarios such as peak commute hours. Informal interviews revealed the cognitive load and emotional labor endured by frontline operators under simultaneous pressure from technological authority, management directives, and public feedback.
 
-**Key Insight:** A persistent gap between procedural "ideal-state" design and actual frontline operations blurs the boundary between "technological empowerment" and "technological burden." This research framework is directly transferable to B2B product user research — decoding both end-user and internal-operator perspectives simultaneously to prevent systemic disconnects between top-level design and ground-level practice.
+**Key Insight:** Beyond the digital divide on the passenger side, internal users (frontline staff) also bear multiple hidden costs — equipment friction, ambiguous directives, and user conflicts — and remain a systematically overlooked stakeholder in service design. Service blueprints must incorporate the operator perspective from the outset.
 
 ---
 
