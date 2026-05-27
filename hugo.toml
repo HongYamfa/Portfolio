@@ -88,6 +88,12 @@ mainSections = []
   [languages.en]
     languageName = "English"
     weight = 20
+    title = "Xinhua Han"
+    [languages.en.params]
+      author = "Xinhua Han"
+      [languages.en.params.logo]
+        text = "Xinhua Han"
+        url = "/en/"
     [[languages.en.menus.main]]
       identifier = "home"
       name = "Home"

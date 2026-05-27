@@ -8,7 +8,7 @@ Below are research projects and fieldwork I have led or participated in.
 
 ## Cross-Cultural AI User Cognitive Ecology & Inclusive Design Study
 
-**Duration**: 2024.09 — 2025.07  
+**Duration**: Sep 2024 — Jul 2025  
 **Type**: Master's Thesis & Research Project
 
 A near-year longitudinal study of 25 international students using generative AI in cross-cultural environments. The core driver of sustained use turned out to be emotional — not efficiency. This counterintuitive finding has direct implications for AI product design and localization strategy.
@@ -19,7 +19,7 @@ A near-year longitudinal study of 25 international students using generative AI 
 
 ## Mental Model Mismatch & UX Optimization in Digital Governance
 
-**Duration**: 2021.11 — 2022.05  
+**Duration**: Nov 2021 — May 2022  
 **Type**: Independent Fieldwork Project
 
 A product touching 1.4 billion people, behind which lie vastly different user experiences and frictions. Through fieldwork interviews, social media data, and on-site observation, this study reconstructs the resistance, workarounds, and struggles for dignity beneath the surface of compliance.
