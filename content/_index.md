@@ -12,8 +12,8 @@ draft: false
 <p>专注电子产品的用户体验与人因工程评估，擅长通过混合研究方法构建用户画像与包容性设计框架。具备神经多样性用户（ADHD、社交障碍等）的交互需求研究经验，为无障碍设计提供循证支持。</p>
 <p>日常漫步于民间声响、影像与山水之间。对多模态媒介技术，特别是音乐和运动产品的用户感受与行为模式有很多第一手体感洞察。</p>
 </div>
-<div style="flex:1;min-width:0;max-width:280px;">
-<img src="images/fieldwork/fieldwork-0.jpg" alt="田野现场" style="width:100%;border-radius:4px;display:block;">
+<div style="flex:1;min-width:0;max-width:360px;">
+<img src="images/fieldwork/fieldwork-0.jpg" alt="田野现场" style="width:100%;height:260px;object-fit:cover;object-position:center left;border-radius:4px;display:block;">
 </div>
 </div>
 
@@ -21,7 +21,7 @@ draft: false
 
 <h2>田野掠影</h2>
 
-<div style="display:flex;gap:6px;height:360px;margin-top:1rem;max-width:900px;margin-left:auto;margin-right:auto;">
+<div style="display:flex;gap:6px;height:480px;margin-top:1rem;max-width:900px;margin-left:auto;margin-right:auto;">
 <div style="flex:1;min-width:0;">
 <img src="images/fieldwork/fieldwork-1.jpg" alt="田野现场" style="width:100%;height:100%;object-fit:cover;display:block;border-radius:4px;">
 </div>
