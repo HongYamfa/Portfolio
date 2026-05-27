@@ -10,7 +10,7 @@ draft: false
 <div style="flex:2;min-width:0;">
 <p>Interdisciplinary background in socio-cultural anthropology, computer engineering, and digital media. I focus on the intersection of culture, technology, and everyday life — uncovering the unspoken motivations, meanings, and tensions between people and brands, products, and systems.</p>
 <p>Specialized in user experience and human factors evaluation for electronic products, skilled in building user personas and inclusive design frameworks through mixed research methods. Experienced in interaction needs research for neurodivergent users (ADHD, social disabilities), providing evidence-based support for accessible product design.</p>
-<p>Independent music lover, marathon wander. First-hand embodied insights into user feelings and behavior patterns for music and sports products.</p>
+<p>Wandering within folk sounds, visual artifacts and natural resources. First-hand embodied insights into user feelings and behavior patterns for music and sports products.</p>
 </div>
 <div style="flex:1;min-width:0;max-width:280px;">
 <img src="../images/fieldwork/fieldwork-0.jpg" alt="Fieldwork" style="width:100%;border-radius:4px;display:block;">
