@@ -48,6 +48,9 @@
       "home-intro",
       "home-intro-portrait",
       "home-intro-text",
+      "home-quote",
+      "home-quote-attr",
+      "home-quote-text",
       "icon",
       "icon-tabler",
       "icon-tabler-menu-2",
@@ -81,7 +84,10 @@
       "search",
       "search__suggestions--hidden",
       "sidebar",
-      "theme__toggle"
+      "theme__toggle",
+      "”home-quote-attr”",
+      "”home-quote-text”",
+      "”home-quote”"
     ],
     "ids": [
       "awards--honors",
@@ -106,15 +112,13 @@
       "其他活动",
       "地铁安检系统人因工程评估与交互优化研究",
       "工作与实习经历",
-      "成果发表",
-      "成果发表疫情常态化下中国技术治理的人类学反思第八届青年人类学会议南京大学202206",
       "教育背景",
       "数字化田野调查训练",
       "数字治理产品用户心智失配与体验优化研究以健康码系统为例",
       "核心技能",
-      "用自然科学的精度人文科学的深度社会科学的广度投身于技术产品洞察和包容性设计",
       "田野掠影",
       "研究项目",
+      "立足科技背靠人文放眼社会克劳德列维-斯特劳斯",
       "获奖经历",
       "设计人类学理论与洞察从新万物有灵论到数字物质性",
       "跨文化-ai-产品用户认知生态与包容性设计研究"

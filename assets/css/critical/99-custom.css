@@ -1,10 +1,54 @@
 /* Homepage custom styles using theme variables */
 
+/* Hero quote */
+.home-quote {
+  margin: 2.5rem 0 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--bg1);
+}
+
+.home-quote-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: 0.05em;
+  color: var(--fg0);
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.home-quote-text::before,
+.home-quote-text::after {
+  color: var(--bg4);
+  font-size: 1.6em;
+  line-height: 0.1;
+  vertical-align: text-bottom;
+}
+
+.home-quote-text::before {
+  content: "“";
+  margin-right: 0.15em;
+}
+
+.home-quote-text::after {
+  content: "”";
+  margin-left: 0.15em;
+}
+
+.home-quote-attr {
+  font-family: var(--font-monospace);
+  font-size: 0.85rem;
+  color: var(--fg3);
+  text-align: right;
+  margin: 1rem 0 0;
+}
+
 /* Intro section */
 .home-intro {
   display: flex;
   gap: 2.5rem;
-  align-items: flex-start;
+  align-items: stretch;
   margin-bottom: 2.5rem;
 }
 
@@ -25,16 +69,17 @@
 .home-intro-portrait {
   flex: 1;
   min-width: 0;
-  max-width: 320px;
+  max-width: 280px;
+  overflow: hidden;
 }
 
 .home-intro-portrait img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4;
+  height: 100%;
   object-fit: cover;
-  object-position: center left;
+  object-position: center bottom;
   border-radius: 2px;
+  display: block;
 }
 
 /* Gallery */

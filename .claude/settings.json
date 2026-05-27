@@ -5,7 +5,18 @@
       "Bash(xargs grep -l \"logo\")",
       "Bash(Get-ChildItem -Recurse -Filter \"*.html\" \"C:\\\\Users\\\\18991\\\\AppData\\\\Local\\\\hugo_cache\\\\modules\\\\filecache\\\\modules\\\\pkg\\\\mod\\\\github.com\\\\schnerring\\\\hugo-theme-gruvbox@v0.0.0-20251001122453-81058f53a809\\\\layouts\")",
       "Bash(Select-String -Pattern \"logo\")",
-      "Bash(Select-Object -First 10)"
+      "Bash(Select-Object -First 10)",
+      "Bash(hugo server *)",
+      "Bash(curl -s http://127.0.0.1:1314/)",
+      "Bash(curl -s http://127.0.0.1:1314/Portfolio/)",
+      "Bash(npx playwright *)",
+      "Bash(pkill -f \"hugo server\")",
+      "Bash(hugo server --port 1314 --bind 127.0.0.1 > /tmp/hugo.log 2>&1 & *)",
+      "Read(//c/Users/18991/AppData/Local/Temp/**)",
+      "Bash(node -e ' *)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
     ]
   }
 }
