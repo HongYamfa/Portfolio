@@ -1,3 +1,8 @@
+/* Widen main content column (theme default: 650px) */
+main {
+  grid-template-columns: 1fr minmax(0, 900px) 4fr;
+}
+
 /* Homepage custom styles using theme variables */
 
 /* Hero quote */
