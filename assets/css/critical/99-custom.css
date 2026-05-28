@@ -1,3 +1,23 @@
+/* Language switcher in header */
+.lang-switch {
+  align-self: center;
+  font-family: var(--font-monospace);
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--fg3);
+  border: 1px solid var(--bg3);
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-left: 0.8rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.lang-switch:hover {
+  color: var(--fg0);
+  border-color: var(--fg3);
+}
+
 /* Widen and center main content (theme default: 1fr 650px 4fr — sidebar occupies 4fr even when hidden) */
 main {
   grid-template-columns: 1fr minmax(0, 900px) 1fr;

@@ -5,6 +5,17 @@
     {{ end }}
     <div class="logo__chevron">></div>
     <div class="logo__cursor">█</div>
+    {{ if .Translations }}
+      {{ with index .Translations 0 }}
+        <a class="lang-switch" href="{{ .Permalink }}">{{ if eq .Language.Lang "en" }}EN{{ else }}中文{{ end }}</a>
+      {{ end }}
+    {{ else }}
+      {{ if eq .Language.Lang "zh-cn" }}
+        <a class="lang-switch" href="{{ $.Site.BaseURL }}en/">EN</a>
+      {{ else }}
+        <a class="lang-switch" href="{{ $.Site.BaseURL }}">中文</a>
+      {{ end }}
+    {{ end }}
   </div>
 
   <div class="search">
