@@ -13,7 +13,9 @@
       "Bash(pkill -f \"hugo server\")",
       "Bash(hugo server --port 1314 --bind 127.0.0.1 > /tmp/hugo.log 2>&1 & *)",
       "Read(//c/Users/18991/AppData/Local/Temp/**)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
     ],
     "additionalDirectories": [
       "\\tmp"
