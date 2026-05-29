@@ -18,11 +18,6 @@
   border-color: var(--fg3);
 }
 
-/* Widen and center main content (theme default: 1fr 650px 4fr — sidebar occupies 4fr even when hidden) */
-main {
-  grid-template-columns: 1fr minmax(0, 900px) 1fr;
-}
-
 /* Homepage custom styles using theme variables */
 
 /* Hero quote */
