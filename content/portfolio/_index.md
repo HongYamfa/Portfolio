@@ -17,6 +17,17 @@ draft: false
 
 ---
 
+## 当免费乘车遇上幽灵公交：斯旺西公共交通服务快速 UX 研究
+
+**时间**：2022.11 – 2022.12（4 周）  
+**类型**：独立 UX 研究项目
+
+一项为期四周的混合方法调查：信息架构的崩溃、算法的不可靠与空间上的不平等，如何一点点侵蚀公共交通的用户信任——即便纸面上的乘客数据看起来还不错。
+
+<a href="Swansea_Bus_zh.html" style="font-weight:700;background:rgba(255,200,0,0.22);padding:2px 10px;border-radius:4px;text-decoration:none;border-bottom:2px solid #f59e0b;">查看完整报告</a>
+
+---
+
 ## 数字治理产品用户心智失配与体验优化研究：以健康码系统为例
 
 **时间**：2021.11 — 2022.05  

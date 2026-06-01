@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swansea Bus Service UX Research — Field Portfolio | Xinhua Han</title>
+    <style>
+        :root {
+            --bg: #fbf1c7;
+            --text: #1c1917;
+            --text-secondary: #78716c;
+            --accent-red: #dc2626;
+            --accent-yellow: #d97706;
+            --accent-green: #059669;
+            --accent-blue: #2563eb;
+            --accent-purple: #7c3aed;
+            --accent-teal: #0f766e;
+            --border: #e7e5e4;
+            --card: #f2e5bc;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        header {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0; width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(220,38,38,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 900px;
+            margin-bottom: 32px;
+        }
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .meta-item strong {
+            color: var(--text);
+            display: block;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+        .section {
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 600;
+        }
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+        }
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .context-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 32px;
+            margin-top: 8px;
+        }
+        .context-box h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .context-box p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .context-box .highlight {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .personas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .persona-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .persona-card:hover { transform: translateY(-3px); }
+        .persona-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+        }
+        .persona-card.red::before { background: var(--accent-red); }
+        .persona-card.yellow::before { background: var(--accent-yellow); }
+        .persona-card.blue::before { background: var(--accent-blue); }
+        .persona-card.purple::before { background: var(--accent-purple); }
+        .persona-card.teal::before { background: var(--accent-teal); }
+        .persona-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 100px;
+            margin-bottom: 14px;
+        }
+        .persona-card.red .persona-tag { background: rgba(220,38,38,0.08); color: var(--accent-red); }
+        .persona-card.yellow .persona-tag { background: rgba(217,119,6,0.08); color: var(--accent-yellow); }
+        .persona-card.blue .persona-tag { background: rgba(37,99,235,0.08); color: var(--accent-blue); }
+        .persona-card.purple .persona-tag { background: rgba(124,58,237,0.08); color: var(--accent-purple); }
+        .persona-card.teal .persona-tag { background: rgba(15,118,110,0.08); color: var(--accent-teal); }
+        .persona-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .persona-traits {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .quote-box {
+            background: var(--bg);
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 1.5;
+            border-left: 3px solid var(--border);
+            margin-bottom: 14px;
+        }
+        .persona-card.red .quote-box { border-left-color: var(--accent-red); }
+        .persona-card.yellow .quote-box { border-left-color: var(--accent-yellow); }
+        .persona-card.blue .quote-box { border-left-color: var(--accent-blue); }
+        .persona-card.purple .quote-box { border-left-color: var(--accent-purple); }
+        .persona-card.teal .quote-box { border-left-color: var(--accent-teal); }
+        .insight-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .insight-pill span {
+            display: inline-block;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+        }
+        .persona-card.red .insight-pill span { background: var(--accent-red); }
+        .persona-card.yellow .insight-pill span { background: var(--accent-yellow); }
+        .persona-card.blue .insight-pill span { background: var(--accent-blue); }
+        .persona-card.purple .insight-pill span { background: var(--accent-purple); }
+        .persona-card.teal .insight-pill span { background: var(--accent-teal); }
+
+        .spatial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 8px;
+        }
+        .spatial-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px;
+            position: relative;
+        }
+        .spatial-card .zone-label {
+            position: absolute;
+            top:  16px;
+            right: 16px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        .zone-red { background: rgba(220,38,38,0.08); color: var(--accent-red); }
+        .zone-yellow { background: rgba(217,119,6,0.08); color: var(--accent-yellow); }
+        .zone-green { background: rgba(5,150,105,0.08); color: var(--accent-green); }
+        .spatial-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            padding-right: 60px;
+        }
+        .spatial-card .field {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+        .spatial-card .value {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        .spatial-card .quote {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 2px solid var(--border);
+            padding-left: 12px;
+            line-height: 1.5;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .insight-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+        }
+        .insight-card .label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .insight-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .insight-card .verbatim {
+            font-size: 13px;
+            font-style: italic;
+            color: var(--text-secondary);
+            border-left: 2px solid var(--border);
+            padding-left: 12px;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .insight-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .arrow {
+            color: var(--accent-green);
+            font-weight: 700;
+            margin-right: 4px;
+        }
+
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .method-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+        }
+        .method-icon {
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+        .method-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .method-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 64px 0 80px;
+            text-align: center;
+        }
+        .footer-quote {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+        }
+        .footer-contact {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .footer-contact a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        .footer-contact a:hover {
+            border-color: var(--text);
+        }
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 100px;
+            background: var(--text);
+            color: var(--bg);
+            margin-bottom: 24px;
+        }
+        .section-summary {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 32px; }
+            .section { padding: 48px 0; }
+            header { padding: 60px 0 36px; }
+        }
+    </style>
+</head>
+<body>
+<a href="./" style="position:fixed;top:20px;left:20px;z-index:1000;padding:8px 16px;background:rgba(251,241,199,0.9);border:1px solid #e7e5e4;border-radius:6px;color:#78716c;font-size:14px;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;backdrop-filter:blur(4px);box-shadow:0 1px 3px rgba(0,0,0,0.05);">&larr; Back</a>
+
+<header>
+    <div class="container">
+        <div class="eyebrow">User Research Portfolio — Mixed Methods Case Study</div>
+        <h1>When Free Rides Meet Ghost Buses:<br>Swansea Public Transport Service<br>Rapid UX Research</h1>
+        <p class="subtitle">
+            A four-week mixed-methods investigation into how collapsing information architecture, algorithmic unreliability, and spatial inequality erode public transport trust — even when headline passenger numbers look fine.
+        </p>
+        <div class="meta">
+            <div class="meta-item"><strong>Role</strong>Independent Researcher</div>
+            <div class="meta-item"><strong>Methods</strong>Participant Observation, In-depth Interviews, App Heuristic Evaluation, Social Media Analysis, Policy Text Review</div>
+            <div class="meta-item"><strong>Period</strong>Nov 2022 – Dec 2022</div>
+            <div class="meta-item"><strong>Scale</strong>10+ Interviews, 200+ Social Media Comments, 5+ Bus Stops, 3 Routes</div>
+        </div>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>Research Overview</h2>
+        <div class="overview-grid">
+            <div class="stat-card">
+                <div class="stat-number">4 Weeks</div>
+                <div class="stat-label">Rapid mixed-methods fieldwork covering multiple sites across Swansea</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">In-depth interviews with participants from 5+ nationalities and diverse age groups</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Social media comments analyzed from Facebook community groups and official pages</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Observed bus stops ranging from university campuses to city centers and peripheral residential areas</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Research Background</h2>
+        <div class="context-box">
+            <h3>Research Question: When "More Passengers" Masks a Deeper Service Crisis</h3>
+            <p>
+                The Swansea Council's "Free Ride" scheme returned for the 2022 Christmas season, driving an immediate surge in passenger numbers. <span class="highlight">Yet beneath these stellar figures, user trust was already severely eroded: real-time tracking displayed "Due," but the buses never arrived; passengers were turned away due to overcapacity; and elderly users with low digital literacy were effectively locked out of the system.</span>
+            </p>
+            <p>
+                The study was triggered by a specific incident: on October 5th, a storm knocked down a large tree near the Fulton House roundabout, forcing a temporary relocation of the bus stop. Two months later, the stop had been restored to its original location, but without any official notification. An elderly university employee remains uncertain to this day whether they are standing in the correct spot. The information gap between official channels and frontline reality was never bridged.
+            </p>
+            <p>
+                <span class="highlight">This study asks: When metrics (ridership) and experience (reliability) decouple, what does "user satisfaction" actually mean? How does the failure of information architecture—contradictory notices, ambiguous app design, and missing real-time updates—cumulatively transform into frustration across different user groups? And what happens when the glowing numbers brought by free incentives mask systemic service decline?</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>User Personas</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            Swansea's bus service produced four distinctly different user experiences — defined not by demographics but by each person's relationship with uncertainty, digital literacy, and alternative transport options.
+        </p>
+        <div class="personas">
+            <div class="persona-card red">
+                <div class="persona-tag">Frustrated Explorer</div>
+                <div class="persona-name">Delima — The Resilient Walker</div>
+                <div class="persona-traits">Malaysian postgraduate student · First time taking a bus in the UK · Attracted by the free scheme · Changed to walking exclusively after the first failure</div>
+                <div class="quote-box">"Well, we will just have to walk to the bus station, but it is good exercise anyway!" — Delima, after the bus she intended to board failed to stop due to being completely full and drove straight past</div>
+                <div class="insight-pill"><span></span> Sparked by free incentives → First experience fails → Abandons public transport entirely</div>
+            </div>
+            <div class="persona-card yellow">
+                <div class="persona-tag">Satisfied Adapter</div>
+                <div class="persona-name">Leon — The Grateful Tracker</div>
+                <div class="persona-traits">Kenyan postgraduate student · Commutes daily by bus · App user · Lower expectations compared to his home country</div>
+                <div class="quote-box">"This tracking application is already very advanced and convenient for me; we don't have this kind of technology in my country." — Leon, sharing his evaluation of the First Bus App</div>
+                <div class="insight-pill"><span></span> Cross-cultural expectation gaps make mediocre service seem exceptional</div>
+            </div>
+            <div class="persona-card blue">
+                <div class="persona-tag">Critical Power User</div>
+                <div class="persona-name">Zheyu — The Frustrated Comparer</div>
+                <div class="persona-traits">Chinese postgraduate student · High-frequency bus commuter · High digital literacy · Accustomed to comparing with Chinese real-time bus apps</div>
+                <div class="quote-box">"I gradually realized that the bolded times were not as reliable as Google Maps' 'scheduled time'." — Zheyu, reflecting on his experience with the typographic ambiguity of the First Bus App</div>
+                <div class="insight-pill"><span></span> Inconsistent App UI (bolding representing scheduled time instead of real-time) causes detail-oriented users to lose trust entirely</div>
+            </div>
+            <div class="persona-card purple">
+                <div class="persona-tag">Active Avoider</div>
+                <div class="persona-name">Sean &amp; Margaret — The Driving Locals</div>
+                <div class="persona-traits">Swansea University staff · Long-term residents · Drive to work · Deep institutional distrust</div>
+                <div class="quote-box">"If I had to rely on the bus, I would never get to work!" — Sean; "When I was younger, Swansea's buses and trams were much more convenient than they are now." — Margaret</div>
+                <div class="insight-pill"><span></span> Long-term residents with alternative transport options have completely abandoned the system; their departure leaves passenger data masking the decline in service quality</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Core Findings</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            Within a 2 km radius, three field sites revealed three distinct failure modes. The "same" bus service produced entirely different user journeys due to disparities in stop infrastructure, app reliability, and passenger resilience.
+        </p>
+        <div class="spatial-grid">
+            <div class="spatial-card">
+                <div class="zone-label zone-red">Confusion</div>
+                <h3>Fulton House Roundabout</h3>
+                <div class="field">Failure Mode</div>
+                <div class="value">Physical information failure — more than three contradictory notices left un-updated two months after the storm</div>
+                <div class="field">User Impact</div>
+                <div class="value">Elderly staff remain unsure of where to wait; passengers waited at the wrong location for over thirty minutes</div>
+                <div class="quote" style="margin-top:12px;">"We waited here for over half an hour, watching one bus after another leave. When we finally became the only two people left on the platform, a staff member came over to ask which bus we were taking, and then pointed to the other side."</div>
+            </div>
+            <div class="spatial-card">
+                <div class="zone-label zone-yellow">Ghost Bus</div>
+                <h3>Christina Street (City Centre)</h3>
+                <div class="field">Failure Mode</div>
+                <div class="value">Algorithmic unreliability — real-time tracking displays "Due," but the bus never appears</div>
+                <div class="field">User Impact</div>
+                <div class="value">Two young passengers chased a "ghost bus" and waited for 25 minutes; one walked home, the other was stranded in the strong wind</div>
+                <div class="quote" style="margin-top:12px;">"The originally scheduled bus turned into a 'ghost'. One passenger left first — fortunately, he lived right next door. Three minutes later, the other realized something was wrong too, but had nowhere to go and could only wait in the strong wind."</div>
+            </div>
+            <div class="spatial-card">
+                <div class="zone-label zone-green">Abandoned</div>
+                <h3>Bernard Street (Peripheral Stops)</h3>
+                <div class="field">Failure Mode</div>
+                <div class="value">Service inequality — core routes are prioritized while peripheral areas are marginalized due to "low profitability"</div>
+                <div class="field">User Impact</div>
+                <div class="value">"Peripheral" areas are excluded from the free incentives; residents spontaneously form community groups to document this systemic neglect</div>
+                <div class="quote" style="margin-top:12px;">"Great, but Pennard isn't included in the summer because we are seen as peripheral." — Andrea Brooks</div>
+            </div>
+        </div>
+        <div class="section-summary">
+            <strong>Field Insight:</strong> The same transportation network manifests three distinct failure modes within a 2 km radius — <em>information failure</em> (physical layer), <em>algorithmic "ghosting"</em> (digital layer), and <em>spatial abandonment</em> (structural layer). A product team that only looks at aggregate ridership would miss all three failures.
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>From Insight to Strategy</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            Three field findings translated into actionable product and service design implications.
+        </p>
+        <div class="insights-grid">
+            <div class="insight-card">
+                <div class="label">Finding 01</div>
+                <h3>Two Modes of Information Failure: Contradictory Physical Notices and Digital "Ghost Buses"</h3>
+                <div class="verbatim">"There are more than three notices related to route information at this stop. Are they complementary? Which one is the latest? Two of them even contradict each other." — Fulton House Passenger; "Both were staring intently at their phones displaying tracking info. But the scheduled bus became a 'ghost', and one of them left." — Christina Street Field Observation</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> Information failures occur simultaneously across physical and digital layers but are often handled separately. The physical layer requires a <em>single source of truth</em> — stacking multiple contradictory notices only creates a wall of text that bewilders users. The digital layer must be designed for <em>"how to communicate uncertainty"</em> — a real-time tracker displaying "Due" when no bus is coming destroys trust far more than having no tracker at all. An honest "We are uncertain" status beats false precision.</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Finding 02</div>
+                <h3>Flattering Ridership Numbers Mask Systemic Service Decline</h3>
+                <div class="verbatim">"More passengers during the free ride period does not equal better service." — Core Finding Headline; "I rarely take the bus now, especially when it's free because it's always packed, which makes me incredibly anxious." — Chelsea Barrett</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> Surges in ridership during promotional periods are dangerous "vanity metrics." Product teams should track <em>retention cohorts</em> — do first-time users return after the discount ends? Are their experience ratings positive? A report lacking satisfaction and retention data, showing only aggregated total passenger volume, presents a dangerously distorted picture.</p>
+            </div>
+            <div class="insight-card">
+                <div class="label">Finding 03</div>
+                <h3>Users from Diverse Cultural Backgrounds Approach the Same Interface with Different Mental Models</h3>
+                <div class="verbatim">"After missing it multiple times, I realized that the bolded times were unreliable, unlike Google Maps' 'scheduled time'." — Zheyu's discovery on the First Bus App</div>
+                <p><span class="arrow">→</span> <strong>Strategy:</strong> Users from different transit cultures interpret the same interface elements differently. Bold text meant "real-time" to Zheyu (the convention in Chinese apps), but actually represented "scheduled time" in the First Bus App. <em>Icons and typography must undergo cross-cultural validation</em> — never assume a visual symbol will be interpreted the same way by everyone.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Methodology</h2>
+        <p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">
+            This rapid study combined five methods over four weeks, demonstrating how mixed-methods research produces actionable insights under tight time constraints — a skillset that transfers directly to agile product teams.
+        </p>
+        <div class="method-grid">
+            <div class="method-card">
+                <div class="method-icon">👁️</div>
+                <h3>Participant Observation</h3>
+                <p>Conducted direct observation at 5+ bus stops over two weekends, spanning from the Singleton campus to the city center and peripheral residential areas. Field notes documented passenger behavior, wait times, boarding confusion, and interactions between passengers, physical infrastructure, and mobile apps.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">🎤</div>
+                <h3>In-depth Interviews</h3>
+                <p>Completed 10+ semi-structured interviews with participants from 5+ countries (Malaysia, Kenya, China, UK, Nigeria), ranging in age from their 20s to 60s. Interview guides covered first-time experiences, app usage habits, alternative transit choices, and the process of trust-building.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">📱</div>
+                <h3>App Heuristic Evaluation</h3>
+                <p>Performed systematic walkthroughs of the First Bus mobile application to identify interface inconsistencies (ambiguity between bold and regular typography, unclear icon meanings, dead-end search paths) and contrasted findings with Google Maps on identical routes.</p>
+            </div>
+            <div class="method-card">
+                <div class="method-icon">💬</div>
+                <h3>Social Media Analysis</h3>
+                <p>Analyzed over 200 comments from the Swansea Online Facebook page and community groups like "Bus Service Godre'r Graig &amp; Ystalyfera." Coded comments for sentiment and conducted thematic analysis on complaint typologies, First Bus response patterns, and community self-organization strategies.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="badge">Xinhua Han — Fieldworker</div>
+        <p class="footer-quote">
+            "Fieldwork provides situated perspectives for parallax correction, questioning, and reframing."
+        </p>
+        <p class="footer-contact">
+            MSc Social &amp; Cultural Anthropology · MA Digital Media · B.E. Cybersecurity<br><br>
+            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
