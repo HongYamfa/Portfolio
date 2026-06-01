@@ -39,7 +39,7 @@ A product touching 1.4 billion people, behind which lie vastly different user ex
 
 ---
 
-## Theoretical Grounding: From Animism to Digital Materiality
+## Theoretical Grounding of Design Anthropology: From Animism to Digital Materiality
 
 **Type**: Academic Portfolio / Theoretical Synthesis
 
