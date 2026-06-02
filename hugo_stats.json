@@ -91,7 +91,9 @@
       "theme__toggle"
     ],
     "ids": [
+      "academic-appointments",
       "academic-employment",
+      "awards",
       "awards--honors",
       "conference-presentations",
       "core-skills",
