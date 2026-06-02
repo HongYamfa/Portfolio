@@ -19,7 +19,6 @@ The thesis advances two conceptual contributions. The first is a distinction bet
 
 **Methods:** Dialogical interviews · Participant observation · Autoethnography · Digital trace analysis
 
-**Publication:** *Rethinking Anthropology as Education: Between Self and Alterity*, EASA TAN Annual Conference, University of the Aegean, Greece, Oct 2025
 
 ---
 
