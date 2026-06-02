@@ -9,7 +9,7 @@
     <style>
       main {
         grid-template-areas: "content" !important;
-        grid-template-columns: minmax(0, 900px) !important;
+        grid-template-columns: minmax(0, {{ if eq .Site.Language.Lang "academia" }}1200px{{ else }}900px{{ end }}) !important;
         justify-content: center;
       }
     </style>

@@ -194,13 +194,61 @@
 .academia-text {
   flex: 1;
   min-width: 0;
-  font-size: 0.93rem;
+  font-size: 1.10rem;
   line-height: 1.8;
 }
 
 .academia-text p:first-child {
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.45rem;
   line-height: 1.55;
   margin-top: 0;
+}
+
+/* Academia quote styling */
+.academia-quote {
+  margin: 3rem 0 3rem;
+  padding: 2.5rem 2rem 2.5rem 2.5rem;
+  border-left: 5px solid var(--blue1);
+  background: linear-gradient(90deg, var(--bg1) 0%, transparent 100%);
+  border-radius: 0 6px 6px 0;
+  position: relative;
+}
+
+.academia-quote::before {
+  content: "\"";
+  position: absolute;
+  top: 0.6rem;
+  left: 0.9rem;
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  color: var(--blue1);
+  opacity: 0.22;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.academia-quote-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: var(--fg0);
+  line-height: 1.55;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.academia-quote-attr {
+  font-family: var(--font-monospace);
+  font-size: 0.8rem;
+  color: var(--fg3);
+  text-align: right;
+  margin: 1.5rem 0 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
 }

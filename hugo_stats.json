@@ -38,6 +38,9 @@
     "classes": [
       "academia-intro",
       "academia-portrait",
+      "academia-quote",
+      "academia-quote-attr",
+      "academia-quote-text",
       "academia-text",
       "bio",
       "content",
