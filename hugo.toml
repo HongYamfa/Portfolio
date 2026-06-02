@@ -110,6 +110,37 @@ mainSections = []
       url = "/en/resume/"
       weight = 30
 
+  [languages.academia]
+    languageName = "Academia"
+    weight = 30
+    contentDir = "content-academia"
+    title = "Xinhua Han"
+    [languages.academia.params]
+      author = "Xinhua Han"
+      subtitle = "Socio-Cultural Anthropology · Digital Media"
+      description = "Academic portfolio of Xinhua Han — socio-cultural anthropologist and digital media researcher."
+      defaultTheme = "auto"
+      themeColor = "blue"
+      themeContrast = "medium"
+      [languages.academia.params.logo]
+        text = "Xinhua Han"
+        url = "/academia/"
+    [[languages.academia.menus.main]]
+      identifier = "about"
+      name = "About"
+      url = "/academia/"
+      weight = 10
+    [[languages.academia.menus.main]]
+      identifier = "research"
+      name = "Research"
+      url = "/academia/research/"
+      weight = 20
+    [[languages.academia.menus.main]]
+      identifier = "cv"
+      name = "CV"
+      url = "/academia/cv/"
+      weight = 30
+
 [module]
   [[module.imports]]
     path = "github.com/schnerring/hugo-theme-gruvbox"

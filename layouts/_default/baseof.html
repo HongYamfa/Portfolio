@@ -5,7 +5,7 @@
 >
   {{ partial "head/head.html" . }}
   <body>
-    {{ if .IsHome }}
+    {{ if or .IsHome .Params.hideSidebar }}
     <style>
       main {
         grid-template-areas: "content" !important;
@@ -20,7 +20,7 @@
         <div class="content">
           {{ block "main" . }}{{ end }}
         </div>
-        {{ if not .IsHome }}
+        {{ if and (not .IsHome) (not .Params.hideSidebar) }}
           {{ partial "sidebar.html" . }}
         {{ end }}
       </main>

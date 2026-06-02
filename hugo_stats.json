@@ -36,6 +36,9 @@
       "ul"
     ],
     "classes": [
+      "academia-intro",
+      "academia-portrait",
+      "academia-text",
       "bio",
       "content",
       "content-section",
@@ -88,23 +91,29 @@
       "theme__toggle"
     ],
     "ids": [
+      "academic-employment",
       "awards--honors",
+      "conference-presentations",
       "core-skills",
       "cross-cultural-ai-user-cognitive-ecology--inclusive-design-study",
       "digital-fieldwork-training",
       "education",
       "fieldwork-snapshots",
       "human-factors-evaluation--interaction-optimization-of-metro-security-systems",
+      "languages",
       "mental-model-mismatch--ux-optimization-in-digital-governance",
       "mental-model-mismatch--ux-optimization-in-digital-governance-a-health-code-case-study",
       "menu",
       "other-activities",
+      "pandemic-risk-perception--insurance-mediated-travel-willingness",
       "prism-dark",
       "prism-light",
+      "publications--conference-papers",
+      "research-methods",
       "research-projects",
       "search__suggestions",
       "search__text",
-      "theoretical-grounding-from-animism-to-digital-materiality",
+      "technical-skills",
       "theoretical-grounding-of-design-anthropology-from-animism-to-digital-materiality",
       "when-free-rides-meet-ghost-buses-swansea-public-transport-service-rapid-ux-research",
       "work--internship-experience",
@@ -120,7 +129,6 @@
       "研究项目",
       "获奖经历",
       "设计人类学从新万物有灵论到数字物质性",
-      "设计人类学理论与洞察从新万物有灵论到数字物质性",
       "跨文化-ai-产品用户认知生态与包容性设计研究"
     ]
   }
