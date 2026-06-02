@@ -7,7 +7,7 @@ hideSidebar: true
 
 ## Education
 
-**KU Leuven (QS #60), Belgium** | Sep 2023 — Sep 2026
+**KU Leuven, Belgium** | Sep 2023 — Sep 2026
 MSc Socio-Cultural Anthropology · *Distinction*
 
 Courses: Culture, Intimacy & Relatedness; Migration & Mobility; Posthumanist Anthropology; Diversity & Inequality in Language Worlds
@@ -16,7 +16,7 @@ Thesis: *Remaking Meaning: How Chinese Students Reconstruct the Self Through Plu
 
 ---
 
-**Heidelberg University (QS #80), Germany** | Oct 2025 — Mar 2026
+**Heidelberg University, Germany** | Oct 2025 — Mar 2026
 Erasmus+ Exchange Student · Institute of Anthropology
 
 Research focus: How the technological modernization of alphabetic civilizations reshapes thinking and expression in Chinese civilization (e.g., romanization of Chinese script), and the ethical challenges arising across different cultural ecologies.
