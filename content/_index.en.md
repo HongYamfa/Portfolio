@@ -17,7 +17,7 @@ draft: false
 <div class="home-intro-text">
 <p><strong>Hi there, I'm Xinhua Han. Background in computer engineering, digital media, and anthropology</strong>. Long-term focus on the intersection of <strong>local cultures, digital technology, and everyday life</strong> — drawn to the web of tensions between humans, digital products and computational systems.</p>
 <p>Skilled in building user personas and <strong>inclusive design frameworks</strong> through <strong>mixed research methods</strong>. Experienced in interaction needs research for <strong>operator-side and neurodivergent users</strong>, providing evidence-based support for accessible product design.</p>
-<p><strong>First-hand embodied insights</strong> into user feelings and behavior patterns for <strong>music and sports products</strong>.</p>
+<p>My personal involvement in music and sports gives me first-hand, embodied insight into the feelings and behavior patterns that shape how people actually use products in those spaces.</p>
 </div>
 </div>
 
