@@ -19,7 +19,7 @@ A near-year longitudinal study of 25 international students using generative AI 
 
 ## When Free Rides Meet Ghost Buses: Swansea Public Transport Service Rapid UX Research
 
-**Duration**: Nov 2022 – Dec 2022
+**Duration**: Nov 2022 – Dec 2022  
 **Type**: Independent Fieldwork Project
 
 A four-week mixed-methods investigation into how collapsing information architecture, algorithmic unreliability, and spatial inequality erode public transport trust — even when headline passenger numbers look fine.
