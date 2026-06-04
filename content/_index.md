@@ -15,8 +15,8 @@ draft: false
 <img src="images/fieldwork/fieldwork-0.jpg" alt="田野现场">
 </div>
 <div class="home-intro-text">
-<p><strong>Hi there，我是韩鑫华。计算机工程、数字媒体与社会文化人类学</strong>复合背景。长期关注<strong>地方文化、数字技术与日常生活</strong>之间的交汇地带，热衷于探索人与数字产品、计算系统之间的张力之网。</p>
-<p>擅长通过<strong>混合研究方法</strong>构建用户画像与<strong>包容性设计框架</strong>。具备<strong>操作端和神经多样性用户</strong>的交互需求研究经验，可为无障碍设计提供多重循证支持。</p>
+<p><strong>Hi there，我是韩鑫华。计算机工程、数字媒体与社会文化人类学</strong>复合背景。长期关注<strong>地方文化、数字技术与日常生活</strong>之间的交汇地带，热衷于探索人与数字产品、计算系统之间的张力之网。并把这些洞察转化为产品与策略团队能够使用的叙事与战略。</p>
+<p>擅长通过<strong>混合研究方法（深度访谈、沉浸式田野调查与数据分析等）</strong>构建用户画像与<strong>包容性设计框架</strong>,尤其处理跨文化语境下用户逻辑与产品设计之间的摩擦地带。同时具备<strong>操作端和神经多样性用户</strong>的交互需求研究经验，可为无障碍设计提供多重循证支持。</p>
 <p>时而漫步于民间声响、影像与山水之间。对<strong>多模态媒介技术</strong>，特别是<strong>音乐和运动产品</strong>的用户感受与行为模式有很多<strong>第一手体感洞察</strong>。相信与梦和远方同样重要的，是对当下和附近的感知、想象与呼应。</p>
 </div>
 </div>
