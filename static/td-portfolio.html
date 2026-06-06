@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人才发展 & 知识运营作品集 | 韩鑫华</title>
+    <style>
+        :root {
+            --bg: #fbf1c7;
+            --text: #1c1917;
+            --text-secondary: #78716c;
+            --accent-teal: #0f766e;
+            --accent-indigo: #4338ca;
+            --accent-amber: #b45309;
+            --accent-red: #dc2626;
+            --border: #e7e5e4;
+            --card: #f2e5bc;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        header {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; right: 0; width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(15,118,110,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .eyebrow {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 900px;
+            margin-bottom: 32px;
+        }
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 32px;
+        }
+        .tag {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 100px;
+            background: rgba(15,118,110,0.08);
+            color: var(--accent-teal);
+            border: 1px solid rgba(15,118,110,0.15);
+        }
+        .profile-line {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 1000px;
+        }
+        .section {
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            font-weight: 600;
+        }
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            margin-bottom: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 4px;
+        }
+        .project-card.teal::before { background: var(--accent-teal); }
+        .project-card.indigo::before { background: var(--accent-indigo); }
+        .project-card.amber::before { background: var(--accent-amber); }
+        .project-card.red::before { background: var(--accent-red); }
+        .project-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .meta-tag {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 10px;
+            border-radius: 100px;
+            background: rgba(15,118,110,0.08);
+            color: var(--accent-teal);
+        }
+        .project-card.indigo .meta-tag {
+            background: rgba(67,56,202,0.08);
+            color: var(--accent-indigo);
+        }
+        .project-card.amber .meta-tag {
+            background: rgba(180,83,9,0.08);
+            color: var(--accent-amber);
+        }
+        .project-card.red .meta-tag {
+            background: rgba(220,38,38,0.08);
+            color: var(--accent-red);
+        }
+        .project-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .project-sub {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .block {
+            margin-bottom: 20px;
+        }
+        .block-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .block p, .block li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text);
+        }
+        .block ul {
+            padding-left: 18px;
+        }
+        .block li { margin-bottom: 8px; }
+        .quote-line {
+            border-left: 3px solid var(--border);
+            padding-left: 16px;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin: 14px 0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        .project-card.teal .quote-line { border-left-color: var(--accent-teal); }
+        .project-card.indigo .quote-line { border-left-color: var(--accent-indigo); }
+        .project-card.amber .quote-line { border-left-color: var(--accent-amber); }
+        .project-card.red .quote-line { border-left-color: var(--accent-red); }
+        .insight-box {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 18px 20px;
+            margin-top: 20px;
+        }
+        .insight-box .label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .insight-box p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text);
+        }
+        .insight-box strong {
+            color: var(--accent-teal);
+        }
+        .project-card.indigo .insight-box strong { color: var(--accent-indigo); }
+        .project-card.amber .insight-box strong { color: var(--accent-amber); }
+        .project-card.red .insight-box strong { color: var(--accent-red); }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+        .skill-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .skill-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .skill-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .other-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px;
+            margin-top: 8px;
+        }
+        .other-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .other-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 56px 0 72px;
+            text-align: center;
+        }
+        .footer-contact {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .footer-contact a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+        .badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 12px;
+            border-radius: 100px;
+            background: var(--text);
+            color: var(--bg);
+            margin-bottom: 20px;
+        }
+        @media (max-width: 640px) {
+            .project-card { padding: 24px; }
+            h1 { font-size: 32px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="eyebrow">人才发展 & 知识运营 — 作品集</div>
+        <h1>从田野洞察到学习设计</h1>
+        <p class="subtitle">
+            将技术理解力、人类学洞察与数据分析能力，转化为可落地的培训内容、知识库与学习体验方案。
+        </p>
+        <div class="tag-list">
+            <span class="tag">AI 知识库搭建</span>
+            <span class="tag">培训内容设计</span>
+            <span class="tag">复杂概念降维</span>
+            <span class="tag">多利益相关方分析</span>
+            <span class="tag">用户反馈诊断</span>
+        </div>
+        <p class="profile-line">
+            计算机工程本科 + 数字媒体/人类学双硕士。既理解 AI 与数字系统的技术逻辑，也理解人如何学习、适应与抵抗。擅长将复杂概念分层拆解，识别不同群体在同一系统中的差异化体验，并用数据验证洞察。
+        </p>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <h2>项目一：AI 知识库与分层培训内容</h2>
+        <div class="project-card indigo">
+            <div class="project-meta">
+                <span class="meta-tag">AI 知识库</span>
+                <span class="meta-tag">用户分层</span>
+                <span class="meta-tag">培训路径</span>
+            </div>
+            <h3>生成式 AI 工具的跨文化用户认知研究与分层适配</h3>
+            <p class="project-sub">
+                针对非母语学术场景中的生成式 AI 学习工具，开展 10 个月纵向田野，追踪 25 名核心用户，执行 50+ 场深度访谈。研究核心不是"功能怎么用"，而是"不同背景的用户如何以截然不同的认知模式接近 AI"。
+            </p>
+
+            <div class="block">
+                <div class="block-label">核心发现</div>
+                <ul>
+                    <li>识别出 <strong>4 类认知原型</strong>（直觉驱动型 / 目标导向型 / 系统寻求型 / 渐进转型型），同一功能在不同原型用户手中产生完全不同的意义</li>
+                    <li>建立 <strong>情感曲线模型</strong>（蜜月期 → 双重束缚 → 策略性适应），定位用户从"尝试"到"依赖"到"抵触"的关键转折</li>
+                    <li>发现"自我残酷化"现象：用户因系统不透明而对自己施加过高要求，这直接指向<strong>培训内容需要主动解释系统逻辑，而非只教操作步骤</strong></li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <div class="block-label">对知识库/培训设计的启示</div>
+                <div class="quote-line">
+                    "对神经多样性用户，AI 同时是认知支架和能力萎缩器。产品应设计'渐进式依赖'——在替代的同时重建被替代的技能。"
+                </div>
+                <p>
+                    这意味着 AI 知识库不能是"功能说明书"式的平铺直叙。需要为不同认知风格的员工设计差异化的入口：直觉型用户需要场景化案例，系统型用户需要底层逻辑图解，目标导向型用户需要任务清单。同时需要追踪<strong>技能迁移指标</strong>，而非仅看任务完成度。
+                </p>
+            </div>
+
+            <!--<div class="insight-box">
+                <div class="label">为什么适合 TD 岗位</div>
+                <p>
+                    <strong>技术理解 + 学习行为洞察。</strong> 计算机工程背景让我能快速理解 AI 工具的技术逻辑；人类学训练让我能识别不同员工在接触 AI 时的认知差异和情感阻力。这正是搭建"人人可用"的 AI 知识库所需要的复合能力。
+                </p>
+            </div>-->
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>项目二：复杂概念的知识库结构化</h2>
+        <div class="project-card teal">
+            <div class="project-meta">
+                <span class="meta-tag">知识库</span>
+                <span class="meta-tag">概念降维</span>
+                <span class="meta-tag">内容架构</span>
+            </div>
+            <h3>设计人类学理论档案：从学术概念到可执行策略</h3>
+            <p class="project-sub">
+                将 Tim Ingold、Paul Dourish、Alexander Galloway 等学者的抽象理论，转化为产品团队可理解的商业洞察。核心挑战是：如何让没有人类学背景的设计师和 PM，在 10 分钟内抓住一个理论视角的价值？
+            </p>
+
+            <div class="block">
+                <div class="block-label">核心工作</div>
+                <ul>
+                    <li>从数十篇学术文献中提取与<strong>用户体验设计</strong>直接相关的概念，过滤掉纯哲学讨论</li>
+                    <li>建立 <strong>"理论视角 → 田野发现 → 设计策略"</strong> 的三层转化链路，让学术概念成为可执行的设计原则</li>
+                    <li>输出包含"用户画像过程化""界面如何训练用户""包容性设计"等模块的<strong>结构化知识档案</strong></li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <div class="block-label">知识转化示例</div>
+                <div class="quote-line">
+                    "常规用研的起点是：用户有需求，研究者去发现它。设计人类学的起点不同：用户正生活在一个持续变化的世界里，产品是那个世界的一部分。"
+                </div>
+                <p>
+                    将这一学术视角转化为产品团队能用的设计原则：<strong>《用户画像需要时间维度，不只是类型描述》</strong>——教会团队追踪用户与产品的关系演变，而非仅捕捉当下快照。
+                </p>
+            </div>
+
+            <!--<div class="insight-box">
+                <div class="label">为什么适合 TD 岗位</div>
+                <p>
+                    <strong>知识库搭建的核心能力是"翻译"与"分层"。</strong> 能够将复杂的 AI 技术逻辑、学术方法论或业务知识，转化为不同层级员工（技术 / 产品 / 运营）可理解、可检索、可执行的知识文档。这是知识库从"资料堆"变成"生产力工具"的关键。
+                </p>
+            </div>-->
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>项目三：多利益相关方的培训体验设计</h2>
+        <div class="project-card amber">
+            <div class="project-meta">
+                <span class="meta-tag">服务蓝图</span>
+                <span class="meta-tag">利益相关方</span>
+                <span class="meta-tag">体验断裂</span>
+            </div>
+            <h3>数字公共服务产品的空间民族志与系统修补研究</h3>
+            <p class="project-sub">
+                针对健康码系统，开展 6 个月空间民族志，覆盖医疗、商业、公共交通等 5 类终端场景，执行 30+ 场利益相关方访谈。核心发现：同一系统在不同执行语境下产生了完全不同的用户旅程，一线员工被迫成为系统的"人肉补丁"。
+            </p>
+
+            <div class="block">
+                <div class="block-label">核心发现</div>
+                <ul>
+                    <li>识别"800 米政策弹性"：同一产品因空间语境、执行文化与经济压力产生截然不同的用户旅程</li>
+                    <li>绘制 <strong>利益相关方地图与服务蓝图</strong>，发现系统设计者遗忘的关键角色（一线操作者、老年用户、非智能手机用户）</li>
+                    <li>发现<strong>内部使用者</strong>（一线员工）承担着设备磨合、指令模糊与用户冲突的多重隐性成本，是服务设计中被系统性忽视的利益相关方</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <div class="block-label">对培训设计的迁移</div>
+                <div class="quote-line">
+                    "服务蓝图必须包含内部操作者的旅程，不只关注终端用户。员工的灰色变通是系统性失败的早期信号，不是个人英雄主义。"
+                </div>
+                <p>
+                    这一思维直接迁移到培训项目设计：<strong>同一门培训课程对不同部门、不同层级、不同数字素养的员工，体验完全不同。</strong> 培训设计者如果只关注"课程内容"，而忽略"执行语境"（部门节奏、管理压力、历史经验），就会重复健康码系统的设计错误——表面上全员覆盖，实际上大量员工在用自己的"灰色变通"应付。
+                </p>
+            </div>
+
+            <!--<div class="insight-box">
+                <div class="label">为什么适合 TD 岗位</div>
+                <p>
+                    <strong>服务蓝图与利益相关方分析是培训设计的底层能力。</strong> 能够识别培训项目中的隐性利益相关方（一线管理者、老员工、外包同事），预判不同群体在同一培训中的体验断裂点，并设计针对性的支持方案。
+                </p>
+            </div>-->
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>项目四：用户反馈快速诊断与数据洞察</h2>
+        <div class="project-card red">
+            <div class="project-meta">
+                <span class="meta-tag">体验诊断</span>
+                <span class="meta-tag">社媒分析</span>
+                <span class="meta-tag">数据洞察</span>
+            </div>
+            <h3>公共交通服务 UX 快速诊断与信息架构评估</h3>
+            <p class="project-sub">
+                4 周混合方法独立调查，执行 10+ 场深度访谈（覆盖 5+ 国籍用户），完成 200+ 社交媒体评论的情感与主题分析，结合 5+ 公交站点的参与式观察与移动 App 启发式评估。
+            </p>
+
+            <div class="block">
+                <div class="block-label">核心工作</div>
+                <ul>
+                    <li>在有限时间内快速建立<strong>用户反馈采集框架</strong>：访谈、社媒、现场观察三源交叉验证</li>
+                    <li>对 200+ 社媒评论进行<strong>情感编码与主题聚类</strong>，识别出信息架构崩溃、算法幽灵化、空间不平等三类体验断裂模式</li>
+                    <li>通过 App 启发式评估，发现界面设计假设（粗体=实时）与用户心智模型（粗体=计划）之间的<strong>跨文化语义冲突</strong></li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <div class="block-label">对反馈数据洞察的启示</div>
+                <div class="quote-line">
+                    "当根本没有车来时，一个仍显示'即将到达'的实时追踪，比完全没有追踪更能摧毁信任。一个诚实的'我们也无法确定'状态，胜过虚假的精确。"
+                </div>
+                <p>
+                    这揭示了<strong>反馈数据分析中的"虚荣指标"陷阱</strong>：高采用率、高点击率可能掩盖真实的体验断裂。在培训场景中，"课程完成率"不等于"学会"，"点击次数"不等于"理解"。需要设计更深层的数据看板指标，识别员工在知识库/学习平台中的真实卡点。
+                </p>
+            </div>
+
+            <!--<div class="insight-box">
+                <div class="label">为什么适合 TD 岗位</div>
+                <p>
+                    <strong>快速诊断 + 反馈数据洞察。</strong> 能够搭建学习平台的轻量级反馈采集机制（社媒情绪、使用日志、访谈），并用情感分析和主题编码快速提炼洞察，为知识库迭代和培训内容优化提供数据依据。
+                </p>
+            </div>-->
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container">
+        <h2>核心能力</h2>
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h4>AI 知识库搭建</h4>
+                <p>理解生成式 AI 技术逻辑，能识别不同认知风格用户的学习卡点，设计分层知识结构与渐进式学习路径</p>
+            </div>
+            <div class="skill-card">
+                <h4>培训内容设计</h4>
+                <p>复杂概念降维、结构化知识整理、多层级内容适配（技术 / 产品 / 运营 / 新人 / 资深）</p>
+            </div>
+            <div class="skill-card">
+                <h4>体验诊断与数据洞察</h4>
+                <p>Python 数据爬取与 NLP、情感分析、Tableau 可视化、用户反馈快速诊断、数据看板指标设计</p>
+            </div>
+            <div class="skill-card">
+                <h4>多利益相关方分析</h4>
+                <p>服务蓝图、利益相关方地图、跨部门协作、识别隐性成本与体验断裂点</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="badge">韩鑫华 — 现场工作者</div>
+        <p class="footer-contact">
+            社会文化人类学与数字媒体硕士 · 计算机工程学士<br><br>
+            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a> ·
+            <a href="https://hongyamfa.github.io/Portfolio/">完整作品集</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
