@@ -275,13 +275,40 @@
             color: var(--bg);
             margin-bottom: 20px;
         }
+        .top-nav {
+            position: fixed;
+            top: 20px;
+            right: 24px;
+            z-index: 100;
+        }
+        .top-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-decoration: none;
+            padding: 9px 18px;
+            border-radius: 100px;
+            background: var(--text);
+            color: var(--bg);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            transition: opacity 0.15s;
+        }
+        .top-nav a:hover { opacity: 0.8; }
         @media (max-width: 640px) {
             .project-card { padding: 24px; }
             h1 { font-size: 32px; }
+            .top-nav { top: 12px; right: 12px; }
         }
     </style>
 </head>
 <body>
+
+<nav class="top-nav">
+    <a href="https://hongyamfa.github.io/Portfolio/portfolio">项目详细信息 →</a>
+</nav>
 
 <header>
     <div class="container">
@@ -504,8 +531,7 @@
         <div class="badge">韩鑫华 — 现场工作者</div>
         <p class="footer-contact">
             社会文化人类学与数字媒体硕士 · 计算机工程学士<br><br>
-            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a> ·
-            <a href="https://hongyamfa.github.io/Portfolio/portfolio">项目详细信息</a>
+            <a href="mailto:hongyamfa@gmail.com">hongyamfa@gmail.com</a>
         </p>
     </div>
 </footer>
