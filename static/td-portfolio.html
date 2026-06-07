@@ -75,15 +75,19 @@
             border: 1px solid rgba(15,118,110,0.15);
         }
         .profile-line {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.75;
             max-width: 1000px;
-            margin-top: 20px;
-            padding: 14px 18px;
-            background: var(--card);
+            margin-top: 24px;
+            padding: 16px 20px;
+            background: rgba(180,83,9,0.06);
             border-radius: 8px;
-            border-left: 3px solid var(--accent-teal);
+            border-left: 4px solid var(--accent-amber);
+        }
+        .profile-line strong {
+            color: var(--accent-amber);
+            font-weight: 700;
         }
         .section {
             padding: 64px 0;
@@ -185,20 +189,36 @@
         }
         .header-quote {
             font-style: italic;
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-            padding-left: 16px;
-            border-left: 3px solid var(--accent-teal);
-            max-width: 900px;
+            font-size: 17px;
+            line-height: 1.75;
+            color: var(--text);
+            margin: 16px 0 10px;
+            padding: 24px 24px 24px 32px;
+            background: linear-gradient(90deg, var(--card) 0%, transparent 100%);
+            border-left: 4px solid var(--accent-teal);
+            border-radius: 0 8px 8px 0;
+            position: relative;
+            max-width: 1100px;
+        }
+        .header-quote::before {
+            content: "\"";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 52px;
+            color: var(--accent-teal);
+            opacity: 0.18;
+            line-height: 1;
+            pointer-events: none;
         }
         .header-quote-attr {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-secondary);
-            margin-bottom: 24px;
+            margin-bottom: 28px;
             text-align: right;
             max-width: 900px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
         }
         .project-card.teal .quote-line { border-left-color: var(--accent-teal); }
         .project-card.indigo .quote-line { border-left-color: var(--accent-indigo); }
@@ -339,6 +359,7 @@
             我的智力是新石器时代式的。有如土著所放的草原野火那样，有时候会使一些意想不到的地区大放光明；有时候可能使那些地区得到些养料，从那些地区摘取一些作物，然后就迁移到别的地区去，把燃烧过的大地留置其后。
         </div>
         <p class="header-quote-attr">— 克劳德·列维-斯特劳斯《忧郁的热带》</p>
+
         <h1>从田野洞察到学习设计</h1>
         <!--<div class="tag-list">
             <span class="tag">AI 知识库搭建</span>
@@ -347,7 +368,7 @@
             <span class="tag">用户反馈诊断</span>
         </div>-->
         <p class="profile-line">
-            Bio: 韩鑫华，计算机工程本科 + 数字媒体/人类学双硕士。既理解 AI 与数字系统的技术逻辑，也理解人如何学习、适应与抵抗。擅长将复杂概念分层拆解，识别不同群体在同一系统中的差异化体验，并用数据验证洞察。
+            <strong>Bio:</strong> 韩鑫华，<strong>计算机工程本科</strong> + <strong>数字媒体&社会文化人类学双硕士</strong>。既理解 AI 与数字系统的<strong>技术逻辑</strong>，也理解人如何<strong>学习、适应与抵抗</strong>。擅长将<strong>复杂概念分层拆解</strong>，识别不同群体在同一系统中的<strong>差异化体验</strong>，并用<strong>数据验证洞察</strong>。
         </p>
     </div>
 </header>
