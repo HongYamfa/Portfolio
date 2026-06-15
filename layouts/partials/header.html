@@ -5,6 +5,7 @@
     {{ end }}
     <div class="logo__chevron">></div>
     <div class="logo__cursor">█</div>
+    {{ if not .Params.hideMenu }}
     {{ if eq .Language.Lang "academia" }}
       {{/* academia version: no language switch */}}
     {{ else if .Translations }}
@@ -17,6 +18,7 @@
       {{ else }}
         <a class="lang-switch" href="{{ $.Site.BaseURL }}">中文</a>
       {{ end }}
+    {{ end }}
     {{ end }}
   </div>
 
@@ -31,6 +33,7 @@
     <div id="search__suggestions" class="search__suggestions--hidden"></div>
   </div>
 
+  {{ if not .Params.hideMenu }}
   <nav id="menu">
     <ul class="menu--horizontal">
       {{ range $.Site.Menus.main }}
@@ -55,6 +58,7 @@
       </ul>
     </div>
   </nav>
+  {{ end }}
 
   <button class="theme__toggle light--hidden" aria-label="Toggle light mode">
     {{ partial "icons/tabler-icon.html" "outline/sun" }}
