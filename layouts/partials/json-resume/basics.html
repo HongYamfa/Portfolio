@@ -1,0 +1,29 @@
+{{ $cv := index .Site.Data.json_resume .Site.Language.Lang }}
+{{ $page := . }}
+{{ with $cv.basics }}
+  <div class="jr__item jr-basics__item">
+    {{ with .image }}
+      <div class="jr-basics__image">
+        <img src="{{ . | absURL }}" alt="Picture" width="250" height="250" />
+      </div>
+    {{ end }}
+    {{ with .name }}<div class="jr-basics__name">{{ . }}</div>{{ end }}
+    {{ with .label }}<div class="jr-basics__label">{{ . }}</div>{{ end }}
+    {{ with .email }}<div class="jr-basics__email">{{ . }}</div>{{ end }}
+    {{ with .summary }}
+      <div class="jr-basics__summary">
+        {{ if $page.Params.shortSummary }}
+          {{ replace . "并转化为产品与策略团队能够使用的叙事与战略。" "" }}
+        {{ else }}
+          {{ . }}
+        {{ end }}
+      </div>
+    {{ end }}
+    {{ with .location }}
+      <div class="jr-basics__location">
+        {{ with .city }}{{ . }}{{ end }}
+        {{ with .countryCode }}<div class="jr-basics__location-countryCode">{{ . }}</div>{{ end }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
