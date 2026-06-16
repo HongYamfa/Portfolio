@@ -5,6 +5,9 @@
     {{ end }}
     <div class="logo__chevron">></div>
     <div class="logo__cursor">█</div>
+    {{ with .Params.pageNavText }}
+    <a class="logo__page-nav" href="{{ $.Params.pageNavUrl }}">{{ . }}</a>
+    {{ end }}
     {{ if not .Params.hideMenu }}
     {{ if eq .Language.Lang "academia" }}
       {{/* academia version: no language switch */}}

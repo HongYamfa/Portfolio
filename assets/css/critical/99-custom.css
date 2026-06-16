@@ -18,6 +18,83 @@
   border-color: var(--fg3);
 }
 
+/* Sidebar — fill viewport height & stronger typography */
+.sidebar {
+  height: calc(100vh - 5rem);
+}
+
+.sidebar .bio,
+.sidebar .bio .jr__item {
+  height: 100%;
+}
+
+.sidebar .jr-basics__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar .jr-basics__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.75rem;
+}
+
+.sidebar .jr-basics__name {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.sidebar .jr-basics__label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--fg3);
+  margin-top: 0.35rem;
+}
+
+.sidebar .jr-basics__email {
+  font-family: var(--font-monospace);
+  font-size: 0.7rem;
+  color: var(--fg3);
+  margin-top: 0.2rem;
+}
+
+.sidebar .jr-basics__summary {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  line-height: 1.85;
+  color: var(--fg1);
+  margin-top: 3rem;
+  width: 75%;
+}
+
+.sidebar .jr-basics__location {
+  display: none;
+}
+
+/* Inline page nav button inside header logo (zm / zm_resume pages) */
+.logo__page-nav {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  padding: 5px 14px;
+  border-radius: 100px;
+  background: var(--fg0);
+  color: var(--bg0);
+  margin-left: 12px;
+  transition: opacity 0.15s;
+  line-height: 1;
+}
+
+.logo__page-nav:hover { opacity: 0.7; }
+
 /* Homepage custom styles using theme variables */
 
 /* Hero quote */

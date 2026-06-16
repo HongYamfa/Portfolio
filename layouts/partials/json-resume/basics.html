@@ -7,9 +7,11 @@
         <img src="{{ . | absURL }}" alt="Picture" width="250" height="250" />
       </div>
     {{ end }}
-    {{ with .name }}<div class="jr-basics__name">{{ . }}</div>{{ end }}
-    {{ with .label }}<div class="jr-basics__label">{{ . }}</div>{{ end }}
-    {{ with .email }}<div class="jr-basics__email">{{ . }}</div>{{ end }}
+    <div class="jr-basics__info">
+      {{ with .name }}<div class="jr-basics__name">{{ . }}</div>{{ end }}
+      {{ with .label }}<div class="jr-basics__label">{{ . }}</div>{{ end }}
+      {{ with .email }}<div class="jr-basics__email">{{ . }}</div>{{ end }}
+    </div>
     {{ with .summary }}
       <div class="jr-basics__summary">
         {{ if $page.Params.shortSummary }}
